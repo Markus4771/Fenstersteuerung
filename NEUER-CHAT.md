@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3w_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3x_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3w_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3x_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -558,3 +558,31 @@ v3.3w:
 - Ziel: die letzten zwei TOP-Kreuzungen beseitigen
 - BOT_COIL weiterhin offen
 - nächster Schritt: DRC v3.3w
+
+
+## Update v3.3x
+
+DRC v3.3w:
+- 54 DRC-Verstöße
+- 47 offene Verbindungen
+- 0 Kurzschlüsse
+- 2 Tracks-Crossing-Fehler
+- 1 dangling Track bei REED_TILT
+- 29 Bibliothekswarnungen
+- 19 Silkscreen-over-Copper-Warnungen
+- 2 Silkscreen-Overlap-Warnungen
+- 1 Silkscreen-Edge-Warnung
+
+Verbleibende TOP-Kreuzungen:
+- TOP_COIL_1 <-> TOP_COIL_2 bei ca. x=168.2 / y=69.0
+- TOP_COIL_3 <-> TOP_COIL_4 bei ca. x=166.6 / y=71.0
+
+v3.3x:
+- Basis: v3.3w
+- TOP1 und TOP3 bleiben auf ihren bisherigen Lagen
+- TOP2 erhält einen kurzen F.Cu-Bridge-Abschnitt nur über den TOP1-Kreuzungspunkt
+- TOP4 erhält einen kurzen B.Cu-Bridge-Abschnitt nur über den TOP3-Kreuzungspunkt
+- vier kleine 0.8/0.4-mm-Vias nur für diese beiden Brücken
+- keine Änderungen an Bauteilpositionen
+- BOT_COIL weiterhin offen
+- nächster Schritt: DRC v3.3x
