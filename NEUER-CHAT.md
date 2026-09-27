@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3u_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3v_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3u_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3v_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -506,3 +506,30 @@ v3.3u:
 - keine Vias
 - BOT_COIL weiterhin offen
 - nächster Schritt: DRC v3.3u
+
+
+## Update v3.3v
+
+DRC v3.3u:
+- 71 DRC-Verstöße
+- 47 offene Verbindungen
+- 4 Kurzschlüsse
+- 1 Tracks-Crossing
+- 14 Soldermask-Bridge-Meldungen
+- 1 dangling Track bei REED_TILT
+- 0 Footprint-Fehler
+
+Hauptursache:
+- Die neue vertikale TOP-Fluchtführung kollidierte mit der K2-Treiberzeile R5/Q2/D2.
+- Besonders TOP_COIL_2 und TOP_COIL_4 trafen R5, Q2 und D2.
+
+v3.3v:
+- Basis: v3.3o
+- R5/Q2/D2 von y=67 mm auf y=64 mm verschoben
+- dadurch freier Routing-Korridor zwischen K2-Treiberzeile und U4
+- TOP_COIL_1–4 vollständig neu geroutet
+- TOP1/TOP2 auf B.Cu
+- TOP3/TOP4 auf F.Cu
+- keine Vias
+- BOT_COIL weiterhin offen
+- nächster Schritt: DRC v3.3v
