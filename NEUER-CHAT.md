@@ -887,3 +887,33 @@ Datei:
 Weiterhin nur ein kleines Netz bzw. eine klar abgegrenzte Teilverbindung pro DRC-Schritt ändern. Saubere Coil-, STEP-, RS485_RX/TX/DE- und Transistor-Basisnetze nicht erneut verändern, solange der DRC dies nicht zwingend erfordert.
 
 Der aktuelle Stand ist keine Fertigungsfreigabe.
+
+
+## DRC v3.3bt bestätigt
+
+Ergebnis:
+- 51 DRC-Meldungen, ausschließlich Bibliotheks-/Silkscreen-Warnungen
+- 0 Kurzschlüsse
+- 0 Leiterbahnkreuzungen
+- 0 Clearance-/Keepout-Fehler
+- 0 Hole-/Dangling-Fehler
+- 27 offene Verbindungen
+- 0 Footprint-Fehler
+
+Damit ist der lokale Abschnitt von RS485_A zwischen U3.6 und R3.1 sauber abgeschlossen.
+
+Weiter offen:
+- RS485_A Restweg R3.1 ↔ J4.3
+- RS485_B U3.7 ↔ R3.2 ↔ J4.4
+- REED_OPEN
+- REED_TILT
+- ROLL_UP
+- ROLL_DN
+- K1_COIL_LOW Restweg zum Relais
+- K2_COIL_LOW Restweg zum Relais
+- +3V3
+- +5V
+- GND
+
+Aktueller bestätigter Arbeitsstand:
+`hardware/Hauptplatine/Hauptplatine_v3.3bt_logic_minimal_150x90.kicad_pcb`
