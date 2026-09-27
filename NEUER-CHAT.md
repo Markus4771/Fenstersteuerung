@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3k_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3l_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3k_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3l_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -243,3 +243,25 @@ Korrektur:
 - nur TOP_COIL_1–4 neu auf F.Cu geroutet
 - BOT_COIL weiterhin offen
 - nächster Schritt: DRC v3.3k
+
+
+## Update v3.3l
+
+DRC v3.3k:
+- 62 DRC-Verstöße
+- 47 offene Verbindungen
+- TOP-Coils weiterhin fehlerhaft
+- Probleme: TOP_COIL_1/3 kreuzten sich, TOP_COIL_3 kurzschloss TOP_COIL_4, mehrere Clearance- und Soldermask-Konflikte an U4
+
+Ursache:
+- Die Pinreihenfolge U4 -> J6 ist geometrisch invertiert. Vier direkte Leitungen auf einer Lage können daher nicht kreuzungsfrei geführt werden.
+
+v3.3l:
+- alle TOP/BOT-Coil-Tracks entfernt
+- nur TOP_COIL_1–4 neu geroutet
+- TOP1 und TOP3 auf B.Cu
+- TOP2 und TOP4 auf F.Cu
+- äußere und innere Routingkorridore getrennt
+- keine Vias erforderlich
+- BOT_COIL weiterhin offen
+- nächster Schritt: DRC v3.3l
