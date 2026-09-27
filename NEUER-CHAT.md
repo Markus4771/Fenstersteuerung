@@ -794,3 +794,96 @@ Status:
 ### Wichtig
 
 Der aktuelle Entwicklungsstand ist **keine Fertigungsfreigabe**. Vor Fertigung muss der 230-V-Bereich separat auf Luft-/Kriechstrecken, Absicherung, Leiterbahnbreiten, Schutzmaßnahmen, Relais-/Motorpfade und Bauteileignung geprüft werden.
+
+
+## Update v3.3bp bis v3.3bt
+
+### Letzter vollständig bestätigter sauberer Stand: v3.3bp
+
+DRC v3.3bp:
+
+- 51 DRC-Meldungen, ausschließlich Bibliotheks-/Silkscreen-Warnungen
+- 0 Kurzschlüsse
+- 0 Leiterbahnkreuzungen
+- 0 Clearance-/Keepout-Fehler
+- 0 Hole-/Dangling-Fehler
+- 28 offene Verbindungen
+- 0 Footprint-Fehler
+
+Zusätzlich abgeschlossen:
+
+- Q1_BASE
+- Q2_BASE
+- lokale K1_COIL_LOW-Verbindung Q1.1 ↔ D1.2
+- lokale K2_COIL_LOW-Verbindung Q2.1 ↔ D2.2
+
+### RS485_A
+
+v3.3bq:
+- kompletter A-Versuch bis J4
+- offene Verbindungen auf 26 reduziert
+- jedoch 7 Leiterbahnkreuzungen, 1 Kurzschluss und 1 Clearance-Fehler
+- langer Weg deshalb verworfen
+
+v3.3br:
+- nur U3.6 ↔ R3.1 lokal
+- 27 offene Verbindungen
+- 2 Kurzschlussmeldungen gegen RS485_TX
+
+v3.3bs:
+- lokaler A-Weg rechts um U3 herum und unter RS485_TX
+- 52 DRC-Meldungen
+- 27 offene Verbindungen
+- 0 Kurzschlüsse
+- 0 Clearance-Fehler
+- nur noch 1 Leiterbahnkreuzung gegen GND
+
+v3.3bt:
+- aktueller Arbeitsstand
+- Basis: v3.3bs
+- kurzer Layerwechsel auf B.Cu, um die GND-Leitung zu unterqueren
+- danach zurück auf F.Cu zu R3.1
+- J4.3 bleibt bewusst offen
+- DRC v3.3bt steht noch aus
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3bt_logic_minimal_150x90.kicad_pcb`
+
+### Aktuell bestätigte saubere Funktionsblöcke
+
+- TOP_COIL_1–4
+- BOT_COIL_1–4
+- STEP_TOP_1–4
+- STEP_BOT_1–4
+- RS485_RX
+- RS485_TX
+- RS485_DE
+- Q1_BASE
+- Q2_BASE
+- lokale K1_COIL_LOW-Verbindung
+- lokale K2_COIL_LOW-Verbindung
+
+### Noch offen
+
+- DRC v3.3bt
+- RS485_A Restweg zu J4.3
+- RS485_B
+- REED_OPEN
+- REED_TILT
+- ROLL_UP
+- ROLL_DN
+- K1_COIL_LOW Restweg zum Relais
+- K2_COIL_LOW Restweg zum Relais
+- +3V3
+- +5V
+- GND
+- vollständige physische Konnektivitätsprüfung
+- finaler DRC
+- separate 230-V-Sicherheitsprüfung
+- Gerber/Drill/BOM
+
+### Arbeitsregel
+
+Weiterhin nur ein kleines Netz bzw. eine klar abgegrenzte Teilverbindung pro DRC-Schritt ändern. Saubere Coil-, STEP-, RS485_RX/TX/DE- und Transistor-Basisnetze nicht erneut verändern, solange der DRC dies nicht zwingend erfordert.
+
+Der aktuelle Stand ist keine Fertigungsfreigabe.
