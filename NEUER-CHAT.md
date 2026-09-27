@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3r_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3s_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3r_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3s_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -428,3 +428,30 @@ v3.3r:
   - TOP4: 168.5 / 63.5
 - BOT_COIL weiterhin offen
 - nächster Schritt: DRC v3.3r
+
+
+## Update v3.3s
+
+DRC v3.3r:
+- 73 DRC-Verstöße
+- 47 offene Verbindungen
+- 5 Tracks-Crossing-Fehler
+- 4 Kurzschlussmeldungen
+- 8 Soldermask-Bridge-Meldungen
+- 1 dangling Track
+- 0 Footprint-Fehler
+
+Schlussfolgerung:
+- v3.3r ist schlechter als v3.3o/v3.3p.
+- Die J6-Verlegung nach oben wird verworfen.
+- Bester stabiler Ausgangspunkt bleibt v3.3o: 0 Kurzschlüsse, nur 2 TOP-Kreuzungen.
+
+v3.3s:
+- Basis: v3.3o
+- J6 wieder in der v3.3o-Position
+- TOP1 und TOP2 bleiben auf ihren ursprünglichen Lagen
+- TOP3 und TOP4 erhalten nur lokal je zwei Vias
+- Layerwechsel nur an den beiden bisherigen Kreuzungsstellen
+- Ziel: die zwei letzten TOP-Kreuzungen beseitigen, ohne neue lange Korridore zu erzeugen
+- BOT_COIL weiterhin offen
+- nächster Schritt: DRC v3.3s
