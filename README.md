@@ -130,5 +130,5 @@ Vorstufe v3.3bs hatte:
 
 Diese Kreuzung wurde in v3.3bt mit einem kurzen B.Cu-Abschnitt korrigiert.
 
-**DRC für v3.3bt steht noch aus.**
+**DRC v3.3bt bestätigt sauber:** 51 Warnmeldungen, 0 echte Routingfehler, 27 offene Verbindungen, 0 Footprint-Fehler.
 
