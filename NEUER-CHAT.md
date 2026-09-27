@@ -636,3 +636,32 @@ v3.3aa:
 - insgesamt vier kleine 0.8/0.4-mm-Vias für die beiden lokalen Brücken
 - keine Bauteile verschoben
 - nächster Schritt: DRC v3.3aa
+
+
+## Update v3.3ab
+
+DRC v3.3aa:
+- 54 DRC-Verstöße
+- 43 offene Verbindungen
+- 0 Kurzschlüsse
+- weiterhin 2 Tracks-Crossing-Fehler
+- 1 dangling Track bei REED_TILT
+- 0 Footprint-Fehler
+
+Verbleibende BOT-Kreuzungen:
+- BOT_COIL_1 <-> BOT_COIL_2
+- BOT_COIL_3 <-> BOT_COIL_4
+
+Ursache:
+- Die Layer-Brücken in v3.3aa lagen zu spät.
+- BOT2 kreuzte BOT1 bereits auf dem senkrechten Abgang direkt unter U5.
+- BOT4 kreuzte BOT3 ebenfalls bereits direkt unter U5.
+
+v3.3ab:
+- Basis: v3.3aa
+- TOP-Routing unverändert
+- BOT1 und BOT3 unverändert
+- BOT2 wechselt direkt am U5-Ausgang auf F.Cu und bei y=90.4 zurück auf B.Cu
+- BOT4 wechselt direkt am U5-Ausgang auf B.Cu und bei y=92.8 zurück auf F.Cu
+- keine Bauteile verschoben
+- nächster Schritt: DRC v3.3ab
