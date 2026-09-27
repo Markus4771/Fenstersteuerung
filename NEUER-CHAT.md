@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3y_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3ak_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3y_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3ak_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -665,3 +665,39 @@ v3.3ab:
 - BOT4 wechselt direkt am U5-Ausgang auf B.Cu und bei y=92.8 zurück auf F.Cu
 - keine Bauteile verschoben
 - nächster Schritt: DRC v3.3ab
+
+
+## Update v3.3ak
+
+DRC v3.3ak:
+- 52 DRC-Verstöße
+- 43 offene Verbindungen
+- 0 Kurzschlüsse
+- 0 Tracks-Crossing-Fehler
+- 0 Clearance-Fehler
+- 0 Hole-Clearance-/Hole-to-Hole-Fehler
+- 1 dangling Track bei REED_TILT
+- übrige DRC-Meldungen sind Bibliotheks-/Silkscreen-Warnungen
+
+Wichtiger Meilenstein:
+- TOP_COIL_1–4 sauber geroutet
+- BOT_COIL_1–4 sauber geroutet
+- U4/J6 und U5/J7 folgen jetzt demselben Routingprinzip
+- Coil-Routing damit abgeschlossen
+
+Offene Netze laut DRC betreffen jetzt vor allem:
+- GND
+- +5V
+- +3V3
+- STEP_TOP_1–4
+- STEP_BOT_1–4
+- REED_OPEN
+- REED_TILT
+- RS485_A / RS485_B / RS485_DE / RS485_RX / RS485_TX
+- K1_COIL_LOW / K2_COIL_LOW
+- Q1_BASE / Q2_BASE
+- ROLL_UP / ROLL_DN
+
+Nächster Schritt:
+- offene Logik- und Versorgungssignale blockweise routen
+- zuerst STEP_TOP/STEP_BOT, danach RS485/Reed, danach Versorgung/GND
