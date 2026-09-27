@@ -77,25 +77,27 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3f_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3g_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3f_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3g_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
-- v3.3f ist noch nicht vollständig geroutet
+- v3.3g ist noch nicht vollständig geroutet
 - keine Fertigungsfreigabe
-- basiert wieder auf v3.3c
+- v3.3g basiert auf v3.3f; v3.3f basiert wiederum auf dem sauberen v3.3c-Stand
 - v3.3d/v3.3e wegen Routing-Konflikten nicht weiterverwenden
-- RS485_A/B in v3.3f bewusst wieder offen
-- TOP_COIL_1–4 wurden neu geroutet
+- RS485_A/B weiterhin bewusst offen
+- TOP_COIL_1–4 sind aus v3.3f übernommen
+- BOT_COIL_1–4 wurden in v3.3g neu geroutet
+- BOT_COIL_1 liegt bewusst auf B.Cu, BOT_COIL_2–4 auf F.Cu, um Kreuzungen zu vermeiden
 
 ## Noch offene Netze
 
 - TOP_COIL_1–4: DRC prüfen
-- BOT_COIL_1–4
+- BOT_COIL_1–4: neu in v3.3g, DRC prüfen
 - STEP_TOP_1–4
 - STEP_BOT_1–4
 - ROLL_UP
