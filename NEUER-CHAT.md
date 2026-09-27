@@ -1,33 +1,100 @@
 # NEUER-CHAT – Fenstersteuerung
 
-## Projektziel
+## Projekt
 
-Kompakte ESP32-basierte Fenster-/Rollladensteuerung mit Hauptplatine im Rollladenkasten und abgesetzter Sensorplatine.
+GitHub:
+https://github.com/Markus4771/Fenstersteuerung
 
-## Hardware
+## Ziel
 
-- ESP32
-- Finder 40.52 Relais
-- Reedkontakte werden per Kabel aus der Hauptelektronik herausgeführt
-- RS485 vorgesehen
-- ULN2003-Ausgänge TOP/BOTTOM
-- Sensorik räumlich von der Hauptelektronik getrennt
-- Hauptplatine ca. 150 x 90 mm
+Kompakte ESP32-basierte Fenster-/Rollladensteuerung.
 
-## Aktueller Stand
+Die Hauptelektronik sitzt im Rollladenkasten. Die Sensorik wird abgesetzt. Das System soll bewusst mehr können als ein einfacher Rollladenaktor:
 
-Aktuelle Arbeitsversion: **Hauptplatine_v3.3f_logic_minimal_150x90.kicad_pcb**
+- Rollladen AUF/AB
+- Fenster offen/gekippt erkennen
+- Präsenz erkennen
+- Raumklima erfassen
+- Endlagen-/Hilfsmechanik ansteuern
+- Sensorplatine per RS485 anbinden
+
+Es ist **kein Fensterantrieb** vorgesehen.
+
+## Festgelegte Hardware
+
+### Hauptplatine
+
+- ESP32-S3
+- 2 x Finder 40.52
+- 5-V-Spulen
+- DPDT
+- Hardware-Interlock
+- 230-V-Rollladenmotor-Ausgänge
+- 2 x ULN2003
+- TOP/BOTTOM-Ausgangsgruppen
+- 28BYJ-48 + ULN2003 für Endlagen-/Verstellmechanik
+- Reed-Eingänge
+- RS485
+- ca. 150 x 90 mm
+- 2-lagig
+
+### Sensorplatine
+
+- ESP32-C3
+- RS485
+- 4 Adern zur Hauptplatine:
+  - 5 V
+  - GND
+  - A
+  - B
+- 3,3-V-kompatibler RS485-Transceiver, z. B. MAX3485
+- LD2450 fest eingeplant
+- SHT40
+- SCD41 optional
+- MQ-2 optional
+
+### Reedkontakte
+
+Zwei kabelgebundene Reedkontakte:
+
+1. Fenster offen
+2. Fenster gekippt
+
+Die Reedkontakte werden per Kabel direkt von der Hauptelektronik herausgeführt.
+
+## Stromversorgung
+
+Festgelegt:
+
+- 230 V AC Eingang
+- Mean Well IRM-20-5
+- 5 V / 4 A
+- 5-V-Bus
+- separate 3,3-V-Regelung
+- klare Trennung zwischen Netzspannung und SELV
+
+## Aktuelle PCB-Version
+
+Aktuell:
+
+**Hauptplatine_v3.3f_logic_minimal_150x90.kicad_pcb**
+
+Repository-Pfad:
+
+`hardware/Hauptplatine/Hauptplatine_v3.3f_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
-- v3.3f ist noch nicht vollständig geroutet.
-- Sie ist keine Fertigungsfreigabe.
-- Frühere automatische Routing-Versuche v3.3d/v3.3e erzeugten DRC-Konflikte und werden nicht als Basis verwendet.
-- v3.3f wurde wieder aus dem saubereren v3.3c-Stand aufgebaut.
-- RS485 wurde in v3.3f bewusst offen gelassen.
-- TOP_COIL_1–4 wurden neu geroutet und müssen als nächster Schritt per DRC geprüft werden.
 
-## Noch offene Netze / Aufgaben
+- v3.3f ist noch nicht vollständig geroutet
+- keine Fertigungsfreigabe
+- basiert wieder auf v3.3c
+- v3.3d/v3.3e wegen Routing-Konflikten nicht weiterverwenden
+- RS485_A/B in v3.3f bewusst wieder offen
+- TOP_COIL_1–4 wurden neu geroutet
 
+## Noch offene Netze
+
+- TOP_COIL_1–4: DRC prüfen
 - BOT_COIL_1–4
 - STEP_TOP_1–4
 - STEP_BOT_1–4
@@ -37,31 +104,61 @@ Wichtig:
 - K2_COIL_LOW
 - RS485_A
 - RS485_B
-- REED_TILT bzw. Reed-Bereich final prüfen
-- +5 V und GND final prüfen
-- komplette Konnektivität unabhängig vom DRC kontrollieren
+- REED_OPEN final prüfen
+- REED_TILT final routen/prüfen
+- +5 V final prüfen
+- GND final prüfen
 
-## Vorgehensweise
+## Routing-Regel aus den bisherigen Versuchen
 
 Nicht mehrere Netzgruppen gleichzeitig automatisch routen.
 
 Empfohlene Reihenfolge:
-1. TOP_COIL prüfen
-2. BOT_COIL routen und DRC
-3. STEP_TOP/BOT routen und DRC
+
+1. TOP_COIL
+2. BOT_COIL
+3. STEP_TOP/BOT
 4. Relaisansteuerung
 5. RS485
 6. Reed-Eingänge
 7. Versorgung/GND
-8. finaler DRC
-9. 230-V-Sicherheitsprüfung
-10. Gerber/Drill/BOM
+8. komplette physische Konnektivitätsprüfung
+9. finaler DRC
+
+## Wichtige Lektion aus DRC 3.3c
+
+Ein DRC mit "0 unconnected pads" darf **nicht** automatisch als vollständiges Routing interpretiert werden.
+
+Zusätzlich immer direkt in der PCB-Datei prüfen:
+
+- ob jedes verwendete Netz Leiterbahnsegmente besitzt
+- ob alle Pads tatsächlich elektrisch verbunden sind
+- ob keine Ratsnest-Verbindungen offen sind
 
 ## Fertigungsfreigabe
 
-Erst wenn:
-- alle verwendeten Pads physisch verbunden sind,
-- keine Kurzschlüsse/Kreuzungen vorhanden sind,
-- DRC sauber ist,
-- Netzspannungsbereich separat sicherheitstechnisch geprüft ist,
-- Gerberdaten visuell kontrolliert wurden.
+Nur wenn:
+
+- alle verwendeten Pads physisch verbunden sind
+- keine Kurzschlüsse vorhanden sind
+- keine Leiterbahnkreuzungen vorhanden sind
+- keine offenen/dangling Tracks vorhanden sind
+- DRC sauber ist
+- RS485 korrekt geroutet ist
+- Netzspannungsbereich separat sicherheitstechnisch geprüft ist
+- Gerberdaten visuell geprüft sind
+
+## 230-V-Bereich
+
+Vor Produktion separat prüfen:
+
+- Luftstrecken
+- Kriechstrecken
+- Absicherung
+- Leiterbahnbreiten
+- Abstand zu 5 V / 3,3 V / GND
+- Relaiskontaktführung
+- Motoranschlüsse
+- Schutzmaßnahmen
+
+Der 230-V-Bereich darf nicht allein aufgrund eines sauberen DRC freigegeben werden.
