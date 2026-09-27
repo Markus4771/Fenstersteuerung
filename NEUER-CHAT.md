@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3ak_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3al_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3ak_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3al_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -701,3 +701,24 @@ Offene Netze laut DRC betreffen jetzt vor allem:
 Nächster Schritt:
 - offene Logik- und Versorgungssignale blockweise routen
 - zuerst STEP_TOP/STEP_BOT, danach RS485/Reed, danach Versorgung/GND
+
+
+## Update v3.3al
+
+Basis:
+- v3.3ak mit sauberem TOP- und BOT-Coil-Routing
+- DRC v3.3ak: 0 Kurzschlüsse, 0 Leiterbahnkreuzungen, 0 Clearance-/Hole-Fehler, 43 offene Verbindungen
+
+v3.3al:
+- STEP_TOP_1–4 vollständig geroutet
+- U1 -> U4
+- STEP_TOP_1/2 vollständig auf F.Cu
+- STEP_TOP_3/4 überwiegend F.Cu
+- kurze B.Cu-Brücken nur zum Überqueren der vorhandenen REED_TILT-Führung
+- 0.3-mm-Signalbahnen
+- Coil-Routing unverändert
+- U5/J7 unverändert
+
+Nächster DRC-Checkpoint:
+- STEP_TOP_1–4 prüfen
+- danach STEP_BOT_1–4, RS485/Reed und Relaissteuerung weiter routen
