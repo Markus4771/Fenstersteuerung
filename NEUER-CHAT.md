@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3o_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3p_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3o_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3p_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -348,3 +348,26 @@ v3.3o:
 - Endstücke zu J6 so angeordnet, dass sie die jeweils andere Vertikalstrecke nicht schneiden
 - BOT_COIL weiterhin offen
 - nächster Schritt: DRC v3.3o
+
+
+## Update v3.3p
+
+DRC v3.3o:
+- 54 DRC-Verstöße
+- 47 offene Verbindungen
+- 0 Kurzschlüsse
+- 2 Tracks-Crossing-Fehler
+- 1 dangling Track (REED_TILT)
+- restliche Meldungen überwiegend Bibliotheks-/Silkscreen-Warnungen
+
+Verbleibende TOP-Kreuzungen:
+- TOP_COIL_2 <-> TOP_COIL_4 auf F.Cu
+- TOP_COIL_1 <-> TOP_COIL_3 auf B.Cu
+
+v3.3p:
+- nur TOP_COIL_1–4 angepasst
+- auf B.Cu die rechten Vertikalkorridore von TOP1/TOP3 getauscht
+- auf F.Cu die rechten Vertikalkorridore von TOP2/TOP4 getauscht
+- Ziel: keine Kreuzungen mehr innerhalb derselben Lage
+- BOT_COIL weiterhin offen
+- nächster Schritt: DRC v3.3p
