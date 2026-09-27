@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3i_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3j_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3i_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3j_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -193,3 +193,28 @@ Grund:
 - TOP_COIL_3/4 und BOT_COIL_3/4 mit gezielten Vias auf B.Cu
 - keine direkte Diagonalführung mehr durch den DIP-Padbereich
 - nächster Schritt: DRC v3.3i prüfen
+
+
+## Update v3.3j
+
+Wichtige Korrektur:
+- Die bisherigen U4/U5-Padkoordinaten waren bei den Routingversuchen falsch transformiert.
+- U4/U5 sind im PCB um 90 Grad gedreht; lokale Padkoordinaten müssen entsprechend in globale Koordinaten umgerechnet werden.
+- Diese falsche Umrechnung war die Hauptursache der Coil-Padkollisionen in v3.3h/v3.3i.
+
+v3.3j:
+- alle TOP/BOT-Coil-Tracks aus der Basis entfernt
+- nur TOP_COIL_1–4 neu geroutet
+- korrekte globale U4-Padkoordinaten verwendet:
+  - TOP1 U4.16: 139.42 / 88.12
+  - TOP2 U4.15: 136.88 / 88.12
+  - TOP3 U4.14: 134.34 / 88.12
+  - TOP4 U4.13: 131.80 / 88.12
+- korrekte globale J6-Padkoordinaten:
+  - TOP1 J6.4: 164.50 / 91.00
+  - TOP2 J6.3: 164.50 / 88.50
+  - TOP3 J6.2: 164.50 / 86.00
+  - TOP4 J6.1: 164.50 / 83.50
+- alle vier TOP-Coils liegen in v3.3j auf B.Cu
+- BOT_COIL bleibt bewusst offen
+- nächster Schritt: DRC v3.3j prüfen
