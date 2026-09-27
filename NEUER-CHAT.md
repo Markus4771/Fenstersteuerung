@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3j_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3k_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3j_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3k_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -218,3 +218,28 @@ v3.3j:
 - alle vier TOP-Coils liegen in v3.3j auf B.Cu
 - BOT_COIL bleibt bewusst offen
 - nächster Schritt: DRC v3.3j prüfen
+
+
+## Update v3.3k
+
+DRC von v3.3j ausgewertet:
+- 79 DRC-Verstöße
+- 54 offene Verbindungen
+- 3 Kurzschlussfehler
+- Hauptursache: TOP-Coil-Startkoordinaten lagen fälschlich bei y=88.12 mm und liefen dadurch durch U5.
+
+Korrektur:
+- tatsächliche Koordinaten direkt aus dem KiCad-DRC übernommen
+- U4-Ausgänge:
+  - TOP1 U4.16: 139.42 / 72.88
+  - TOP2 U4.15: 141.96 / 72.88
+  - TOP3 U4.14: 144.50 / 72.88
+  - TOP4 U4.13: 147.04 / 72.88
+- J6:
+  - TOP1 J6.4: 164.50 / 76.00
+  - TOP2 J6.3: 164.50 / 78.50
+  - TOP3 J6.2: 164.50 / 81.00
+  - TOP4 J6.1: 164.50 / 83.50
+- nur TOP_COIL_1–4 neu auf F.Cu geroutet
+- BOT_COIL weiterhin offen
+- nächster Schritt: DRC v3.3k
