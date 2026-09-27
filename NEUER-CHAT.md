@@ -917,3 +917,24 @@ Weiter offen:
 
 Aktueller bestätigter Arbeitsstand:
 `hardware/Hauptplatine/Hauptplatine_v3.3bt_logic_minimal_150x90.kicad_pcb`
+
+
+## DRC v3.3bw bestätigt
+
+Ergebnis:
+- 51 DRC-Meldungen, nur Bibliotheks-/Silkscreen-Warnungen
+- 0 Kurzschlüsse
+- 0 Leiterbahnkreuzungen
+- 0 Clearance-/Keepout-/Hole-/Dangling-Fehler
+- 26 offene Verbindungen
+- 0 Footprint-Fehler
+
+RS485_A ist damit vollständig abgeschlossen:
+- U3.6 ↔ R3.1
+- R3.1 ↔ J4.3
+
+Aktueller bestätigter Stand:
+`hardware/Hauptplatine/Hauptplatine_v3.3bw_logic_minimal_150x90.kicad_pcb`
+
+Nächster Block:
+- RS485_B U3.7 ↔ R3.2 ↔ J4.4
