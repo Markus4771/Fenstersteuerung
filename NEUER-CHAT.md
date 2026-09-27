@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3h_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3i_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3h_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3i_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -179,3 +179,17 @@ v3.3h:
 - acht Coil-Netze neu direkt von U4/U5 zu J6/J7 geroutet
 - tatsächliche Padkoordinaten aus dem DRC/Board verwendet
 - nächster Schritt: DRC v3.3h prüfen, erst danach STEP_TOP/STEP_BOT routen
+
+
+## Update v3.3i
+
+Grund:
+- DRC v3.3h zeigte erneut Pad-Kollisionen/Kreuzungen durch direkte diagonale Coil-Leitungen über U4/U5.
+
+Änderungen:
+- alle TOP_COIL_1–4- und BOT_COIL_1–4-Tracks aus v3.3h entfernt
+- neue Routingstrategie: zuerst horizontal rechts aus U4/U5 herausfächern
+- TOP_COIL_1/2 und BOT_COIL_1/2 auf F.Cu
+- TOP_COIL_3/4 und BOT_COIL_3/4 mit gezielten Vias auf B.Cu
+- keine direkte Diagonalführung mehr durch den DIP-Padbereich
+- nächster Schritt: DRC v3.3i prüfen
