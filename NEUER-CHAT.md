@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3l_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3m_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3l_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3m_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -265,3 +265,31 @@ v3.3l:
 - keine Vias erforderlich
 - BOT_COIL weiterhin offen
 - nächster Schritt: DRC v3.3l
+
+
+## Update v3.3m
+
+DRC v3.3l:
+- 69 DRC-Verstöße
+- 50 offene Verbindungen
+- 4 Kurzschlüsse
+- 2 Clearance-Verstöße
+- 2 dangling Tracks
+- 0 Footprint-Fehler
+
+Hauptprobleme:
+- TOP_COIL_2 kollidiert mit R5/D2/Q2 und +5 V
+- TOP_COIL_1 läuft in den J7/BOT-Bereich
+- TOP_COIL_3 zu nah an U4-GND
+- die äußeren Routingkorridore sind damit ungeeignet
+
+v3.3m:
+- alle TOP/BOT-Coil-Routen aus v3.3l entfernt
+- nur TOP_COIL_1–4 neu geroutet
+- je TOP-Netz zwei Vias
+- erster Via direkt oberhalb der U4-Ausgangsreihe
+- Hauptführung auf B.Cu außerhalb des U4-/R5-/Q2-/D2-Bereichs
+- zweiter Via erst rechts neben U4, kurz vor J6
+- Endstücke zu J6 auf F.Cu
+- BOT_COIL bleibt bewusst offen
+- nächster Schritt: DRC v3.3m
