@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3x_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3y_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3x_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3y_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -586,3 +586,28 @@ v3.3x:
 - keine Änderungen an Bauteilpositionen
 - BOT_COIL weiterhin offen
 - nächster Schritt: DRC v3.3x
+
+
+## Update v3.3y
+
+DRC v3.3x:
+- 52 DRC-Verstöße
+- 47 offene Verbindungen
+- 0 Kurzschlüsse
+- 0 Tracks-Crossing-Fehler
+- 1 dangling Track bei REED_TILT
+- 0 Footprint-Fehler
+- TOP_COIL_1–4 damit erstmals sauber geroutet
+
+v3.3y:
+- Basis: v3.3x
+- TOP-Routing unverändert übernommen
+- BOT_COIL_1–4 neu geroutet
+- erfolgreiche TOP-Strategie gespiegelt:
+  - BOT1/BOT2 primär B.Cu
+  - BOT3/BOT4 primär F.Cu
+  - BOT2 mit kurzer F.Cu-Brücke
+  - BOT4 mit kurzer B.Cu-Brücke
+  - insgesamt vier kleine 0.8/0.4-mm-Vias für die beiden lokalen Brücken
+- keine Bauteilpositionen verändert
+- nächster Schritt: DRC v3.3y
