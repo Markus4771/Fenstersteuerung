@@ -77,15 +77,15 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3g_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3h_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3g_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3h_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
-- v3.3g ist noch nicht vollständig geroutet
+- v3.3h ist noch nicht vollständig geroutet
 - keine Fertigungsfreigabe
 - v3.3g basiert auf v3.3f; v3.3f basiert wiederum auf dem sauberen v3.3c-Stand
 - v3.3d/v3.3e wegen Routing-Konflikten nicht weiterverwenden
@@ -164,3 +164,18 @@ Vor Produktion separat prüfen:
 - Schutzmaßnahmen
 
 Der 230-V-Bereich darf nicht allein aufgrund eines sauberen DRC freigegeben werden.
+
+
+## Update v3.3h
+
+DRC v3.3g:
+- 63 DRC-Verstöße
+- 54 offene Verbindungen
+- keine gemeldeten Kurzschluss- oder Leiterbahnkreuzungs-Kategorien
+- TOP/BOT-Coil-Leitungen hatten offene Enden, weil die Startpunkte nicht auf den tatsächlichen U4/U5-Pads lagen
+
+v3.3h:
+- alle bisherigen TOP_COIL_1–4- und BOT_COIL_1–4-Tracks entfernt
+- acht Coil-Netze neu direkt von U4/U5 zu J6/J7 geroutet
+- tatsächliche Padkoordinaten aus dem DRC/Board verwendet
+- nächster Schritt: DRC v3.3h prüfen, erst danach STEP_TOP/STEP_BOT routen
