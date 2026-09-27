@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3s_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3t_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3s_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3t_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -455,3 +455,35 @@ v3.3s:
 - Ziel: die zwei letzten TOP-Kreuzungen beseitigen, ohne neue lange Korridore zu erzeugen
 - BOT_COIL weiterhin offen
 - nächster Schritt: DRC v3.3s
+
+
+## Update v3.3t
+
+DRC v3.3s:
+- 60 DRC-Verstöße
+- 47 offene Verbindungen
+- mehrere TOP-Kurzschlüsse
+- mehrere TOP-Kreuzungen
+- 1 Clearance-Fehler
+- 1 dangling Track bei REED_TILT
+- 0 Footprint-Fehler
+
+Schlussfolgerung:
+- Lokale Via-Hops lösen die TOP-Geometrie nicht robust.
+- Stattdessen wird die Pinbelegung von J6 logisch neu geordnet.
+- Bei den vier 28BYJ-Coils kann die Reihenfolge der Coil-Ausgänge frei zugeordnet und später in der Software-Schrittfolge angepasst werden.
+
+v3.3t:
+- Basis: v3.3o
+- J6 bleibt mechanisch unverändert
+- J6-Padbelegung geändert:
+  - J6.1 = TOP_COIL_1
+  - J6.2 = TOP_COIL_2
+  - J6.3 = TOP_COIL_3
+  - J6.4 = TOP_COIL_4
+  - J6.5 = +5V unverändert
+- TOP_COIL_1–4 neu als monotone, gestaffelte F.Cu-Routen geführt
+- Ziel: keinerlei Kreuzungszwang mehr
+- Hinweis: Schematic/Pin-Mapping muss später konsistent nachgezogen werden
+- BOT_COIL bleibt weiterhin offen
+- nächster Schritt: DRC v3.3t
