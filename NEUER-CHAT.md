@@ -722,3 +722,75 @@ v3.3al:
 Nächster DRC-Checkpoint:
 - STEP_TOP_1–4 prüfen
 - danach STEP_BOT_1–4, RS485/Reed und Relaissteuerung weiter routen
+
+
+## Aktueller Stand v3.3bd
+
+### Bestätigte Meilensteine
+
+v3.3ak:
+- TOP_COIL_1–4 sauber
+- BOT_COIL_1–4 sauber
+- 0 Kurzschlüsse
+- 0 Tracks-Crossing
+- 0 Clearance-/Hole-Fehler
+
+v3.3as:
+- STEP_TOP_1–4 sauber
+- 51 DRC-Meldungen, nur Warnungen
+- 0 Kurzschlüsse
+- 0 Leiterbahnkreuzungen
+- 0 Clearance-/Keepout-Fehler
+- 40 offene Verbindungen
+
+v3.3az:
+- STEP_BOT_1–4 sauber
+- TOP/BOT-Coils weiterhin sauber
+- STEP_TOP weiterhin sauber
+- 51 DRC-Meldungen, nur Warnungen
+- 0 echte Routingfehler
+- 36 offene Verbindungen
+
+v3.3bc:
+- RS485_RX sauber
+- RS485_TX sauber
+- RS485_DE sauber
+- 51 DRC-Meldungen, nur Warnungen
+- 0 Kurzschlüsse
+- 0 Leiterbahnkreuzungen
+- 0 Clearance-/Keepout-Fehler
+- 32 offene Verbindungen
+
+### v3.3bd
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3bd_logic_minimal_150x90.kicad_pcb`
+
+Neu:
+- REED_OPEN komplett neu geroutet
+- REED_TILT komplett neu geroutet
+- J2/J3, R1/R2 und C1/C2 eingebunden
+- Coil-, STEP- und RS485_RX/TX/DE-Routing aus den bestätigten sauberen Ständen unverändert
+
+Status:
+- DRC v3.3bd steht noch aus
+- RS485_A/B bewusst noch offen
+
+### Danach weiter
+
+1. DRC v3.3bd auswerten
+2. RS485_A/B separat routen
+3. ROLL_UP / ROLL_DN
+4. Q1_BASE / Q2_BASE
+5. K1_COIL_LOW / K2_COIL_LOW
+6. +3V3
+7. +5V
+8. GND
+9. komplette physische Konnektivitätsprüfung
+10. finaler DRC
+11. separate 230-V-Sicherheitsprüfung
+12. Gerber/Drill/BOM
+
+### Wichtig
+
+Der aktuelle Entwicklungsstand ist **keine Fertigungsfreigabe**. Vor Fertigung muss der 230-V-Bereich separat auf Luft-/Kriechstrecken, Absicherung, Leiterbahnbreiten, Schutzmaßnahmen, Relais-/Motorpfade und Bauteileignung geprüft werden.
