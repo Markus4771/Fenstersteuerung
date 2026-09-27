@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3m_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3n_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3m_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3n_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -293,3 +293,29 @@ v3.3m:
 - Endstücke zu J6 auf F.Cu
 - BOT_COIL bleibt bewusst offen
 - nächster Schritt: DRC v3.3m
+
+
+## Update v3.3n
+
+DRC v3.3m:
+- 61 DRC-Verstöße
+- 47 offene Verbindungen
+- nur noch 2 Kurzschlüsse bei TOP-Coils
+- 1 Clearance-Verstoß
+- 1 dangling Track
+- 0 Footprint-Fehler
+
+Konkrete TOP-Probleme:
+- TOP_COIL_3 zu nah an Via/Track von TOP_COIL_4
+- TOP_COIL_4 lief mit seiner B.Cu-Strecke zu nah an der J6-Padreihe und kurzschloss TOP_COIL_1
+- zusätzlich mehrere Soldermask-Bridge-Warnungen an J6
+- Via von TOP_COIL_4 lag direkt neben J6.1 und erzeugte Hole-to-hole-Warnungen
+
+v3.3n:
+- TOP_COIL_1–4 vollständig neu geroutet
+- vertikale Hauptkorridore nach rechts von J6 verlegt
+- J6 wird horizontal von rechts angefahren
+- TOP3/TOP4-Vias weiter voneinander getrennt
+- keine Vias mehr direkt an J6
+- BOT_COIL weiterhin offen
+- nächster Schritt: DRC v3.3n
