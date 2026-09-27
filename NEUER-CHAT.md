@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3p_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3q_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3p_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3q_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -371,3 +371,29 @@ v3.3p:
 - Ziel: keine Kreuzungen mehr innerhalb derselben Lage
 - BOT_COIL weiterhin offen
 - nächster Schritt: DRC v3.3p
+
+
+## Update v3.3q
+
+DRC v3.3p:
+- 54 DRC-Verstöße
+- 47 offene Verbindungen
+- 0 Kurzschlüsse
+- weiterhin 2 Tracks-Crossing-Fehler:
+  - TOP_COIL_2 <-> TOP_COIL_4 auf F.Cu
+  - TOP_COIL_1 <-> TOP_COIL_3 auf B.Cu
+- 1 dangling Track bei REED_TILT
+- Rest überwiegend Bibliotheks-/Silkscreen-Warnungen
+
+Schlussfolgerung:
+- Die bisherige senkrechte J6-Ausrichtung erzwingt unnötig komplizierte TOP-Routen.
+- Weiteres Um-die-Pads-Routen ist nicht sinnvoll.
+
+v3.3q:
+- J6 mechanisch gedreht und nach oben versetzt
+- neue J6-Position: 164.5 / 72.88, Rotation 180 Grad
+- dadurch liegen TOP1..TOP4 in derselben Reihenfolge wie U4.16..U4.13
+- TOP_COIL_1–4 komplett neu auf F.Cu geroutet
+- vier gestaffelte horizontale Routing-Lanes
+- BOT_COIL weiterhin offen
+- nächster Schritt: DRC v3.3q
