@@ -50,11 +50,11 @@ Geplant:
 
 Aktuelle Arbeitsversion:
 
-**v3.3bd**
+**v3.3bt**
 
 Datei:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3bd_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3bt_logic_minimal_150x90.kicad_pcb`
 
 ### Bestätigt sauber per DRC
 
@@ -87,97 +87,48 @@ Datei:
 - 0 Clearance-/Keepout-Fehler
 - 32 offene Verbindungen
 
-### v3.3bd
+### Aktueller Routingstand
 
-Neu gegenüber v3.3bc:
+#### v3.3bp – letzter vollständig bestätigter sauberer Stand
 
-- REED_OPEN neu geroutet
-- REED_TILT neu geroutet
-- J2/J3, R1/R2 und C1/C2 eingebunden
-- bestehendes Coil-, STEP- und RS485_RX/TX/DE-Routing unverändert
+DRC v3.3bp:
 
-**DRC für v3.3bd steht noch aus.**
+- 51 DRC-Meldungen, ausschließlich Bibliotheks-/Silkscreen-Warnungen
+- 0 Kurzschlüsse
+- 0 Leiterbahnkreuzungen
+- 0 Clearance-/Keepout-Fehler
+- 0 Hole-/Dangling-Fehler
+- 28 offene Verbindungen
+- 0 Footprint-Fehler
 
-## Bereits abgeschlossen
+Zusätzlich zu den früheren Meilensteinen sind dort sauber abgeschlossen:
 
-- TOP_COIL_1–4
-- BOT_COIL_1–4
-- STEP_TOP_1–4
-- STEP_BOT_1–4
-- RS485_RX
-- RS485_TX
-- RS485_DE
-
-## Noch offen
-
-- DRC von v3.3bd
-- RS485_A
-- RS485_B
-- ROLL_UP
-- ROLL_DN
 - Q1_BASE
 - Q2_BASE
-- K1_COIL_LOW
-- K2_COIL_LOW
-- +3V3
-- +5V
-- GND
-- verbleibende lokale Verbindungen an Widerständen, Dioden und Transistoren
-- abschließende vollständige Konnektivitätsprüfung
-- finaler DRC
-- separate 230-V-Sicherheitsprüfung
-- Gerber/Drill/BOM
+- lokale K1_COIL_LOW-Verbindung Q1 ↔ D1
+- lokale K2_COIL_LOW-Verbindung Q2 ↔ D2
 
-## Routingstrategie
+#### v3.3bt – aktueller Teststand
 
-Die Entwicklung erfolgt bewusst blockweise mit DRC-Checkpoint nach jedem Funktionsblock.
+Datei:
 
-Reihenfolge:
+`hardware/Hauptplatine/Hauptplatine_v3.3bt_logic_minimal_150x90.kicad_pcb`
 
-1. Coils
-2. STEP_TOP
-3. STEP_BOT
-4. RS485 RX/TX/DE
-5. Reed-Eingänge
-6. RS485 A/B
-7. Relais-/Transistorsteuerung
-8. +3V3 / +5V / GND
-9. Gesamt-DRC
-10. 230-V-Sicherheitsprüfung
-11. Fertigungsdaten
+Neu gegenüber v3.3bp:
 
-## PCB-Zonen
+- lokaler Teil von RS485_A zwischen U3.6 und R3.1
+- Layerwechsel auf B.Cu zum Unterqueren der bestehenden GND-Leitung
+- J4.3 / langer RS485_A-Hauptweg bleibt bewusst noch offen
 
-- links: 230-V-Bereich
-- Mitte: ESP32-S3 und Finder-Relais
-- rechts: 3,3/5-V-Logik, RS485 und ULN2003
-- ganz rechts: TOP/BOTTOM-Anschlüsse
+Vorstufe v3.3bs hatte:
 
-Zwischen Netzspannung und SELV ist ein eigener Trenn-/Keepout-Bereich vorgesehen.
+- 52 DRC-Meldungen
+- 27 offene Verbindungen
+- 0 Kurzschlüsse
+- 0 Clearance-Fehler
+- genau 1 Leiterbahnkreuzung: RS485_A gegen GND
 
-## Sicherheitsanforderungen
+Diese Kreuzung wurde in v3.3bt mit einem kurzen B.Cu-Abschnitt korrigiert.
 
-Vor Fertigung und insbesondere vor Betrieb an 230 V müssen separat geprüft werden:
+**DRC für v3.3bt steht noch aus.**
 
-- Luftstrecken
-- Kriechstrecken
-- Absicherung
-- Leiterbahnbreiten
-- Trennung zu SELV
-- Relaiskontakt- und Motorpfade
-- Schutzmaßnahmen
-- netzspannungsgeeignete Bauteile
-- mechanische Abstände
-- Gerberdaten
-
-Ein sauberer KiCad-DRC ist **keine Freigabe für Netzspannung**.
-
-## Verzeichnisstruktur
-
-- `hardware/Hauptplatine/` – Hauptplatine
-- `hardware/Sensorplatine/` – Sensorplatine
-- `DRC/` – DRC-Berichte
-- `gerber/` – spätere Fertigungsdaten
-- `bom/` – spätere Stücklisten
-- `NEUER-CHAT.md` – Übergabestand
-- `README.md` – technische Übersicht
