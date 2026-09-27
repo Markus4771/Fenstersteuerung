@@ -77,11 +77,11 @@ Festgelegt:
 
 Aktuell:
 
-**Hauptplatine_v3.3t_logic_minimal_150x90.kicad_pcb**
+**Hauptplatine_v3.3u_logic_minimal_150x90.kicad_pcb**
 
 Repository-Pfad:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3t_logic_minimal_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3u_logic_minimal_150x90.kicad_pcb`
 
 Wichtig:
 
@@ -487,3 +487,22 @@ v3.3t:
 - Hinweis: Schematic/Pin-Mapping muss später konsistent nachgezogen werden
 - BOT_COIL bleibt weiterhin offen
 - nächster Schritt: DRC v3.3t
+
+
+## Update v3.3u
+
+Ausgangslage:
+- v3.3t war deutlich schlechter als v3.3o.
+- bester stabiler Stand bleibt v3.3o mit 0 Kurzschlüssen und 2 TOP-Kreuzungen.
+
+v3.3u:
+- Basis: v3.3o
+- J6-Pinbelegung wieder unverändert wie in v3.3o
+- TOP_COIL_1–4 vollständig neu geroutet
+- jede Leitung wird zuerst senkrecht aus dem U4-Padfeld herausgeführt
+- erst außerhalb des Padfelds erfolgt die seitliche Führung zu J6
+- TOP1/TOP3 auf B.Cu
+- TOP2/TOP4 auf F.Cu
+- keine Vias
+- BOT_COIL weiterhin offen
+- nächster Schritt: DRC v3.3u
