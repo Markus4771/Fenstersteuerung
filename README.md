@@ -147,3 +147,25 @@ Diese Kreuzung wurde in v3.3bt mit einem kurzen B.Cu-Abschnitt korrigiert.
 Damit ist RS485_A vollständig abgeschlossen:
 - U3.6 ↔ R3.1
 - R3.1 ↔ J4.3
+
+
+## DRC v3.3cp bestätigt
+
+- 51 DRC-Meldungen, ausschließlich Bibliotheks-/Silkscreen-Warnungen
+- 0 Kurzschlüsse
+- 0 Leiterbahnkreuzungen
+- 0 Clearance-/Keepout-/Hole-/Dangling-Fehler
+- 24 offene Verbindungen
+- 0 Footprint-Fehler
+
+Damit ist der komplette RS485-Block abgeschlossen:
+- RS485_RX
+- RS485_TX
+- RS485_DE
+- RS485_A
+- RS485_B
+
+Aktueller bestätigter Stand:
+`hardware/Hauptplatine/Hauptplatine_v3.3cp_logic_minimal_150x90.kicad_pcb`
+
+Nächster Routingblock: REED_OPEN, danach REED_TILT.
