@@ -4348,7 +4348,7 @@
 	)
 	(segment
 		(start 36 40.8)
-		(end 30 40.8)
+		(end 30 54.6)
 		(width 2)
 		(layer "F.Cu")
 		(net "/AC_L")
