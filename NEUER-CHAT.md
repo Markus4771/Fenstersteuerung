@@ -938,3 +938,24 @@ Aktueller bestätigter Stand:
 
 Nächster Block:
 - RS485_B U3.7 ↔ R3.2 ↔ J4.4
+
+
+## DRC v3.3cp bestätigt
+
+Ergebnis:
+- 51 DRC-Meldungen, nur Bibliotheks-/Silkscreen-Warnungen
+- 0 Kurzschlüsse
+- 0 Leiterbahnkreuzungen
+- 0 Clearance-/Keepout-/Hole-/Dangling-Fehler
+- 24 offene Verbindungen
+- 0 Footprint-Fehler
+
+RS485 ist damit vollständig abgeschlossen:
+- RX/TX/DE
+- A bis J4.3
+- B bis J4.4
+
+Aktueller bestätigter Arbeitsstand:
+`hardware/Hauptplatine/Hauptplatine_v3.3cp_logic_minimal_150x90.kicad_pcb`
+
+Als nächstes nur REED_OPEN routen und per DRC prüfen; danach REED_TILT.
