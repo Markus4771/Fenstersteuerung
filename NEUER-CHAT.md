@@ -1441,3 +1441,58 @@ Nächster Schritt:
 4. anschließend 50 isolated_copper-Warnungen der GND-Zone bereinigen
 5. danach Silkscreen- und Library-Warnungen
 6. separate 230-V-Sicherheitsprüfung
+
+
+## Update v3.3ebc / v3.3ebd – 230-V-Sicherheitsprüfung
+
+Basis:
+- Hauptplatine_v3.3ebb_logic_repair_150x90.kicad_pcb
+- Beginn der separaten 230-V-Endprüfung
+
+Mess-/Prüfergebnisse:
+- echte 6-mm-Kupfer-Keepout-Zone zwischen Primärseite und SELV vorhanden:
+  - x=71..77 mm
+  - F.Cu + B.Cu
+  - Tracks/Vias/Copperpour verboten
+- kleinster gemessener Primär->SELV-Kupferabstand außerhalb PS1/K1/K2 ca. 8,8 mm
+- 230-V-Leiterbahnen aktuell 2,0 mm breit
+- PS1 Primär-/Sekundär-Padabstand im Footprint >40 mm
+- K1/K2 Kontaktseite->Spulenseite im Footprint min. ca. 12,9 mm
+
+v3.3ebc:
+- obere AC_L-Führung weiter von oberer Platinenkante nach innen verlegt
+- Kupfer->Board-Edge von ca. 1,5 mm auf ca. 3,0 mm verbessert
+
+v3.3ebd:
+- kritischen L_PSU_FUSED-Zweig zu PS1 neu geroutet
+- vorher ca. 0,3 mm zu PS1.1 / AC_N
+- neue Führung links um PS1 herum
+
+Neue Datei:
+- `hardware/Hauptplatine/Hauptplatine.kicad_dru`
+  - unterschiedliche MAINS-Netze: min. 1,5 mm
+  - MAINS->SELV: min. 6 mm
+  - MAINS-Trackbreite: min. 2,0 mm
+- `hardware/Hauptplatine/230V-SICHERHEITSPRUEFUNG.md`
+
+Statische Prüfung v3.3ebd:
+- Primär->SELV weiterhin min. ca. 8,8 mm
+- noch 16 Objektpaare unter dem konservativen 1,5-mm-Ziel innerhalb der 230-V-Seite
+- Hauptbereiche:
+  - AC_L bei F1/RV1
+  - AC_L/L_MOTOR/DN_FEED im K1-Bereich
+  - DN_FEED/K2.22
+  - MOTOR_DN bei J5
+
+Nächster Schritt:
+1. v3.3ebd mit Hauptplatine.kicad_dru in KiCad öffnen
+2. Design Rule Editor -> Check rule syntax
+3. Zonen neu füllen
+4. DRC ausführen
+5. neuen DRC-Bericht hochladen
+6. MAINS-clearance-Fehler einzeln neu routen
+7. danach Footprint-Datenblattprüfung und Prototypenfreigabe-Check
+
+Wichtig:
+- keine formale Sicherheits-/Fertigungsfreigabe
+- 230-V-Sicherheitsprüfung bleibt separat erforderlich
