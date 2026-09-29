@@ -1059,3 +1059,31 @@ Nächster Schritt:
 1. KiCad-DRC v3.3ear ausführen
 2. speziell prüfen, ob ROLL_UP/ROLL_DN nun frei von shorting_items/tracks_crossing/clearance sind
 3. anschließend verbleibende DRC-Fehler blockweise reparieren
+
+
+## Update v3.3eas
+
+Basis:
+- Hauptplatine_v3.3ear_logic_repair_150x90.kicad_pcb
+- DRCear.rpt vom 2026-09-29: 123 Verstöße
+- davon 23 Tracks crossing, 9 shorting_items, 6 clearance, 6 unconnected_items
+
+DRC-Ergebnis für die ROLL-Netze:
+- ROLL_UP und ROLL_DN kreuzten sich links
+- ROLL_DN kollidierte mit J7.2 / BOT_COIL_3
+- ROLL_DN kreuzte K2_COIL_LOW
+
+Änderung:
+- alte ROLL_UP-/ROLL_DN-Routen entfernt
+- beide Netze neu per zweilagigem, hindernisbewusstem Routing geführt
+- Pad-Rotation in KiCad bei der Kollisionsprüfung korrekt berücksichtigt
+- vorhandene Tracks, Vias und Pads mit Sicherheitsabstand als Hindernisse behandelt
+- statische Prüfung der neuen Routen: 0 Track-, Via- und Pad-Kollisionen
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3eas_logic_repair_150x90.kicad_pcb`
+
+Nächster Schritt:
+1. KiCad-DRC v3.3eas
+2. ROLL_UP/ROLL_DN auf shorting_items/tracks_crossing/clearance prüfen
+3. danach verbleibende Altfehler priorisieren: STEP_TOP_4, TOP/BOT_COIL, RS485, Versorgung
