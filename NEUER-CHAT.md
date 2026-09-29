@@ -1653,3 +1653,58 @@ Nächster Schritt:
 2. DRC v3.3ebm2
 3. Ziel: keine elektrischen DRC-Meldungen mehr
 4. danach Silkscreen-/Library-Warnungen bereinigen und Fertigungsdaten prüfen
+
+
+## Update v3.3ebn2 – elektrisch sauber, Silkscreen-Warnungen bereinigt
+
+Basis:
+- Hauptplatine_v3.3ebm2_logic_repair_150x90.kicad_pcb
+- DRCebm2.rpt vom 2026-09-29
+
+DRCebm2:
+- 54 DRC-Warnungen
+- 0 unconnected pads
+- 0 Footprint-Fehler
+- keine Clearance-/Short-/Crossing-/Dangling-Fehler
+- keine elektrischen DRC-Meldungen mehr
+
+Verteilung der verbliebenen Warnungen:
+- 21 lib_footprint_mismatch
+- 9 lib_footprint_issues (fehlende RolladenCustom-Library)
+- 21 silk_over_copper
+- 2 silk_overlap
+- 1 silk_edge_clearance
+
+Änderungen v3.3ebn2:
+- ausschließlich F.SilkS bereinigt
+- problematische F.SilkS-Umrisse entfernt bei:
+  - RV1
+  - F1
+  - U2
+  - U3
+  - D1
+  - D2
+  - Q1
+  - Q2
+- kollidierende Referenztexte U2/U3 ausgeblendet
+- Kupfer, Pads, Netze und Routing unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3ebn2_logic_repair_150x90.kicad_pcb`
+
+Erwarteter nächster DRC:
+- 0 elektrische Fehler
+- Silkscreen-Warnungen deutlich reduziert bzw. 0
+- verbleibend voraussichtlich nur Library-Warnungen
+
+Library-Warnungen:
+- nicht elektrisch
+- entstehen durch fehlende lokale RolladenCustom-Bibliothek und durch bewusst angepasste eingebettete Footprints
+- vor finaler Projektpflege kann eine repository-lokale Footprint-Library aufgebaut und die Footprints damit synchronisiert werden
+
+Nächster Schritt:
+1. v3.3ebn2 öffnen
+2. Zonen neu füllen
+3. DRC ausführen
+4. wenn nur Library-Warnungen bleiben: Fertigungs-/Gerber-Check
+5. separate 230-V-Sicherheitsprüfung bleibt erforderlich
