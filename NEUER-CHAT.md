@@ -1214,3 +1214,49 @@ Nächster Schritt:
 3. verbleibende elektrische DRC-Fehler beheben
 4. danach Warnungen separat priorisieren (GND-Zoneninseln, Silkscreen, fehlende Footprint-Libraries)
 5. abschließende 230-V-Sicherheitsprüfung
+
+
+## Update v3.3eaw
+
+Basis:
+- Hauptplatine_v3.3eav_logic_repair_150x90.kicad_pcb
+- DRCeav.rpt vom 2026-09-29
+- DRCeav: 109 Verstöße
+- keine unconnected_items
+- 4 Clearance-Fehler
+- 1 Tracks crossing
+- 1 solder_mask_bridge
+- 1 starved_thermal
+- Rest überwiegend Warnungen: isolated_copper, lib_footprint_issues, silk_over_copper, silk_overlap
+
+Elektrische Restfehler aus DRCeav:
+- K1_COIL_LOW zu nah an J4.1 / +5V
+- +5V-B.Cu-Trunk von 162/58 nach 146.92/58 lief durch D1.2 / K1_COIL_LOW
+- dadurch Track-Kreuzung und Solder-Mask-Bridge im D1-Bereich
+
+Änderungen in v3.3eaw:
+- problematischen +5V-B.Cu-Abschnitt 162/58 -> 146.92/58 entfernt
+- +5V im D1-Bereich mit Umfahrung über y=59..60 mm neu geführt
+- K1_COIL_LOW vollständig neu geroutet
+- K1_COIL_LOW im J4-Bereich konservativer mit größerem Abstand zur rechteckigen J4.1-Kupferfläche geführt
+- K1_COIL_LOW im D1/Q1-Bereich unterhalb des neuen +5V-Trunks geführt
+- alle Netze weiterhin verbunden
+- 230-V-Bereich unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3eaw_logic_repair_150x90.kicad_pcb`
+
+Status:
+- keine offenen Netze laut DRCeav
+- Routing elektrisch vollständig
+- v3.3eaw zielt auf Beseitigung der letzten Kurzschluss-/Clearance-/Maskenfehler
+- GND-starved-thermal, GND-Zoneninseln, Silkscreen- und Library-Warnungen werden separat bereinigt
+- keine Fertigungsfreigabe
+
+Nächster Schritt:
+1. Zonen neu füllen
+2. DRC v3.3eaw
+3. verbleibende echte elektrische Fehler auf 0 bringen
+4. GND-Zonenwarnungen bereinigen
+5. Silkscreen/Library-Warnungen bereinigen
+6. separate 230-V-Sicherheitsprüfung
