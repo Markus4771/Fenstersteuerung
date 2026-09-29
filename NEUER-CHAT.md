@@ -1623,3 +1623,33 @@ Nächster Schritt:
 2. finalen DRC v3.3ebl2 ausführen
 3. Ziel: 0 unconnected / 0 dangling / 0 electrical errors
 4. danach nur noch Silkscreen-/Library-Warnungen und Fertigungscheck
+
+
+## Update v3.3ebm2 – letzter +5V-Dangling-Endpunkt geschlossen
+
+Basis:
+- Hauptplatine_v3.3ebl2_logic_repair_150x90.kicad_pcb
+- DRCebl2.rpt vom 2026-09-29
+
+DRCebl2:
+- 55 DRC-Warnungen
+- 0 unconnected pads
+- 0 Footprint-Fehler
+- keine Clearance-/Short-/Crossing-Fehler
+- nur noch 1 elektrische Warnung:
+  - track_dangling bei +5V an 82.5/28 mm
+- Rest ausschließlich Library-/Silkscreen-Warnungen
+
+Änderung v3.3ebm2:
+- Via bei 82.5/28 mm ergänzt
+- B.Cu-Verbindung 82.5/28 -> 82.5/24 ergänzt
+- dadurch ist das F.Cu-Ende des +5V-Busses direkt mit dem bestehenden oberen B.Cu-+5V-Bus verbunden
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3ebm2_logic_repair_150x90.kicad_pcb`
+
+Nächster Schritt:
+1. Zonen neu füllen
+2. DRC v3.3ebm2
+3. Ziel: keine elektrischen DRC-Meldungen mehr
+4. danach Silkscreen-/Library-Warnungen bereinigen und Fertigungsdaten prüfen
