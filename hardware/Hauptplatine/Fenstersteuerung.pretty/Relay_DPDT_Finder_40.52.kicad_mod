@@ -1,7 +1,5 @@
 (footprint "Relay_DPDT_Finder_40.52"
 		(layer "F.Cu")
-		(uuid "3a655cb4-883f-4693-9e49-1e33eabe6f58")
-		(at 80.5 76.62 180)
 		(property "Reference" "REF**"
 			(at 0 0 0)
 			(layer "F.SilkS")
@@ -45,16 +43,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "Relay*DPDT*Finder*40.52*")
-		(path "/00000000-0000-0000-0000-00008da1cdb1")
-		(sheetname "/")
-		(sheetfile "Hauptplatine.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "A1" "A2" "12" "11" "14" "22" "21" "24")
-			)
-		)
+		
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -2.54 -2.54)
@@ -73,8 +62,6 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/UP_FEED")
-			(pintype "passive")
 			(uuid "479ce46d-04eb-4720-872a-5d6e1c90baa5")
 		)
 		(pad "12" thru_hole circle
@@ -83,8 +70,6 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(K1-Pad12)")
-			(pintype "passive+no_connect")
 			(uuid "5bb4dab6-97b4-400e-9129-d968877aaa06")
 		)
 		(pad "14" thru_hole circle
@@ -93,8 +78,6 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/MOTOR_UP")
-			(pintype "passive")
 			(uuid "1fdf6085-055f-4bae-b2eb-8875136b8720")
 		)
 		(pad "21" thru_hole circle
@@ -103,8 +86,6 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/L_MOTOR")
-			(pintype "passive")
 			(uuid "cad2c73c-41b7-49d3-89c8-23406e61769b")
 		)
 		(pad "22" thru_hole circle
@@ -113,8 +94,6 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/DN_FEED")
-			(pintype "passive")
 			(uuid "140f7074-e744-4081-b26d-6730f7f3ded1")
 		)
 		(pad "24" thru_hole circle
@@ -123,8 +102,6 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "unconnected-(K1-Pad24)")
-			(pintype "passive+no_connect")
 			(uuid "e18602fe-7708-4e35-9ad9-23f277b76860")
 		)
 		(pad "A1" thru_hole circle
@@ -133,8 +110,6 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/K1_COIL_LOW")
-			(pintype "passive")
 			(uuid "5d2e0cc5-1119-4cc1-9060-543da71d9e9d")
 		)
 		(pad "A2" thru_hole circle
@@ -143,8 +118,6 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/+5V")
-			(pintype "passive")
 			(uuid "76b2620d-9dc0-46fb-8922-01f51b733423")
 		)
 		(embedded_fonts no)
