@@ -1,7 +1,5 @@
 (footprint "DIP-16_W7.62mm"
 		(layer "F.Cu")
-		(uuid "345c7fd9-ec7c-4371-b3bf-40ce30fb396c")
-		(at 131.46 101.5 90)
 		(property "Reference" "REF**"
 			(at 0 -3 0)
 			(layer "F.SilkS")
@@ -44,9 +42,6 @@
 				)
 			)
 		)
-		(path "/00000000-0000-0000-0000-000017c42ce1")
-		(sheetname "/")
-		(sheetfile "Hauptplatine.kicad_sch")
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -1.5 -1.5)
@@ -65,9 +60,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/STEP_BOT_1")
-			(pinfunction "Pin_1")
-			(pintype "passive")
 			(uuid "f37c58eb-2c45-48cf-a0cf-96a38301bdb9")
 		)
 		(pad "2" thru_hole circle
@@ -76,9 +68,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/STEP_BOT_2")
-			(pinfunction "Pin_2")
-			(pintype "passive")
 			(uuid "0743c822-031d-48b2-84b7-6caff9f2acc8")
 		)
 		(pad "3" thru_hole circle
@@ -87,9 +76,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/STEP_BOT_3")
-			(pinfunction "Pin_3")
-			(pintype "passive")
 			(uuid "14b4c785-57a8-4998-a51a-654d56409673")
 		)
 		(pad "4" thru_hole circle
@@ -98,9 +84,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/STEP_BOT_4")
-			(pinfunction "Pin_4")
-			(pintype "passive")
 			(uuid "3f15034b-c2a5-468b-97d3-8a3558312009")
 		)
 		(pad "5" thru_hole circle
@@ -133,9 +116,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/GND")
-			(pinfunction "Pin_8")
-			(pintype "passive")
 			(uuid "e0deb15f-d4ee-458d-b3af-398a8b14e7a5")
 		)
 		(pad "9" thru_hole circle
@@ -144,9 +124,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/+5V")
-			(pinfunction "Pin_9")
-			(pintype "passive")
 			(uuid "5468fbd1-e81f-4c29-bf1a-1a86f2d6f4d2")
 		)
 		(pad "10" thru_hole circle
@@ -179,9 +156,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/BOT_COIL_4")
-			(pinfunction "Pin_13")
-			(pintype "passive")
 			(uuid "2735a5d0-682e-4323-955d-5817a939692c")
 		)
 		(pad "14" thru_hole circle
@@ -190,9 +164,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/BOT_COIL_3")
-			(pinfunction "Pin_14")
-			(pintype "passive")
 			(uuid "efc5cbd1-ef69-4c38-bbf4-053f7f0f71c7")
 		)
 		(pad "15" thru_hole circle
@@ -201,9 +172,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/BOT_COIL_2")
-			(pinfunction "Pin_15")
-			(pintype "passive")
 			(uuid "4d031e3c-a297-47d6-baf7-f242c4223e87")
 		)
 		(pad "16" thru_hole circle
@@ -212,9 +180,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/BOT_COIL_1")
-			(pinfunction "Pin_16")
-			(pintype "passive")
 			(uuid "50f29743-3c75-4e22-b40b-e838f9d12fb1")
 		)
 		(embedded_fonts no)
