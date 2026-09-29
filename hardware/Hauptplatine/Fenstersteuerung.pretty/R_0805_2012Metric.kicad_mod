@@ -1,0 +1,83 @@
+(footprint "R_0805_2012Metric"
+		(layer "F.Cu")
+		(uuid "30c4acf7-06bc-4e71-8a93-8f11566a7820")
+		(at 141 48)
+		(property "Reference" "REF**"
+			(at 0 -3 0)
+			(layer "F.SilkS")
+			(uuid "d20fa801-74b0-4d25-8172-3795a8827ea0")
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "R_0805_2012Metric"
+			(at 0 3 0)
+			(layer "F.Fab")
+			(uuid "911dd945-37bc-4105-970f-c78f052baac3")
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "01fcdfe5-a16f-4100-8197-2e9b5288548f")
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c3321106-a514-4870-8136-7a06c71a1b08")
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(path "/00000000-0000-0000-0000-00002a1db5a3")
+		(sheetname "/")
+		(sheetfile "Hauptplatine.kicad_sch")
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -2 -1.2)
+			(end 2 1.2)
+			(stroke
+				(width 0.15)
+				(type default)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "0c62e0be-b89d-445f-9bc2-b6cbc6e37da8")
+		)
+		(pad "1" smd roundrect
+			(at -1 0)
+			(size 1.2 1.4)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net "/RS485_A")
+			(pinfunction "Pin_1")
+			(pintype "passive")
+			(uuid "7ed831b4-9bf1-462a-9c05-b00a6d55b09b")
+		)
+		(pad "2" smd roundrect
+			(at 1 0)
+			(size 1.2 1.4)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.25)
+			(net "/RS485_B")
+			(pinfunction "Pin_2")
+			(pintype "passive")
+			(uuid "d52ac804-158b-44d1-9e94-b8807392dea0")
+		)
+		(embedded_fonts no)
+	)
