@@ -1403,3 +1403,41 @@ Nächster Schritt:
 4. DRC ausführen
 5. anschließend GND-Zoneninseln/Silkscreen/Library-Warnungen bereinigen
 6. separate 230-V-Sicherheitsprüfung
+
+
+## Update v3.3ebb
+
+Basis:
+- Hauptplatine_v3.3eba_logic_repair_150x90.kicad_pcb
+- DRCeba.rpt vom 2026-09-29
+- DRCeba: 131 DRC-Warnungen
+- 0 unconnected pads
+- keine Kurzschlüsse
+- keine Track-Kreuzungen
+- keine Clearance-Fehler
+
+Warnungsverteilung:
+- 50 isolated_copper
+- 30 holes_co_located
+- 29 lib_footprint_issues
+- 19 silk_over_copper
+- 2 silk_overlap
+- 1 silk_edge_clearance
+
+Änderung in v3.3ebb:
+- doppelte GND-Vias an identischen Koordinaten bereinigt
+- 9 tatsächlich redundante GND-Vias entfernt
+- die 30 holes_co_located-Warnungen entstanden aus Mehrfachpaarungen dieser doppelten Vias
+- elektrische Netze und Signalrouten unverändert
+- 230-V-Bereich unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3ebb_logic_repair_150x90.kicad_pcb`
+
+Nächster Schritt:
+1. Zonen neu füllen
+2. DRC v3.3ebb
+3. prüfen, ob holes_co_located = 0
+4. anschließend 50 isolated_copper-Warnungen der GND-Zone bereinigen
+5. danach Silkscreen- und Library-Warnungen
+6. separate 230-V-Sicherheitsprüfung
