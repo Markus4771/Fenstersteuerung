@@ -1,7 +1,5 @@
 (footprint "Phoenix_MKDS-1.5_2P_P5.08"
 		(layer "F.Cu")
-		(uuid "1327c8ff-9e38-4f61-aefa-09cc67ced7a6")
-		(at 123 30)
 		(property "Reference" "REF**"
 			(at 0 0 0)
 			(layer "F.SilkS")
@@ -45,16 +43,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "Connector*:*_1x??_*")
-		(path "/00000000-0000-0000-0000-00002eff1a28")
-		(sheetname "/")
-		(sheetfile "Hauptplatine.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
+		
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -2.5 -4)
@@ -73,9 +62,6 @@
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/REED_OPEN")
-			(pinfunction "Pin_1_1")
-			(pintype "passive")
 			(uuid "45c221eb-de33-4c4c-9565-4f1b76cad58f")
 		)
 		(pad "2" thru_hole circle
@@ -84,9 +70,6 @@
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/GND")
-			(pinfunction "Pin_2_2")
-			(pintype "passive")
 			(uuid "e8d22f45-48d0-48ae-851c-b3276397ee6c")
 		)
 		(embedded_fonts no)
