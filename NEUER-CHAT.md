@@ -1708,3 +1708,39 @@ Nächster Schritt:
 3. DRC ausführen
 4. wenn nur Library-Warnungen bleiben: Fertigungs-/Gerber-Check
 5. separate 230-V-Sicherheitsprüfung bleibt erforderlich
+
+
+## Update v3.3ebn2 – DRC elektrisch vollständig sauber
+
+Basis:
+- Hauptplatine_v3.3ebn2_logic_repair_150x90.kicad_pcb
+- DRCebn2.rpt vom 2026-09-29
+
+DRCebn2:
+- 30 DRC-Warnungen
+- 0 unconnected pads
+- 0 Footprint-Fehler
+- keine Clearance-Fehler
+- keine Kurzschlüsse
+- keine Track-Kreuzungen
+- keine Dangling-Tracks
+- keine Silkscreen-Warnungen
+- keine sonstigen elektrischen DRC-Meldungen
+
+Verbleibend ausschließlich Library-Warnungen:
+- 21 lib_footprint_mismatch
+- 9 lib_footprint_issues
+- Ursache: angepasste lokale Footprints und fehlende RolladenCustom-Library in der lokalen KiCad-Konfiguration
+- diese Meldungen sind nicht elektrisch
+
+Aktueller Arbeits-/Fertigungsprüfstand:
+`hardware/Hauptplatine/Hauptplatine_v3.3ebn2_logic_repair_150x90.kicad_pcb`
+
+Noch vor Bestellung:
+1. repository-lokale Footprint-Library optional sauber aufbauen
+2. Gerber/Drill erzeugen
+3. Gerber im Viewer prüfen
+4. Bohrungen/Boardkontur/Bestückungsseite prüfen
+5. BOM gegen tatsächlich bestellte Bauteile abgleichen
+6. 230-V-Sicherheitsprüfung separat dokumentiert abschließen
+7. erste Inbetriebnahme ohne Netzspannung
