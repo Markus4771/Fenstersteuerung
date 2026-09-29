@@ -1,0 +1,86 @@
+(footprint "TO-92_Inline_Wide"
+		(layer "F.Cu")
+		(uuid "64d6af20-1632-4cda-a01a-fb1a88d9827e")
+		(at 142 64)
+		(property "Reference" "REF**"
+			(at 0 -3 0)
+			(layer "F.SilkS")
+			(uuid "b9f6069c-1fa1-4eb6-8b68-6dbe3fa52511")
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Value" "TO-92_Inline_Wide"
+			(at 0 3 0)
+			(layer "F.Fab")
+			(uuid "0570bd9a-aae9-4cb3-bba1-2bcb0ba9b80e")
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "ff9325e2-c362-4331-b438-391607b1e8aa")
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "8bac3616-3d04-457c-87fc-db6a35959a6f")
+			(effects
+				(font
+					(size 1 1)
+				)
+			)
+		)
+		(path "/00000000-0000-0000-0000-0000aa388350")
+		(sheetname "/")
+		(sheetfile "Hauptplatine.kicad_sch")
+		(duplicate_pad_numbers_are_jumpers no)
+		
+		(pad "1" thru_hole circle
+			(at -2.54 0)
+			(size 1.8 1.8)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/K2_COIL_LOW")
+			(pinfunction "Pin_1")
+			(pintype "passive")
+			(uuid "b300a655-c5c5-47c6-a9bb-026011c11a96")
+		)
+		(pad "2" thru_hole circle
+			(at 0 0)
+			(size 1.8 1.8)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/Q2_BASE")
+			(pinfunction "Pin_2")
+			(pintype "passive")
+			(uuid "0aea43f4-f48b-4b50-b7d9-23bdb295ab3f")
+		)
+		(pad "3" thru_hole circle
+			(at 2.54 0)
+			(size 1.8 1.8)
+			(drill 0.9)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/GND")
+			(pinfunction "Pin_3")
+			(pintype "passive")
+			(uuid "13a03990-9e04-4be9-a550-cad62775881f")
+		)
+		(embedded_fonts no)
+	)
