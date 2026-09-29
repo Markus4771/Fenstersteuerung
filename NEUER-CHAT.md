@@ -959,3 +959,36 @@ Aktueller bestätigter Arbeitsstand:
 `hardware/Hauptplatine/Hauptplatine_v3.3cp_logic_minimal_150x90.kicad_pcb`
 
 Als nächstes nur REED_OPEN routen und per DRC prüfen; danach REED_TILT.
+
+
+## Update v3.3eap
+
+Basis:
+- Hauptplatine_v3.3eao_logic_repair_150x90.kicad_pcb
+
+Neu:
+- ROLL_UP von U1.11 zu R4.1 geroutet
+- Start U1.11 bei 90 / 40.70 mm
+- F.Cu bis x=128 mm
+- kurzer Wechsel auf B.Cu zur Umgehung der dichten RS485-Führung
+- Rückwechsel auf F.Cu bei 147 / 48 mm
+- Anfahrt von R4.1 über den freien Korridor bei y=54 mm
+- 0,30-mm-Signalbahn, zwei 0,8/0,4-mm-Vias
+- 230-V-Bereich unverändert
+- bestehende Coil-, STEP-, Reed-, RS485- und Versorgungstracks unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3eap_logic_repair_150x90.kicad_pcb`
+
+Status:
+- DRC für v3.3eap steht noch aus
+- ROLL_DN bleibt bis zum DRC dieses Zwischenstands bewusst unverändert
+
+Nächster Schritt:
+1. DRC v3.3eap
+2. bei sauberem Ergebnis ROLL_DN U1.9 -> R5.1 separat routen
+3. danach verbleibende Versorgung/Konnektivität weiter prüfen
+
+Hinweis:
+- weiterhin keine Fertigungsfreigabe
+- Netzspannungsbereich vor Fertigung separat sicherheitstechnisch prüfen
