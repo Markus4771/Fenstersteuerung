@@ -1260,3 +1260,47 @@ Nächster Schritt:
 4. GND-Zonenwarnungen bereinigen
 5. Silkscreen/Library-Warnungen bereinigen
 6. separate 230-V-Sicherheitsprüfung
+
+
+## Update v3.3eax
+
+Basis:
+- Hauptplatine_v3.3eaw_logic_repair_150x90.kicad_pcb
+- DRCeaw.rpt vom 2026-09-29
+- DRCeaw: 106 Verstöße
+- keine unconnected_items
+- keine shorting_items
+- keine tracks_crossing
+- keine clearance-Fehler
+- 1 starved_thermal an J3.2/GND
+- 50 isolated_copper
+- 29 lib_footprint_issues
+- 19 silk_over_copper
+- 2 holes_co_located
+- 2 hole_to_hole
+- 2 silk_overlap
+- 1 silk_edge_clearance
+
+Änderungen in v3.3eax:
+- letzten echten DRC-Fehler starved_thermal an J3.2/GND gezielt adressiert
+- J3.2/GND explizit per Leiterbahn zu Q1.3/GND verbunden
+- redundanten +5V-Via direkt auf U1.1 entfernt; PTH-Pad verbindet F.Cu/B.Cu bereits selbst
+- alte explizite U1.2->J2.2-GND-Hilfsroute entfernt, da deren Via den hole_to_hole-Fehler nahe U1.2 verursachte
+- 230-V-Bereich unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3eax_logic_repair_150x90.kicad_pcb`
+
+Status:
+- alle Netze laut DRC verbunden
+- keine Kurzschlüsse/Kreuzungen/Clearance-Fehler in DRCeaw
+- v3.3eax zielt auf 0 echte elektrische DRC-Fehler
+- verbleibende Meldungen danach voraussichtlich überwiegend Zonen-/Silkscreen-/Library-Warnungen
+- keine Fertigungsfreigabe
+
+Nächster Schritt:
+1. Zonen neu füllen
+2. DRC v3.3eax
+3. prüfen, ob starved_thermal und hole-Warnungen verschwunden sind
+4. danach GND-Zoneninseln und Silkscreen/Library-Warnungen bereinigen
+5. separate 230-V-Sicherheitsprüfung
