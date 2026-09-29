@@ -1087,3 +1087,49 @@ Nächster Schritt:
 1. KiCad-DRC v3.3eas
 2. ROLL_UP/ROLL_DN auf shorting_items/tracks_crossing/clearance prüfen
 3. danach verbleibende Altfehler priorisieren: STEP_TOP_4, TOP/BOT_COIL, RS485, Versorgung
+
+
+## Update v3.3eat
+
+Basis:
+- Hauptplatine_v3.3eas_logic_repair_150x90.kicad_pcb
+- DRCeas.rpt vom 2026-09-29
+- DRCeas: 118 Verstöße
+- 20 Tracks crossing
+- 8 shorting_items
+- 7 clearance
+- 6 unconnected_items
+
+Wichtige Erkenntnisse aus DRCeas:
+- ROLL_DN taucht nicht mehr als Fehler auf
+- ROLL_UP hatte nur noch vier Clearance-Verstöße an J2
+- STEP_TOP_4 verursachte zahlreiche Kreuzungen mit STEP_TOP_3, STEP_BOT_1..4, RS485_A/B und J4
+- TOP_COIL_1..4 und BOT_COIL_1..4 verursachten mehrere Kreuzungen, Shorts und Maskenfehler
+- U2 hatte drei eindeutig offene Layerübergänge: +5V an U2.3 sowie beide +3V3-Flächen von U2.2
+
+Änderungen in v3.3eat:
+- ROLL_UP im Bereich J2 neu geführt; statische Prüfung ohne Track-/Via-/Pad-Kollision
+- STEP_TOP_4 vollständig neu geroutet
+- TOP_COIL_1..4 vollständig neu geroutet
+- BOT_COIL_1..4 vollständig neu geroutet
+- alle neun STEP/COIL-Routen vor Commit zusätzlich geometrisch gegen vorhandene Tracks, Pads und Vias geprüft: 0 erkannte Kollisionen
+- +5V-Layerübergang direkt an U2.3 ergänzt
+- +3V3-Layerübergänge an beiden U2.2-Padflächen ergänzt
+- ROLL_DN unverändert
+- 230-V-Bereich unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3eat_logic_repair_150x90.kicad_pcb`
+
+Noch bewusst offen:
+- GND U1.2
+- GND U1.42
+- GND U5.8
+Diese drei Punkte werden nach dem nächsten KiCad-DRC separat behandelt, da die B.Cu-GND-Zonenfüllung die Bewertung beeinflusst.
+
+Nächster Schritt:
+1. Zonen in KiCad neu füllen
+2. DRC für v3.3eat ausführen
+3. Restfehler aus DRC priorisieren
+4. verbleibende GND-Verbindungen schließen
+5. abschließende 230-V-Sicherheitsprüfung
