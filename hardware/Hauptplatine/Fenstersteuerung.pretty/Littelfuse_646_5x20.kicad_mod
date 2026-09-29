@@ -1,7 +1,5 @@
 (footprint "Littelfuse_646_5x20"
 		(layer "F.Cu")
-		(uuid "f4e4b293-bb11-4b10-841f-dc6bf6745b9f")
-		(at 37.5 91.1 90)
 		(descr "Littelfuse 646 Series PCB fuse block for 5x20mm fuse; verify against purchased variant before fabrication")
 		(property "Reference" "REF**"
 			(at 12.6 -7.5 0)
@@ -48,16 +46,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "*Fuse*")
-		(path "/e984f15b-94bf-483a-bd22-55db078dff7c")
-		(sheetname "/")
-		(sheetfile "Hauptplatine.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
+		
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -2 -6)
@@ -76,8 +65,6 @@
 			(drill 1.4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/L_MOTOR")
-			(pintype "passive")
 			(uuid "105c90d0-88be-485e-b95e-ea103f1bd5fe")
 		)
 		(pad "2" thru_hole circle
@@ -86,8 +73,6 @@
 			(drill 1.4)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/AC_L")
-			(pintype "passive")
 			(uuid "27739387-97d6-4f00-89d4-726f1a2e94a8")
 		)
 		(embedded_fonts no)

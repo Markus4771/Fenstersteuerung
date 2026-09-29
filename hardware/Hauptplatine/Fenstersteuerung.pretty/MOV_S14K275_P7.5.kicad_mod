@@ -1,7 +1,5 @@
 (footprint "MOV_S14K275_P7.5"
 		(layer "F.Cu")
-		(uuid "8691e273-9c55-44a3-b809-0e66402c9439")
-		(at 52 27)
 		(descr "TDK/EPCOS S14K275 radial MOV, nominal 7.5mm lead pitch")
 		(property "Reference" "REF**"
 			(at 3.75 -8.5 0)
@@ -48,16 +46,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "RV_* Varistor*")
-		(path "/00000000-0000-0000-0000-0000f8603724")
-		(sheetname "/")
-		(sheetfile "Hauptplatine.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2")
-			)
-		)
+		
 		(duplicate_pad_numbers_are_jumpers no)
 		
 		(pad "1" thru_hole rect
@@ -66,8 +55,6 @@
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/AC_N")
-			(pintype "passive")
 			(uuid "14259624-1f32-48ff-b288-4a90e62e70b8")
 		)
 		(pad "2" thru_hole circle
@@ -76,8 +63,6 @@
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/L_PSU_FUSED")
-			(pintype "passive")
 			(uuid "d0c5285a-ff6c-4427-9bba-ad0917d51bbe")
 		)
 		(embedded_fonts no)

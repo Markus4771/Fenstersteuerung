@@ -1,7 +1,5 @@
 (footprint "CP_EIA-3528-21_Kemet-B"
 		(layer "F.Cu")
-		(uuid "34b30000-0000-4000-8000-000000000001")
-		(at 146.5 26 180)
 		(property "Reference" "REF**"
 			(at 0 -2.35 180)
 			(layer "F.SilkS")
@@ -48,9 +46,6 @@
 			(size 1.325 2.35)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.188679)
-			(net "/+3V3")
-			(pinfunction "Pin_1")
-			(pintype "passive")
 			(uuid "34b30000-0000-4000-8000-000000000008")
 		)
 		(pad "2" smd roundrect
@@ -58,9 +53,6 @@
 			(size 1.325 2.35)
 			(layers "F.Cu" "F.Paste" "F.Mask")
 			(roundrect_rratio 0.188679)
-			(net "/GND")
-			(pinfunction "Pin_2")
-			(pintype "passive")
 			(uuid "34b30000-0000-4000-8000-000000000009")
 		)
 		(embedded_fonts no)

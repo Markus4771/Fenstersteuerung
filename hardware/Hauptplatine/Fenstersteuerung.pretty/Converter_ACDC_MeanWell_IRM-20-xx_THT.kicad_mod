@@ -1,7 +1,5 @@
 (footprint "Converter_ACDC_MeanWell_IRM-20-xx_THT"
 		(layer "F.Cu")
-		(uuid "54fa6b8e-62d1-4026-81a1-d913559be1af")
-		(at 35 38)
 		(property "Reference" "REF**"
 			(at 0 0 0)
 			(layer "F.SilkS")
@@ -45,16 +43,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "Converter*ACDC*MeanWell*IRM*20*THT*")
-		(path "/00000000-0000-0000-0000-0000c395b586")
-		(sheetname "/")
-		(sheetfile "Hauptplatine.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "4" "3")
-			)
-		)
+		
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -3 -3)
@@ -73,9 +62,6 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/L_PSU_FUSED")
-			(pinfunction "AC/L_1")
-			(pintype "passive")
 			(uuid "2a7c679c-be52-48d1-80a6-40c1a242172c")
 		)
 				(pad "2" thru_hole circle
@@ -84,9 +70,6 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/AC_N")
-			(pinfunction "AC/N_2")
-			(pintype "passive")
 			(uuid "af1737c4-bb2f-4114-ab22-b4428f8d27c7")
 		)
 				(pad "3" thru_hole circle
@@ -95,9 +78,6 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/GND")
-			(pinfunction "-Vo_3")
-			(pintype "power_out")
 			(uuid "e3b832d4-0cc9-49a7-ac8b-88654bc0e193")
 		)
 				(pad "4" thru_hole circle
@@ -106,9 +86,6 @@
 			(drill 1.5)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/+5V")
-			(pinfunction "+Vo_4")
-			(pintype "power_out")
 			(uuid "1a55839e-2c0a-40c7-ab03-9460bcf977b2")
 		)
 		(embedded_fonts no)

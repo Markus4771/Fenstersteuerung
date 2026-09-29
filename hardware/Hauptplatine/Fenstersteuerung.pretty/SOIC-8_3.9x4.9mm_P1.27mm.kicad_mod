@@ -1,7 +1,5 @@
 (footprint "SOIC-8_3.9x4.9mm_P1.27mm"
 		(layer "F.Cu")
-		(uuid "72a894f3-c5fc-4800-b9d4-fc35e0f4b51f")
-		(at 151 45)
 		(property "Reference" "REF**"
 			(at 0 -3 0)
 			(layer "F.SilkS")
@@ -45,9 +43,6 @@
 				)
 			)
 		)
-		(path "/00000000-0000-0000-0000-00004ff17f7c")
-		(sheetname "/")
-		(sheetfile "Hauptplatine.kicad_sch")
 		(duplicate_pad_numbers_are_jumpers no)
 		
 		(pad "1" smd roundrect
@@ -55,9 +50,6 @@
 			(size 1.5 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/RS485_RX")
-			(pinfunction "Pin_1")
-			(pintype "passive")
 			(uuid "eb93a99d-c3b4-4fb3-8381-eb1e74e1b06f")
 		)
 		(pad "2" smd roundrect
@@ -65,9 +57,6 @@
 			(size 1.5 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/RS485_DE")
-			(pinfunction "Pin_2")
-			(pintype "passive")
 			(uuid "aef84104-3444-4ccb-b9f9-7c6968fbf67b")
 		)
 		(pad "3" smd roundrect
@@ -75,9 +64,6 @@
 			(size 1.5 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/RS485_DE")
-			(pinfunction "Pin_3")
-			(pintype "passive")
 			(uuid "fc163cc2-032d-4694-aaab-31eb5eed9a74")
 		)
 		(pad "4" smd roundrect
@@ -85,9 +71,6 @@
 			(size 1.5 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/RS485_TX")
-			(pinfunction "Pin_4")
-			(pintype "passive")
 			(uuid "9cca088b-ca49-424f-90dd-9eb1197dbef4")
 		)
 		(pad "5" smd roundrect
@@ -95,9 +78,6 @@
 			(size 1.5 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/GND")
-			(pinfunction "Pin_5")
-			(pintype "passive")
 			(uuid "97166598-e4a6-4e5b-bf69-402bb9bc8024")
 		)
 		(pad "6" smd roundrect
@@ -105,9 +85,6 @@
 			(size 1.5 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/RS485_A")
-			(pinfunction "Pin_6")
-			(pintype "passive")
 			(uuid "93830ac7-cf0d-490c-b3f8-ccec651f051c")
 		)
 		(pad "7" smd roundrect
@@ -115,9 +92,6 @@
 			(size 1.5 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/RS485_B")
-			(pinfunction "Pin_7")
-			(pintype "passive")
 			(uuid "27178c05-15a5-454f-9955-d47563a6fdb9")
 		)
 		(pad "8" smd roundrect
@@ -125,9 +99,6 @@
 			(size 1.5 0.6)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/+3V3")
-			(pinfunction "Pin_8")
-			(pintype "passive")
 			(uuid "86fd2e38-c9c6-44e2-a3ac-487b1a4fef33")
 		)
 		(embedded_fonts no)
