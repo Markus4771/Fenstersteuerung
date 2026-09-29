@@ -1,7 +1,5 @@
 (footprint "JST_XH_B5B-XH-A_1x05_P2.50mm_Vertical"
 		(layer "F.Cu")
-		(uuid "29cb1a01-5d61-4893-b85e-f86c7d1a74ae")
-		(at 156.5 105.5 90)
 		(property "Reference" "REF**"
 			(at 0 -3 90)
 			(layer "F.SilkS")
@@ -44,9 +42,6 @@
 				)
 			)
 		)
-		(path "/00000000-0000-0000-0000-0000df4e2967")
-		(sheetname "/")
-		(sheetfile "Hauptplatine.kicad_sch")
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -2 -2)
@@ -65,9 +60,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/BOT_COIL_4")
-			(pinfunction "Pin_1")
-			(pintype "passive")
 			(uuid "29672b92-f006-4296-976e-41fd57bf313c")
 		)
 		(pad "2" thru_hole circle
@@ -76,9 +68,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/BOT_COIL_3")
-			(pinfunction "Pin_2")
-			(pintype "passive")
 			(uuid "adabae7a-0f35-46c5-8061-5e08b5a567c6")
 		)
 		(pad "3" thru_hole circle
@@ -87,9 +76,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/BOT_COIL_2")
-			(pinfunction "Pin_3")
-			(pintype "passive")
 			(uuid "c003d69d-e218-4ba5-853c-5ee4196c12bd")
 		)
 		(pad "4" thru_hole circle
@@ -98,9 +84,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/BOT_COIL_1")
-			(pinfunction "Pin_4")
-			(pintype "passive")
 			(uuid "9635ce30-f7da-49db-b1f7-ceb24fb013f1")
 		)
 		(pad "5" thru_hole circle
@@ -109,9 +92,6 @@
 			(drill 0.9)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/+5V")
-			(pinfunction "Pin_5")
-			(pintype "passive")
 			(uuid "cdd48280-827c-41fd-aec4-ccc7efa0e3ee")
 		)
 		(embedded_fonts no)
