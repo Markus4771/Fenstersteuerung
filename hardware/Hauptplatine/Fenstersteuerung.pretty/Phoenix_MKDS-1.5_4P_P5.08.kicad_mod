@@ -1,7 +1,5 @@
 (footprint "Phoenix_MKDS-1.5_4P_P5.08"
 		(layer "F.Cu")
-		(uuid "1a43427f-d55e-4fc2-bad8-f3eef1c63a78")
-		(at 53 102)
 		(property "Reference" "REF**"
 			(at 0 0 0)
 			(layer "F.SilkS")
@@ -45,16 +43,7 @@
 				)
 			)
 		)
-		(property ki_fp_filters "Connector*:*_1x??_*")
-		(path "/00000000-0000-0000-0000-00005c3a099b")
-		(sheetname "/")
-		(sheetfile "Hauptplatine.kicad_sch")
-		(units
-			(unit
-				(name "A")
-				(pins "1" "2" "3" "4")
-			)
-		)
+		
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -2.5 -4)
@@ -73,9 +62,6 @@
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/AC_N")
-			(pinfunction "Pin_1_1")
-			(pintype "passive")
 			(uuid "d02e2fc0-dc78-483d-acc4-abe336704a45")
 		)
 		(pad "2" thru_hole circle
@@ -84,9 +70,6 @@
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/PE")
-			(pinfunction "Pin_2_2")
-			(pintype "passive")
 			(uuid "1eb57a58-c158-41df-8afe-40d457762e42")
 		)
 		(pad "3" thru_hole circle
@@ -95,9 +78,6 @@
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/MOTOR_UP")
-			(pinfunction "Pin_3_3")
-			(pintype "passive")
 			(uuid "bc8494b4-7b57-4221-b9d0-115360d1fd61")
 		)
 		(pad "4" thru_hole circle
@@ -106,9 +86,6 @@
 			(drill 1.2)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/MOTOR_DN")
-			(pinfunction "Pin_4_4")
-			(pintype "passive")
 			(uuid "d594236d-29ed-4ea0-bcba-3c4eda044e20")
 		)
 		(embedded_fonts no)
