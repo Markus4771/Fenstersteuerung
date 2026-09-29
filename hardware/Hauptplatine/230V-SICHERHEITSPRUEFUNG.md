@@ -1,93 +1,126 @@
 # 230-V-Sicherheitsprüfung Hauptplatine
 
-Stand: v3.3ebd  
-Status: Entwicklungs-/Prototypenprüfung, **keine Sicherheits- oder Fertigungsfreigabe**
+Stand: v3.3ebs2  
+Status: Entwicklungs-/Prototypenprüfung, **keine formale Sicherheits- oder Fertigungsfreigabe**
 
-## Aktueller positiver Stand
+## Aktueller Prüfstand
 
-- Elektrisches Standard-DRC zuletzt ohne offene Netze, Kurzschlüsse, Track-Kreuzungen oder normale Clearance-Fehler.
-- 230-V/SELV-Trennzone ist als echter Keepout auf F.Cu und B.Cu umgesetzt:
-  - x = 71..77 mm
-  - Breite = 6 mm
-  - Tracks/Vias/Copperpour verboten
-- Gemessener kleinster Kupferabstand Primärseite -> SELV außerhalb der isolierenden Bauteile:
-  - ca. 8,8 mm
-- Netzspannungs-Leiterbahnen:
-  - 2,0 mm Breite
-- PS1 (Mean Well IRM-20-5) Primär-/Sekundär-Padabstände im Footprint:
-  - deutlich > 40 mm
-- K1/K2 Kontaktseite -> Spulenseite im Footprint:
-  - kleinster gemessener Kupferabstand ca. 12,9 mm
+Aktive PCB-Datei:
 
-## Änderungen v3.3ebc / v3.3ebd
+`hardware/Hauptplatine/Hauptplatine_v3.3ebs2_library_clean_fixed_150x90.kicad_pcb`
 
-### v3.3ebc
-- obere AC_L-Leiterbahn weiter von der oberen Platinenkante nach innen verschoben
-- Kupferabstand zur Platinenkante von ca. 1,5 mm auf ca. 3,0 mm erhöht
+Verwendete Designregeln:
 
-### v3.3ebd
-- L_PSU_FUSED-Zweig zu PS1 neu geführt
-- vorheriger Abstand L_PSU_FUSED zu PS1.1 / AC_N: ca. 0,3 mm
-- neue Führung links um PS1 herum; kritische Annäherung beseitigt
-
-## Neue KiCad-Hochspannungsregeln
-
-Datei:
 `hardware/Hauptplatine/Hauptplatine.kicad_dru`
 
-Regeln:
-1. unterschiedliche 230-V-Netze: mindestens 1,5 mm
-2. 230 V -> SELV: mindestens 6 mm
-3. 230-V-Leiterbahnbreite: mindestens 2,0 mm
+Interne Entwicklungsziele:
 
-Die Syntax muss vor Prototypenfreigabe im KiCad-10 Design Rule Editor mit "Check rule syntax" bestätigt werden.
+- mindestens 1,5 mm zwischen unterschiedlichen Netzspannungs-Potentialen
+- mindestens 6 mm zwischen Netzspannung und SELV
+- mindestens 2,0 mm Leiterbahnbreite für Netzspannungsnetze
 
-## Noch erwartete Primär-Primär-Abstandsverstöße (< 1,5 mm)
+## Statisch verifizierte Punkte v3.3ebs2
 
-Die statische Geometrieprüfung von v3.3ebd findet derzeit 16 Objektpaare unter 1,5 mm. Mehrere gehören zur selben geometrischen Problemstelle.
+### Netzspannungs-Leiterbahnbreite
 
-Wichtigste Bereiche:
+Aus der PCB-Datei wurden 56 Leiterbahnsegmente der folgenden Netze ausgewertet:
 
-- oberer AC_L-Zweig bei F1 / RV1:
-  - ca. 0,8..1,0 mm
-- AC_L im Relaisbereich um K1:
-  - ca. 0,9..1,1 mm
-- L_MOTOR zu K1.14 / MOTOR_UP:
-  - ca. 0,98 mm
-- AC_L zu DN_FEED:
-  - ca. 1,1..1,14 mm
-- DN_FEED zu K2.22 / UP_FEED:
-  - ca. 1,12 mm
-- MOTOR_DN nahe J5.2 / PE und J5.3 / MOTOR_UP:
-  - ca. 1,3 mm
+- AC_L
+- AC_N
+- PE
+- L_PSU_FUSED
+- L_MOTOR
+- UP_FEED
+- DN_FEED
+- MOTOR_UP
+- MOTOR_DN
 
-Diese Stellen werden erst nach KiCad-DRC mit den neuen Regeln endgültig bewertet und anschließend einzeln neu geroutet.
+Ergebnis:
+
+- kleinste gefundene Leiterbahnbreite: **2,0 mm**
+- Segmente unter 2,0 mm: **0**
+
+Damit wird das interne Entwicklungsziel für die Leiterbahnbreite in der statisch ausgewerteten PCB-Geometrie eingehalten.
+
+### Trennung Netzspannung / SELV
+
+Die Leiterplatte besitzt eine echte Kupfer-Keepout-Zone auf F.Cu und B.Cu:
+
+- x = 71 .. 77 mm
+- Breite = **6 mm**
+- Tracks verboten
+- Vias verboten
+- Copper Pour verboten
+
+Statische Auswertung der 56 Netzspannungs-Leiterbahnsegmente:
+
+- Netzspannungs-Tracks, die die Keepout-Zone durchqueren: **0**
+
+### Komponenten-/Footprint-Stand
+
+Folgende zuvor problematische Footprints wurden im aktuellen Stand korrigiert bzw. auf die projektlokale Bibliothek umgestellt:
+
+- Mean Well IRM-20-5
+- Finder 40.52
+- Littelfuse 646 Sicherungshalter
+- ESP32-S3 DevKitC-1 Carrier
+- Phoenix MKDS Klemmen
+- MOV S14K275
+- weitere Standard-Footprints in `Fenstersteuerung.pretty`
+
+## Bereits umgesetzte Schutzmaßnahmen
+
+- 6-mm-Trennzone zwischen 230-V-/Motorbereich und SELV-/Logikbereich
+- 2,0-mm-Netzspannungsleiterbahnen
+- getrennte Sicherung für Netzteilzweig und Motorzweig
+- MOV auf der Netzseite
+- galvanisch getrenntes AC/DC-Netzteil
+- Relaiskontakte räumlich von den Spulenanschlüssen getrennt
+- PE wird als eigenes Netz von J1 zum Motorausgang J5 geführt
+
+## Noch vor Prototypenbestellung erforderlich
+
+1. PCB in KiCad 10 öffnen.
+2. Alle Kupferzonen neu füllen.
+3. `Hauptplatine.kicad_dru` im Design Rule Editor laden bzw. prüfen.
+4. „Check rule syntax“ ausführen.
+5. vollständigen KiCad-DRC ausführen.
+6. insbesondere alle MAINS-different-net-clearance-Verstöße prüfen.
+7. bestätigen, dass zwischen allen unterschiedlichen 230-V-Potentialen mindestens das interne Ziel von 1,5 mm erreicht wird.
+8. tatsächliche Kaufteile gegen Footprints prüfen:
+   - Littelfuse 646
+   - Finder 40.52.9.005.0000
+   - Mean Well IRM-20-5
+   - Phoenix-Klemmen
+   - MOV
+9. Gerber- und Drill-Daten visuell prüfen.
+10. Erstinbetriebnahme ohne Netzspannung durchführen.
+11. Netzspannung erst nach separater elektrischer Sicherheitskontrolle anlegen.
 
 ## Normative Einordnung
 
-Die exakten Anforderungen hängen vom Endgerät ab, insbesondere von:
+Die oben verwendeten Abstände sind konservative interne Entwicklungsziele und stellen **keinen Nachweis einer Normkonformität** dar.
+
+Die tatsächlich erforderlichen Luft- und Kriechstrecken hängen unter anderem ab von:
+
+- anzuwendender Produktnorm
 - Überspannungskategorie
 - Verschmutzungsgrad
 - Leiterplatten-Materialgruppe / CTI
 - Einsatzhöhe
-- erforderlicher Basisisolation oder verstärkter Isolation
-- einschlägiger Produktnorm
+- Basisisolation oder verstärkter Isolation
+- Gehäuse und Berührschutz
+- Absicherung und Fehlerfallbetrachtung
 
-Als konservative Entwicklungsziele werden aktuell verwendet:
-- 1,5 mm zwischen verschiedenen Netzspannungs-Potentialen
-- 6 mm zwischen Netzspannung und SELV
+Vor einem produktiven Einsatz an 230 V ist deshalb eine separate fachliche Sicherheitsbewertung erforderlich.
 
-Diese Werte sind interne Designziele und keine Aussage über eine formale Normkonformität.
+## Ergebnis v3.3ebs2
 
-## Vor Prototypenbestellung noch erforderlich
+Der aktuelle PCB-Stand ist gegenüber den früheren Revisionen wesentlich bereinigt:
 
-1. KiCad-DRC mit `Hauptplatine.kicad_dru`
-2. alle MAINS-clearance-Fehler bewerten und beseitigen
-3. F1/T2A-Footprints gegen die tatsächlich bestellten Sicherungshalter prüfen
-4. Finder-40.52-Footprint und Pinbelegung gegen Datenblatt / reales Relais prüfen
-5. Mean-Well-IRM-20-5-Footprint gegen Datenblatt prüfen
-6. PE-Führung und Klemmenzuordnung kontrollieren
-7. GND-Zonen-/Silkscreen-/Library-Warnungen bereinigen
-8. Fertigungsdaten visuell prüfen
-9. erste Inbetriebnahme ohne Netzspannung
-10. Netzspannungsprüfung erst nach separater Sicherheitskontrolle
+- keine Netzspannungsleiterbahn unter 2,0 mm
+- keine Netzspannungsleiterbahn durchquert die 6-mm-SELV-Keepout-Zone
+- Routing ist vollständig
+- Footprints wurden auf die projektlokale Bibliothek vereinheitlicht
+
+Die **finale Freigabe hängt jetzt vor allem vom vollständigen KiCad-DRC mit den Hochspannungsregeln sowie der Prüfung der realen Kaufteile ab**.
