@@ -1496,3 +1496,53 @@ Nächster Schritt:
 Wichtig:
 - keine formale Sicherheits-/Fertigungsfreigabe
 - 230-V-Sicherheitsprüfung bleibt separat erforderlich
+
+
+## Update v3.3ebj2 – ESP32-S3 DevKitC-1 Header korrigiert
+
+Basis:
+- Hauptplatine_v3.3ebi2_logic_repair_150x90.kicad_pcb
+
+Wichtige Erkenntnis:
+- die rechte U1-Headerreihe entspricht sauber dem offiziellen J3-Pinout
+- auf der linken U1-Headerreihe waren nur bestimmte Anschlüsse falsch belegt
+- die frühere Annahme einer komplett um einen Pin verschobenen linken Reihe war zu grob
+
+Offizielles ESP32-S3-DevKitC-1 J1:
+- J1.1/J1.2 = 3V3
+- J1.3 = RST
+- J1.7 = GPIO7
+- J1.8 = GPIO15
+- J1.14 = GPIO46 (Input-only, daher ungeeignet für STEP-Ausgang)
+- J1.15 = GPIO9
+- J1.21 = 5V
+- J1.22 = GND
+
+Korrekturen:
+- U1.1: +5V entfernt, unbenutzt
+- U1.3: STEP_TOP_3 entfernt, unbenutzt
+- U1.5: STEP_TOP_2 entfernt, unbenutzt
+- U1.13 = STEP_TOP_3 (J1.7 / GPIO7)
+- U1.15 = STEP_TOP_2 (J1.8 / GPIO15)
+- U1.27 = STEP_TOP_4 entfernt (J1.14 / GPIO46)
+- U1.29 = STEP_TOP_4 (J1.15 / GPIO9)
+- U1.41 = +5V (J1.21 / 5V)
+
+Routing:
+- alte Anschlussstücke zu den falschen Pads entfernt
+- STEP_TOP_3 neu zweilagig zu U1.13 geführt
+- STEP_TOP_2 neu zweilagig zu U1.15 geführt
+- STEP_TOP_4 kurz zu U1.29 umgelegt
+- +5V von bestehender +5V-Leitung bei y=90 mm zu U1.41 geführt
+- neue statische Kollisionsprüfung: 0 erkannte Track-/Pad-Kollisionen
+- alle vier neuen U1-Pads exakt getroffen
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3ebj2_logic_repair_150x90.kicad_pcb`
+
+Nächster Schritt:
+1. v3.3ebj2 in KiCad öffnen
+2. Zonen neu füllen
+3. DRC ausführen
+4. prüfen: 0 unconnected / 0 shorts / 0 crossings / 0 clearance
+5. danach verbleibende Warnungen und Gerber-Freigabe
