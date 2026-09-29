@@ -8,7 +8,7 @@
 
 Aktuelle Hauptplatine:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3ebr2_library_clean_usb_clearance_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3ebs2_library_clean_usb_clearance_150x90.kicad_pcb`
 
 Status:
 
@@ -53,10 +53,10 @@ Status:
 
 ## Hinweis
 
-Nicht mit Dateien aus `hardware/Hauptplatine/archive/` weiterarbeiten. Aktive Basis ist ausschließlich **v3.3ebr2**.
+Nicht mit Dateien aus `hardware/Hauptplatine/archive/` weiterarbeiten. Aktive Basis ist ausschließlich **v3.3ebs2**.
 
 
-## Update v3.3ebr2
+## Update v3.3ebs2
 
 - elektrisch sauberer v3.3ebq2-Stand übernommen
 - RS485-Klemme bleibt unten, USB-C frei zugänglich
