@@ -1024,3 +1024,38 @@ Nächster Schritt:
 2. danach offene +3V3-, +5V- und GND-Verbindungen systematisch schließen
 3. vollständige physische Konnektivitätsprüfung
 4. separate 230-V-Sicherheitsprüfung
+
+
+## Update v3.3ear
+
+Basis:
+- Hauptplatine_v3.3eaq_logic_repair_150x90.kicad_pcb
+- DRC-Bericht `DRCeaq.rpt` vom 2026-09-29
+
+DRC-Ursachen der letzten ROLL-Routen:
+- ROLL_UP kreuzte U1.12
+- ROLL_UP kollidierte auf B.Cu mit RS485_DE und J3.2/GND
+- ROLL_DN kreuzte U1.31/U1.32
+
+Änderung:
+- alte ROLL_UP- und ROLL_DN-Routen vollständig entfernt
+- ROLL_UP neu über oberen B.Cu-Randkorridor geführt:
+  - U1.11 -> x=84 mm
+  - B.Cu über y=21.5 mm bis x=164 mm
+  - Rückweg auf F.Cu bei 164/54 mm zu R4.1
+- ROLL_DN neu über unteren B.Cu-Korridor geführt:
+  - U1.9 -> x=84 mm
+  - B.Cu bis y=104 mm, dann nach x=164 mm
+  - B.Cu zurück bis 134/66 mm
+  - kurzer F.Cu-Anschluss zu R5.1
+- 0,30-mm-Signalbahnen, je zwei Vias
+- statische Track-/Pad-Kollisionsprüfung der neuen Korridore ohne Treffer
+- bestehende 230-V-, Coil-, STEP-, Reed-, RS485- und Versorgungsrouten unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3ear_logic_repair_150x90.kicad_pcb`
+
+Nächster Schritt:
+1. KiCad-DRC v3.3ear ausführen
+2. speziell prüfen, ob ROLL_UP/ROLL_DN nun frei von shorting_items/tracks_crossing/clearance sind
+3. anschließend verbleibende DRC-Fehler blockweise reparieren
