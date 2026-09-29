@@ -1333,3 +1333,41 @@ Nächster Schritt:
 3. prüfen, ob unconnected_items = 0 bleibt
 4. anschließend GND-isolated_copper-Warnungen und Silkscreen/Library-Warnungen bereinigen
 5. separate 230-V-Sicherheitsprüfung
+
+
+## Update v3.3eaz
+
+Basis:
+- Hauptplatine_v3.3eay_logic_repair_150x90.kicad_pcb
+- Screenshot vom 2026-09-29 zeigte weiterhin mehrere Ratsnest-/Luftlinien
+
+Ursache:
+- mehrere bestehende Leiterbahnen endeten nur knapp neben den exakten Padkoordinaten
+- typische Abweichungen lagen bei 0,04 bis 0,20 mm
+- dadurch wirkten die Netze in einer groben Textprüfung verbunden, KiCad zeigte aber weiterhin Luftlinien
+
+Korrigierte Netze:
+- RS485_RX
+- RS485_TX
+- STEP_TOP_1
+- STEP_TOP_2
+- STEP_TOP_3
+- STEP_BOT_1
+- STEP_BOT_2
+- STEP_BOT_3
+- STEP_BOT_4
+
+Änderung:
+- nur kurze Anschlusssegmente von den bisherigen Track-Enden zu den exakten Padkoordinaten ergänzt
+- bestehende Hauptrouten unverändert
+- 230-V-Bereich unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3eaz_logic_repair_150x90.kicad_pcb`
+
+Nächster Schritt:
+1. Datei in KiCad öffnen
+2. Zonen neu füllen
+3. prüfen, ob die sichtbaren Signal-Ratsnest-Linien verschwunden sind
+4. DRC ausführen
+5. verbleibende GND-/Zonenlinien separat behandeln
