@@ -1588,3 +1588,38 @@ Nächster Schritt:
 3. DRC ausführen
 4. Ziel: 0 unconnected / 0 clearance / 0 dangling
 5. danach nur noch Warnungsbereinigung und Fertigungscheck
+
+
+## Update v3.3ebl2 – letzter elektrischer Restfehler geschlossen
+
+Basis:
+- Hauptplatine_v3.3ebk2_logic_repair_150x90.kicad_pcb
+- DRCebk2.rpt vom 2026-09-29
+
+DRCebk2:
+- 57 DRC-Verstöße
+- 1 unconnected item
+- 3 track_dangling-Warnungen
+- 0 Footprint-Fehler
+- keine Clearance-/Short-/Crossing-Fehler mehr
+
+Letzter echter elektrischer Fehler:
+- K1_COIL_LOW war zwischen 81.5/91 und 102/91 unterbrochen
+- fehlendes Segment wieder ergänzt
+
+Zusätzliche Bereinigung:
+- +5V-Dangling-Junction bei 82.5/58.3 beseitigt
+- alte vertikale +5V-Segmente entfernt
+- +5V-Bus neu mit explizitem Knoten bei 82.5/50.8 aufgebaut:
+  - 82.5/28 -> 82.5/50.8
+  - 82.5/50.8 -> 82.5/69
+- vorhandener Via bei 82.5/50.8 bleibt Layerübergang zum oberen B.Cu-5V-Bus
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3ebl2_logic_repair_150x90.kicad_pcb`
+
+Nächster Schritt:
+1. Zonen neu füllen
+2. finalen DRC v3.3ebl2 ausführen
+3. Ziel: 0 unconnected / 0 dangling / 0 electrical errors
+4. danach nur noch Silkscreen-/Library-Warnungen und Fertigungscheck
