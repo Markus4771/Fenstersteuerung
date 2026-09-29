@@ -169,3 +169,28 @@ Aktueller bestätigter Stand:
 `hardware/Hauptplatine/Hauptplatine_v3.3cp_logic_minimal_150x90.kicad_pcb`
 
 Nächster Routingblock: REED_OPEN, danach REED_TILT.
+
+
+## Aktuelle Arbeitsversion – v3.3ebj2
+
+Neue Hauptplatinen-Arbeitsbasis:
+`hardware/Hauptplatine/Hauptplatine_v3.3ebj2_logic_repair_150x90.kicad_pcb`
+
+Wichtige Korrekturen seit v3.3ebb2:
+- 230-V-Abstände verbessert
+- Mean Well IRM-20-5 Footprint/Pinlage korrigiert
+- Finder 40.52 Footprints auf offizielles Raster korrigiert
+- Littelfuse 646 Sicherungshalter-Pitch auf 22,7 mm korrigiert
+- 22-uF-Ausgangskondensator für AMS1117 ergänzt
+- ESP32-S3 DevKitC-1 J1-Pinbelegung korrigiert:
+  - STEP_TOP_3 -> GPIO7
+  - STEP_TOP_2 -> GPIO15
+  - STEP_TOP_4 -> GPIO9
+  - +5V -> offizieller 5-V-Pin J1.21
+
+Vor Fertigungsfreigabe weiterhin erforderlich:
+- KiCad-Zonen neu füllen
+- vollständiger DRC
+- finale Warnungsbereinigung
+- Gerber-/Drill-Viewer-Kontrolle
+- separate 230-V-Sicherheitsprüfung
