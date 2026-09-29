@@ -1170,3 +1170,47 @@ Nächster Schritt:
 2. DRC v3.3eau
 3. verbleibende Altfehler bei +5V/K1_COIL_LOW, REED_TILT/RS485_TX/STEP_TOP_1 und BOT_COIL_3-Padabstand bereinigen
 4. danach Silkscreen-/Library-Warnungen getrennt behandeln
+
+
+## Update v3.3eav
+
+Basis:
+- Hauptplatine_v3.3eau_logic_repair_150x90.kicad_pcb
+- DRCeau.rpt vom 2026-09-29
+- DRCeau: 105 Verstöße
+- 0 unconnected pads
+- 0 Footprint-Fehler
+
+Elektrische Restfehler aus DRCeau:
+- REED_TILT kurzgeschlossen/gekreuzt mit RS485_TX und STEP_TOP_1
+- K1_COIL_LOW kurzgeschlossen/gekreuzt mit +5V
+- RS485_B-Via zu nah an U3.2 / RS485_DE
+- BOT_COIL_3 zu nah an unbeschaltetem U5.5
+- GND-Via im U1-Bereich zu nah an U1.4
+- zusätzlich viele reine Warnungen (isolated copper, Library, Silkscreen)
+
+Änderungen in v3.3eav:
+- REED_TILT vollständig neu geroutet
+- K1_COIL_LOW vollständig neu geroutet
+- BOT_COIL_3 vollständig neu geroutet
+- RS485_B vollständig neu geroutet; erster Via weiter vom U3-DE-Pad entfernt
+- explizite GND-Verbindung U1.2 -> J2.2 im problematischen U1-Bereich neu geführt
+- strengere statische Kollisionsprüfung verwendet:
+  - Vias gegen beide Kupferlagen geprüft
+  - Pads ohne Netz ebenfalls als Hindernisse berücksichtigt
+- 230-V-Bereich unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3eav_logic_repair_150x90.kicad_pcb`
+
+Status:
+- alle Pads elektrisch verbunden
+- Routing vollständig; Fokus jetzt auf DRC-Fehlerfreiheit und Warnungsbereinigung
+- keine Fertigungsfreigabe
+
+Nächster Schritt:
+1. Zonen neu füllen
+2. DRC v3.3eav
+3. verbleibende elektrische DRC-Fehler beheben
+4. danach Warnungen separat priorisieren (GND-Zoneninseln, Silkscreen, fehlende Footprint-Libraries)
+5. abschließende 230-V-Sicherheitsprüfung
