@@ -1,0 +1,104 @@
+(footprint "Phoenix_MKDS-1.5_3P_P5.08"
+		(layer "F.Cu")
+		(uuid "b97bc56e-0cd1-4b46-abba-71524c89ee1d")
+		(at 23 25)
+		(property "Reference" "REF**"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "9da271bb-73bb-48db-be69-a89d92b207db")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Phoenix_MKDS-1.5_3P_P5.08"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "6e8defb2-fa5d-406d-8bb2-fa231b30a5c3")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3c6fff56-4f5f-475b-94ee-d11d6c8e8774")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4f5c4ced-66df-4206-95d3-8bedf9126464")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
+		(path "/00000000-0000-0000-0000-0000791becde")
+		(sheetname "/")
+		(sheetfile "Hauptplatine.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2" "3")
+			)
+		)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_rect
+			(start -2.5 -4)
+			(end 12.66 4)
+			(stroke
+				(width 0.25)
+				(type default)
+			)
+			(fill no)
+			(layer "F.SilkS")
+			(uuid "39872f0c-3698-47c3-9ff6-06afc11cea64")
+		)
+		(pad "1" thru_hole rect
+			(at 0 0)
+			(size 2.4 2.4)
+			(drill 1.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/PE")
+			(pinfunction "Pin_1_1")
+			(pintype "passive")
+			(uuid "9e89147f-d455-41c1-82b0-e71da64237f8")
+		)
+		(pad "2" thru_hole circle
+			(at 5.08 0)
+			(size 2.4 2.4)
+			(drill 1.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/AC_N")
+			(pinfunction "Pin_2_2")
+			(pintype "passive")
+			(uuid "8b8b1c95-7339-49f8-9c4a-463092f708e2")
+		)
+		(pad "3" thru_hole circle
+			(at 10.16 0)
+			(size 2.4 2.4)
+			(drill 1.2)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/AC_L")
+			(pinfunction "Pin_3_3")
+			(pintype "passive")
+			(uuid "52a7e38b-7de3-42a6-80e5-6e7e7ec1cf67")
+		)
+		(embedded_fonts no)
+	)
