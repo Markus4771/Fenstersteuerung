@@ -992,3 +992,35 @@ Nächster Schritt:
 Hinweis:
 - weiterhin keine Fertigungsfreigabe
 - Netzspannungsbereich vor Fertigung separat sicherheitstechnisch prüfen
+
+
+## Update v3.3eaq
+
+Basis:
+- Hauptplatine_v3.3eap_logic_repair_150x90.kicad_pcb
+
+Neu:
+- ROLL_DN von U1.9 zu R5.1 geroutet
+- Start U1.9 bei 90 / 38.16 mm
+- kurzer F.Cu-Abgang nach links bis x=86 mm
+- Layerwechsel auf B.Cu und senkrechter Korridor bis y=65.5 mm
+- Rückwechsel auf F.Cu und horizontale Führung bis R5.1 bei 134 / 64 mm
+- 0,30-mm-Signalbahn, zwei 0,8/0,4-mm-Vias
+- statische Prüfung: keine Leiterbahnkreuzung mit vorhandenen Tracks
+- statische Prüfung: keine Pad-Kollision im gewählten Korridor
+- 230-V-Bereich unverändert
+- bestehende Coil-, STEP-, Reed-, RS485-, +5V- und ROLL_UP-Routen unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3eaq_logic_repair_150x90.kicad_pcb`
+
+Status:
+- ROLL_UP und ROLL_DN sind nun beide geroutet
+- KiCad-DRC für v3.3eaq steht noch aus
+- keine Fertigungsfreigabe
+
+Nächster Schritt:
+1. DRC v3.3eaq
+2. danach offene +3V3-, +5V- und GND-Verbindungen systematisch schließen
+3. vollständige physische Konnektivitätsprüfung
+4. separate 230-V-Sicherheitsprüfung
