@@ -1133,3 +1133,40 @@ Nächster Schritt:
 3. Restfehler aus DRC priorisieren
 4. verbleibende GND-Verbindungen schließen
 5. abschließende 230-V-Sicherheitsprüfung
+
+
+## Update v3.3eau
+
+Basis:
+- Hauptplatine_v3.3eat_logic_repair_150x90.kicad_pcb
+- DRCeat.rpt vom 2026-09-29
+- DRCeat: 97 Verstöße
+- 8 Tracks crossing
+- 6 shorting_items
+- 2 clearance
+- 1 unconnected_item
+- 0 Footprint-Fehler
+
+Wichtige Erkenntnisse:
+- nur noch eine offene Verbindung: U1.2 / GND zur LOGIC_GND_PLANE
+- RS485_A/B/DE verursachten mehrere Kreuzungen und Shorts
+- +3V3 kreuzte /+5V im U2-Bereich
+- ROLL_UP/ROLL_DN sowie die neu gerouteten TOP/BOT-Coil-Netze erscheinen im DRCeat nicht mehr als eigene Kurzschluss-/Kreuzungsblöcke
+
+Änderungen in v3.3eau:
+- RS485_A vollständig neu geroutet (U3.6, R3.1, J4.3)
+- RS485_B vollständig neu geroutet (U3.7, R3.2, J4.4)
+- RS485_DE vollständig neu geroutet (U3.2/U3.3 zu U1.25)
+- +3V3 vollständig lokal neu aufgebaut zwischen R1, R2, U2.2 und U3.8
+- bisherige +3V3-Routen/Vias entfernt, damit der +5V/+3V3-Kurzschluss am U2 entfällt
+- explizite GND-Verbindung von U1.2 zu J2.2 ergänzt, damit die letzte offene GND-Verbindung nicht allein von der Zonenfüllung abhängt
+- 230-V-Bereich unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3eau_logic_repair_150x90.kicad_pcb`
+
+Nächster Schritt:
+1. Zonen neu füllen
+2. DRC v3.3eau
+3. verbleibende Altfehler bei +5V/K1_COIL_LOW, REED_TILT/RS485_TX/STEP_TOP_1 und BOT_COIL_3-Padabstand bereinigen
+4. danach Silkscreen-/Library-Warnungen getrennt behandeln
