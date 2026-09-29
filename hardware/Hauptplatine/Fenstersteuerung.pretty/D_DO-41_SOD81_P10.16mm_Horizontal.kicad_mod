@@ -1,7 +1,5 @@
 (footprint "D_DO-41_SOD81_P10.16mm_Horizontal"
 		(layer "F.Cu")
-		(uuid "28cfb037-2e96-40b4-98fa-586c8a327789")
-		(at 152 64)
 		(property "Reference" "REF**"
 			(at 0 -3 0)
 			(layer "F.SilkS")
@@ -44,9 +42,6 @@
 				)
 			)
 		)
-		(path "/00000000-0000-0000-0000-0000fad5f286")
-		(sheetname "/")
-		(sheetfile "Hauptplatine.kicad_sch")
 		(duplicate_pad_numbers_are_jumpers no)
 		
 		(pad "1" thru_hole rect
@@ -55,9 +50,6 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/+5V")
-			(pinfunction "Pin_1")
-			(pintype "passive")
 			(uuid "03cdd34d-57fc-4be8-9f42-d1a65defdf86")
 		)
 		(pad "2" thru_hole circle
@@ -66,9 +58,6 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/K2_COIL_LOW")
-			(pinfunction "Pin_2")
-			(pintype "passive")
 			(uuid "60e22570-123a-4c0a-bacd-7fae032bdccc")
 		)
 		(embedded_fonts no)
