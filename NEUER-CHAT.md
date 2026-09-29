@@ -1371,3 +1371,35 @@ Nächster Schritt:
 3. prüfen, ob die sichtbaren Signal-Ratsnest-Linien verschwunden sind
 4. DRC ausführen
 5. verbleibende GND-/Zonenlinien separat behandeln
+
+
+## Update v3.3eba
+
+Basis:
+- Hauptplatine_v3.3eaz_logic_repair_150x90.kicad_pcb
+- Screenshot vom 2026-09-29 zeigte nur noch GND-Ratsnest-Linien
+
+Analyse:
+- Signalnetze RS485_RX/TX sowie STEP_TOP_1..3 und STEP_BOT_1..4 sind nach v3.3eaz an exakten Padkoordinaten angeschlossen
+- verbleibende getrennte Kupfergruppen gehörten ausschließlich zum GND-Netz
+- betroffen: U5.8, U2.1, C2.2, PS1.4, U4.8, Q2.3, U3.5, U1.2, U1.42, C1.2, J4.2
+- gemeinsamer GND-Anker: J3.2 / 128.08,45 mm
+
+Änderungen in v3.3eba:
+- explizites GND-Backbone ergänzt
+- alle oben genannten GND-Pads separat an den gemeinsamen GND-Anker angebunden
+- neue GND-Leiterbahnen mit 0,4 mm
+- Layerwechsel nur über 0,9/0,45-mm-GND-Vias
+- bestehende Signalrouten unverändert
+- 230-V-Bereich unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3eba_logic_repair_150x90.kicad_pcb`
+
+Nächster Schritt:
+1. v3.3eba in KiCad öffnen
+2. Zonen neu füllen
+3. Ratsnest prüfen — Ziel: 0 sichtbare Luftlinien
+4. DRC ausführen
+5. anschließend GND-Zoneninseln/Silkscreen/Library-Warnungen bereinigen
+6. separate 230-V-Sicherheitsprüfung
