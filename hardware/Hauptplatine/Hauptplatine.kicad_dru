@@ -1,0 +1,19 @@
+(version 1)
+
+# Conservative mains-domain rules for the Fenstersteuerung main PCB.
+# Validate these rules in KiCad 10 Design Rule Editor before prototype release.
+
+(rule "MAINS different-net clearance 1.5mm"
+    (severity error)
+    (condition "(A.NetName == '/AC_L' || A.NetName == '/AC_N' || A.NetName == '/PE' || A.NetName == '/L_PSU_FUSED' || A.NetName == '/L_MOTOR' || A.NetName == '/UP_FEED' || A.NetName == '/DN_FEED' || A.NetName == '/MOTOR_UP' || A.NetName == '/MOTOR_DN') && (B.NetName == '/AC_L' || B.NetName == '/AC_N' || B.NetName == '/PE' || B.NetName == '/L_PSU_FUSED' || B.NetName == '/L_MOTOR' || B.NetName == '/UP_FEED' || B.NetName == '/DN_FEED' || B.NetName == '/MOTOR_UP' || B.NetName == '/MOTOR_DN') && A.NetName != B.NetName")
+    (constraint clearance (min 1.5mm)))
+
+(rule "MAINS to SELV clearance 6mm"
+    (severity error)
+    (condition "(((A.NetName == '/AC_L' || A.NetName == '/AC_N' || A.NetName == '/PE' || A.NetName == '/L_PSU_FUSED' || A.NetName == '/L_MOTOR' || A.NetName == '/UP_FEED' || A.NetName == '/DN_FEED' || A.NetName == '/MOTOR_UP' || A.NetName == '/MOTOR_DN')) && ((B.NetName == '/+3V3' || B.NetName == '/+5V' || B.NetName == '/BOT_COIL_1' || B.NetName == '/BOT_COIL_2' || B.NetName == '/BOT_COIL_3' || B.NetName == '/BOT_COIL_4' || B.NetName == '/GND' || B.NetName == '/K1_COIL_LOW' || B.NetName == '/K2_COIL_LOW' || B.NetName == '/Q1_BASE' || B.NetName == '/Q2_BASE' || B.NetName == '/REED_OPEN' || B.NetName == '/REED_TILT' || B.NetName == '/ROLL_DN' || B.NetName == '/ROLL_UP' || B.NetName == '/RS485_A' || B.NetName == '/RS485_B' || B.NetName == '/RS485_DE' || B.NetName == '/RS485_RX' || B.NetName == '/RS485_TX' || B.NetName == '/STEP_BOT_1' || B.NetName == '/STEP_BOT_2' || B.NetName == '/STEP_BOT_3' || B.NetName == '/STEP_BOT_4' || B.NetName == '/STEP_TOP_1' || B.NetName == '/STEP_TOP_2' || B.NetName == '/STEP_TOP_3' || B.NetName == '/STEP_TOP_4' || B.NetName == '/TOP_COIL_1' || B.NetName == '/TOP_COIL_2' || B.NetName == '/TOP_COIL_3' || B.NetName == '/TOP_COIL_4'))) || (((B.NetName == '/AC_L' || B.NetName == '/AC_N' || B.NetName == '/PE' || B.NetName == '/L_PSU_FUSED' || B.NetName == '/L_MOTOR' || B.NetName == '/UP_FEED' || B.NetName == '/DN_FEED' || B.NetName == '/MOTOR_UP' || B.NetName == '/MOTOR_DN')) && ((A.NetName == '/+3V3' || A.NetName == '/+5V' || A.NetName == '/BOT_COIL_1' || A.NetName == '/BOT_COIL_2' || A.NetName == '/BOT_COIL_3' || A.NetName == '/BOT_COIL_4' || A.NetName == '/GND' || A.NetName == '/K1_COIL_LOW' || A.NetName == '/K2_COIL_LOW' || A.NetName == '/Q1_BASE' || A.NetName == '/Q2_BASE' || A.NetName == '/REED_OPEN' || A.NetName == '/REED_TILT' || A.NetName == '/ROLL_DN' || A.NetName == '/ROLL_UP' || A.NetName == '/RS485_A' || A.NetName == '/RS485_B' || A.NetName == '/RS485_DE' || A.NetName == '/RS485_RX' || A.NetName == '/RS485_TX' || A.NetName == '/STEP_BOT_1' || A.NetName == '/STEP_BOT_2' || A.NetName == '/STEP_BOT_3' || A.NetName == '/STEP_BOT_4' || A.NetName == '/STEP_TOP_1' || A.NetName == '/STEP_TOP_2' || A.NetName == '/STEP_TOP_3' || A.NetName == '/STEP_TOP_4' || A.NetName == '/TOP_COIL_1' || A.NetName == '/TOP_COIL_2' || A.NetName == '/TOP_COIL_3' || A.NetName == '/TOP_COIL_4')))")
+    (constraint clearance (min 6mm)))
+
+(rule "MAINS minimum track width 2mm"
+    (severity error)
+    (condition "(A.NetName == '/AC_L' || A.NetName == '/AC_N' || A.NetName == '/PE' || A.NetName == '/L_PSU_FUSED' || A.NetName == '/L_MOTOR' || A.NetName == '/UP_FEED' || A.NetName == '/DN_FEED' || A.NetName == '/MOTOR_UP' || A.NetName == '/MOTOR_DN')")
+    (constraint track_width (min 2mm)))
