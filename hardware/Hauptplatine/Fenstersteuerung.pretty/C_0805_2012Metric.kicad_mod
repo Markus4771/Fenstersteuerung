@@ -1,7 +1,5 @@
 (footprint "C_0805_2012Metric"
 		(layer "F.Cu")
-		(uuid "4c060aff-db74-41c7-8260-c9065bd8a075")
-		(at 141 38)
 		(property "Reference" "REF**"
 			(at 0 -3 0)
 			(layer "F.SilkS")
@@ -44,9 +42,6 @@
 				)
 			)
 		)
-		(path "/00000000-0000-0000-0000-0000732e3c0e")
-		(sheetname "/")
-		(sheetfile "Hauptplatine.kicad_sch")
 		(duplicate_pad_numbers_are_jumpers no)
 		(fp_rect
 			(start -2 -1.2)
@@ -64,9 +59,6 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/REED_TILT")
-			(pinfunction "Pin_1")
-			(pintype "passive")
 			(uuid "ad821e20-f4d3-4dbe-ac92-8af8e40f34ad")
 		)
 		(pad "2" smd roundrect
@@ -74,9 +66,6 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/GND")
-			(pinfunction "Pin_2")
-			(pintype "passive")
 			(uuid "f86efac5-1ce3-4942-bba0-6515791e47a3")
 		)
 		(embedded_fonts no)
