@@ -4,11 +4,11 @@ Modulare ESP32-S3-basierte Fenster-/Rollladensteuerung mit 230-V-Rollladenansteu
 
 ## Aktueller Hauptplatinenstand
 
-**v3.3ebn2**
+**v3.3ebr2**
 
 Datei:
 
-`hardware/Hauptplatine/Hauptplatine_v3.3ebn2_logic_repair_150x90.kicad_pcb`
+`hardware/Hauptplatine/Hauptplatine_v3.3ebr2_library_clean_usb_clearance_150x90.kicad_pcb`
 
 ### DRC-Status
 
@@ -40,10 +40,10 @@ Es verbleiben nur 30 Bibliothekswarnungen durch angepasste bzw. lokal fehlende F
 
 ## Wichtige Dateien
 
-- PCB: `hardware/Hauptplatine/Hauptplatine_v3.3ebn2_logic_repair_150x90.kicad_pcb`
+- PCB: `hardware/Hauptplatine/Hauptplatine_v3.3ebr2_library_clean_usb_clearance_150x90.kicad_pcb`
 - DRC-Regeln: `hardware/Hauptplatine/Hauptplatine.kicad_dru`
 - 230-V-Prüfung: `hardware/Hauptplatine/230V-SICHERHEITSPRUEFUNG.md`
-- BOM: `bom/Hauptplatine_v3.3ebn2_BOM.csv`
+- BOM: `bom/Hauptplatine_v3.3ebr2_BOM.csv`
 - Entwicklungsarchiv: `hardware/Hauptplatine/archive/`
 - Historie: `docs/ENTWICKLUNGSHISTORIE.md`
 - Übergabe für neuen Chat: `NEUER-CHAT.md`
@@ -59,3 +59,13 @@ Es verbleiben nur 30 Bibliothekswarnungen durch angepasste bzw. lokal fehlende F
 ## Sicherheit
 
 Der saubere KiCad-DRC ist keine formale Freigabe für 230-V-Betrieb. Luft-/Kriechstrecken, PE-Führung, Absicherung, Bauteilzulassungen, Gehäuse und Endanwendung müssen separat geprüft werden.
+
+
+## Update v3.3ebr2
+
+- elektrisch sauberer v3.3ebq2-Stand übernommen
+- RS485-Klemme bleibt unten, USB-C frei zugänglich
+- alle 17 verwendeten Footprints auf projektlokale Bibliothek `Fenstersteuerung.pretty` umgestellt
+- `fp-lib-table` liegt im Hauptplatinen-Ordner
+- gegenüber v3.3ebq2 keine Änderungen an Routing, Pads, Vias oder Kupfer
+- nächster Schritt: KiCad öffnen, Zonen neu füllen und DRC ausführen
