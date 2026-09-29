@@ -194,3 +194,23 @@ Vor Fertigungsfreigabe weiterhin erforderlich:
 - finale Warnungsbereinigung
 - Gerber-/Drill-Viewer-Kontrolle
 - separate 230-V-Sicherheitsprüfung
+
+
+## Aktueller Hauptplatinenstand – v3.3ebn2
+
+Der KiCad-DRC vom 2026-09-29 ist elektrisch vollständig sauber:
+
+- 0 unconnected pads
+- 0 Footprint-Fehler
+- keine Clearance-/Short-/Crossing-/Dangling-Fehler
+- keine Silkscreen-Warnungen
+
+Es verbleiben nur 30 Library-Warnungen wegen angepasster bzw. lokal fehlender Footprint-Bibliotheken.
+
+Aktuelle Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3ebn2_logic_repair_150x90.kicad_pcb`
+
+Vor Bestellung:
+- Gerber/Drill erzeugen und prüfen
+- BOM/Footprints gegen reale Bauteile kontrollieren
+- separate 230-V-Sicherheitsprüfung abschließen
