@@ -1304,3 +1304,32 @@ Nächster Schritt:
 3. prüfen, ob starved_thermal und hole-Warnungen verschwunden sind
 4. danach GND-Zoneninseln und Silkscreen/Library-Warnungen bereinigen
 5. separate 230-V-Sicherheitsprüfung
+
+
+## Update v3.3eay
+
+Basis:
+- Hauptplatine_v3.3eax_logic_repair_150x90.kicad_pcb
+- DRCeax.rpt vom 2026-09-29
+- DRCeax: 101 DRC-Verstöße + 1 unconnected pad
+- keine Kurzschlüsse/Kreuzungen/Clearance-Fehler
+- offener Anschluss ausschließlich J2.2 / GND zur LOGIC_GND_PLANE
+- 50 isolated_copper
+- 29 lib_footprint_issues
+- Silkscreen-Warnungen verbleiben
+
+Änderung in v3.3eay:
+- J2.2/GND direkt und ohne Via mit J3.2/GND verbunden
+- gerade B.Cu-Leiterbahn x=128.08 mm von y=30 mm bis y=45 mm
+- keine anderen Netze verändert
+- 230-V-Bereich unverändert
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3eay_logic_repair_150x90.kicad_pcb`
+
+Nächster Schritt:
+1. Zonen neu füllen
+2. DRC v3.3eay
+3. prüfen, ob unconnected_items = 0 bleibt
+4. anschließend GND-isolated_copper-Warnungen und Silkscreen/Library-Warnungen bereinigen
+5. separate 230-V-Sicherheitsprüfung
