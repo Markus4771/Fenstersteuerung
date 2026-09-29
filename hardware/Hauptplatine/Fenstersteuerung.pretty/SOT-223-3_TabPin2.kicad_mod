@@ -1,7 +1,5 @@
 (footprint "SOT-223-3_TabPin2"
 		(layer "F.Cu")
-		(uuid "3ee46a5b-ac45-4c7b-b143-d3d80c25ed23")
-		(at 152 28)
 		(property "Reference" "REF**"
 			(at 0 -3 0)
 			(layer "F.SilkS")
@@ -45,9 +43,6 @@
 				)
 			)
 		)
-		(path "/00000000-0000-0000-0000-0000c1a42cff")
-		(sheetname "/")
-		(sheetfile "Hauptplatine.kicad_sch")
 		(duplicate_pad_numbers_are_jumpers no)
 		
 		(pad "1" smd roundrect
@@ -55,9 +50,6 @@
 			(size 1.6 2.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/GND")
-			(pinfunction "Pin_1")
-			(pintype "passive")
 			(uuid "26c3d76f-173a-4ac6-97ae-22cc6b1f3920")
 		)
 		(pad "2" smd roundrect
@@ -65,9 +57,6 @@
 			(size 3.8 2.8)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/+3V3")
-			(pinfunction "Pin_2")
-			(pintype "passive")
 			(uuid "ac039cad-3886-41d0-a222-ce288ac52ac0")
 		)
 		(pad "2" smd roundrect
@@ -75,9 +64,6 @@
 			(size 1.6 2.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/+3V3")
-			(pinfunction "Pin_2")
-			(pintype "passive")
 			(uuid "ce396f1d-1d39-49c0-bc2a-8bf063df1fe9")
 		)
 		(pad "3" smd roundrect
@@ -85,9 +71,6 @@
 			(size 1.6 2.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.25)
-			(net "/+5V")
-			(pinfunction "Pin_3")
-			(pintype "passive")
 			(uuid "66d5a5fa-0566-4c13-8869-2b20bd737626")
 		)
 		(embedded_fonts no)
