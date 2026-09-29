@@ -1546,3 +1546,45 @@ Nächster Schritt:
 3. DRC ausführen
 4. prüfen: 0 unconnected / 0 shorts / 0 crossings / 0 clearance
 5. danach verbleibende Warnungen und Gerber-Freigabe
+
+
+## Update v3.3ebk2 – DRCebj2 elektrische Restfehler behoben
+
+Basis:
+- Hauptplatine_v3.3ebj2_logic_repair_150x90.kicad_pcb
+- DRCebj2.rpt vom 2026-09-29
+
+DRCebj2:
+- 60 DRC-Verstöße
+- 3 unconnected pads
+- 1 echter Clearance-Fehler
+- 5 dangling-track-Warnungen
+- Rest Library-/Silkscreen-Warnungen
+
+Behobene elektrische Punkte:
+1. REED_OPEN:
+   - J2.1 bei 123/30 mm war zwischen zwei alten Track-Ästen nicht verbunden
+   - beide Äste direkt zu J2.1 geführt
+
+2. +5V:
+   - nach der U1-Pinout-Korrektur war der obere B.Cu-5V-Bus vom übrigen +5V-Netz getrennt
+   - Via bei 82.5/50.8 mm ergänzt
+   - B.Cu-Verbindung 82.5/50.8 -> 82.5/24 -> 90/24
+
+3. AC_L:
+   - bei 66.2/27 mm fehlte der Layerwechsel F.Cu -> B.Cu
+   - 1.2/0.6-mm-Via ergänzt
+
+4. K1_COIL_LOW:
+   - Clearance zu K2.A2 nur 0.18 mm bei geforderten 0.20 mm
+   - lokalen Korridor von y=87.5 mm auf y=89 mm verlegt
+
+Datei:
+`hardware/Hauptplatine/Hauptplatine_v3.3ebk2_logic_repair_150x90.kicad_pcb`
+
+Nächster Schritt:
+1. v3.3ebk2 öffnen
+2. Zonen neu füllen
+3. DRC ausführen
+4. Ziel: 0 unconnected / 0 clearance / 0 dangling
+5. danach nur noch Warnungsbereinigung und Fertigungscheck
