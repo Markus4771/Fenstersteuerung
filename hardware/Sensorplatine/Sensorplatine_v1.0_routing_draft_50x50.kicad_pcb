@@ -7,7 +7,7 @@
     (36 "B.SilkS" user "b.silkscreen")
     (37 "F.SilkS" user "f.silkscreen")
     (44 "Edge.Cuts" user)
-    (36 "User.Drawings" user "user drawings")
+    (40 "Dwgs.User" user "User.Drawings")
   )
   (setup (pad_to_mask_clearance 0))
 
@@ -25,9 +25,9 @@
     (stroke (width 0.2) (type default)) (fill none) (layer "Edge.Cuts"))
 
   (gr_rect (start 103 101.5) (end 147 107)
-    (stroke (width 0.25) (type dash)) (fill none) (layer "User.Drawings"))
+    (stroke (width 0.25) (type dash)) (fill none) (layer "Dwgs.User"))
   (gr_text "LD2450 ANTENNA KEEPOUT" (at 125 104.25)
-    (layer "User.Drawings")
+    (layer "Dwgs.User")
     (effects (font (size 1 1) (thickness 0.15))))
   (gr_text "Sensorplatine v1.0 - ROUTING DRAFT" (at 125 148.5)
     (layer "F.SilkS")
@@ -212,9 +212,9 @@
   (segment (start 110 144.05) (end 111 139.95) (width 0.4) (layer "B.Cu") (net 1))
 
   (gr_text "CORE ROUTED: POWER + RS485" (at 118 146.5)
-    (layer "User.Drawings")
+    (layer "Dwgs.User")
     (effects (font (size 0.8 0.8) (thickness 0.12))))
   (gr_text "Sensor footprints pending exact manufacturer landpatterns" (at 128 147.8)
-    (layer "User.Drawings")
+    (layer "Dwgs.User")
     (effects (font (size 0.65 0.65) (thickness 0.1))))
 )
