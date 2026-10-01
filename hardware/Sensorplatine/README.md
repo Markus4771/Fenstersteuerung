@@ -133,3 +133,21 @@ Aktuelle Platzierung:
 - zunächst zwei 2.5-mm-Befestigungsbohrungen unten
 
 Dieser Stand ist absichtlich noch nicht geroutet. Vor dem Routing werden Footprints und mechanische Abstände final geprüft.
+
+
+## Routing-Stand v1.0
+
+Neue Datei:
+
+`Sensorplatine_v1.0_routing_draft_50x50.kicad_pcb`
+
+Bereits elektrisch geroutet:
+
+- 5-V-Eingang vom JST-XH-Stecker zum AP2112K
+- 3,3-V-Versorgung vom AP2112K zum STM32 und MAX3485
+- GND-Verbindungen im Kernbereich
+- RS485 A/B vom Hauptanschluss über SM712 zum MAX3485
+- USART-Verbindungen MAX3485 <-> STM32
+- DE/RE-Steuerung MAX3485 <-> STM32
+
+Die Sensor-Footprints sind in diesem Stand noch bewusst als Platzhalter markiert. Vor dem Routing von I2C, I2S und LD2450 werden die exakten Hersteller-Landpatterns übernommen und geprüft.
