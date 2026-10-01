@@ -177,3 +177,28 @@ Noch offen bleiben nur die kurzen lokalen Verbindungen direkt an:
 Grund: Für diese Bauteile werden vor einer fertigungstauglichen Version die exakten Hersteller-Landpatterns übernommen. Die derzeitigen Sensorflächen sind ausdrücklich noch Platzhalter.
 
 Der aktuelle Stand ist daher ein **maximal gerouteter mechanisch-elektrischer Entwurf**, aber noch keine freigegebene Fertigungsdatei. Vor Gerber-Erzeugung müssen die finalen Footprints eingesetzt und ein KiCad-DRC durchgeführt werden.
+
+
+## Versionierung
+
+Ab jetzt wird die Sensorplatine strikt versionsbasiert weiterentwickelt.
+
+Regeln:
+
+- vorhandene Hardwareversionen werden nicht mehr überschrieben
+- jede elektrische oder mechanische Änderung erzeugt eine neue Version
+- reine Dokumentationskorrekturen können innerhalb derselben Version dokumentiert werden
+- DRC-Berichte werden passend zur jeweiligen Version abgelegt
+- Gerber-Dateien erhalten immer dieselbe Versionsnummer wie das zugehörige PCB
+
+Aktueller Stand:
+
+- **v1.0** = erster 50 x 50 mm Sensorplatinen-Entwurf mit STM32G031, RS485, LD2450 und vorgerouteten Sensorbussen
+- nächste Entwicklungsstufe: **v1.1**
+
+Geplante Dateinamen:
+
+- `Sensorplatine_v1.0_routing_draft_50x50.kicad_pcb` – eingefrorener aktueller Stand
+- `Sensorplatine_v1.1_50x50.kicad_pcb` – nächste bearbeitete PCB-Version
+- `DRC_v1.0.rpt`, `DRC_v1.1.rpt` usw.
+- spätere Gerber: `Sensorplatine_v1.1_Gerber.zip` usw.
