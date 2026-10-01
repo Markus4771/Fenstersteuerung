@@ -151,3 +151,29 @@ Bereits elektrisch geroutet:
 - DE/RE-Steuerung MAX3485 <-> STM32
 
 Die Sensor-Footprints sind in diesem Stand noch bewusst als Platzhalter markiert. Vor dem Routing von I2C, I2S und LD2450 werden die exakten Hersteller-Landpatterns übernommen und geprüft.
+
+
+## Maximaler Routing-Stand – v1.0
+
+In `Sensorplatine_v1.0_routing_draft_50x50.kicad_pcb` sind jetzt zusätzlich geroutet:
+
+- I2C SDA/SCL vom STM32 bis in die zentrale Sensorzone
+- UART TX/RX vom STM32 bis zur LD2450-Modulschnittstelle
+- 5 V und GND bis zur LD2450-Modulschnittstelle
+- I2S WS / CK / SD vom STM32 bis zur Mikrofonzone
+- SWDIO / SWCLK / NRST / 3V3 / GND bis zum SWD-Header
+
+Damit sind praktisch alle langen bzw. kritischen Leiterbahnstrecken vorgeroutet.
+
+Noch offen bleiben nur die kurzen lokalen Verbindungen direkt an:
+
+- BME280
+- SCD41
+- SGP40
+- VEML7700
+- T5848
+- endgültiges LD2450-Landpattern
+
+Grund: Für diese Bauteile werden vor einer fertigungstauglichen Version die exakten Hersteller-Landpatterns übernommen. Die derzeitigen Sensorflächen sind ausdrücklich noch Platzhalter.
+
+Der aktuelle Stand ist daher ein **maximal gerouteter mechanisch-elektrischer Entwurf**, aber noch keine freigegebene Fertigungsdatei. Vor Gerber-Erzeugung müssen die finalen Footprints eingesetzt und ein KiCad-DRC durchgeführt werden.
