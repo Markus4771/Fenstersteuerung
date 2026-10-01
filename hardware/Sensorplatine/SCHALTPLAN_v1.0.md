@@ -200,7 +200,7 @@ Schutz:
 
 ### 6. Digitales Mikrofon
 
-U8: digitales MEMS-Mikrofon, endgültiger Typ noch festzulegen.
+U8: TDK InvenSense T5848, digitales I2S-MEMS-Mikrofon.
 
 Ziel:
 
@@ -268,9 +268,34 @@ Die physikalischen Pin-Nummern wurden gegen das aktuelle ST-Datenblatt für STM3
 
 ## Noch offen
 
-1. endgültiger MEMS-Mikrofontyp
-2. endgültiger 4-poliger Steckverbinder
-3. genaue TVS-Diode für RS485
-4. endgültiger Footprint des HLK-LD2450
-5. Gehäuse und Öffnungen
-6. Überführung dieser Spezifikation in KiCad-Schaltplan und PCB
+1. endgültiger Footprint des HLK-LD2450
+2. Gehäuse und Öffnungen
+3. mechanische Platzierung auf 50 x 50 mm
+4. PCB-Routing und DRC
+
+
+## Festgelegte Bauteile – Update
+
+### U8 – TDK InvenSense T5848
+- digitaler I2S-Ausgang
+- Bottom-Port-MEMS-Mikrofon
+- ca. 3.50 x 2.65 x 0.98 mm
+- Status: Production
+- benötigt eine Schallöffnung im PCB/Gehäuse
+- Hinweis: wegen Bottom-Pads nicht klassisch mit Lötkolben an allen Anschlüssen zugänglich; Reflow/Heißluft empfohlen
+
+### D_RS485 – Littelfuse SM712
+- speziell für RS485/RS422-Schutz
+- asymmetrische TVS-Auslegung für Busleitungen
+- zwischen RS485 A/B und GND gemäß Hersteller-Applikation platzieren
+- möglichst nahe am externen Steckverbinder
+
+### J1 – JST XH, 4-polig, 2.50 mm
+- Through-Hole-Ausführung
+- gut von Hand lötbar
+- 3 A bei AWG22 laut JST
+- Pinbelegung:
+  1. +5V
+  2. GND
+  3. RS485_A
+  4. RS485_B
