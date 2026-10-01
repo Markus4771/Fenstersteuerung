@@ -76,3 +76,36 @@ Beim späteren PCB-Layout beachten:
 6. Gehäuseabmessungen und Position der Luft-/Licht-/Schallöffnungen
 7. Schutzbeschaltung für die Verbindung zur Hauptplatine
 8. KiCad-Schaltplan und PCB-Version v1.0
+
+
+## Schaltplanstand v1.0
+
+Aktiver Entwurf:
+
+- `Sensorplatine_v1.0.sch`
+- lokale Symbolbibliothek: `Sensorplatine_v1.0-cache.lib`
+- Pinbelegung: `PINBELEGUNG_v1.0.csv`
+- Schaltplan-Spezifikation: `SCHALTPLAN_v1.0.md`
+
+Der Schaltplan enthält bereits:
+
+- STM32G031K8T6 (LQFP-32)
+- AP2112K-3.3
+- MAX3485 / RS485
+- BME280
+- SCD41
+- SGP40
+- VEML7700
+- HLK-LD2450
+- I2S-MEMS-Mikrofon als noch zu finalisierender Typ
+- 4-poligen Anschluss zur Hauptplatine
+- SWD-Programmieranschluss
+
+### Vor PCB-Layout noch final festzulegen
+
+1. konkreter I2S-MEMS-Mikrofontyp und Footprint
+2. RS485-TVS-Typ
+3. 120-Ohm-Abschluss als Jumper/Lötbrücke
+4. endgültiger 4-poliger Steckverbinder
+5. Footprint des HLK-LD2450 und Antennen-Keepout
+6. mechanische Positionen innerhalb 50 x 50 mm
