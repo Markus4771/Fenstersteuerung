@@ -43,6 +43,26 @@
     (layer "F.SilkS")
     (effects (font (size 0.85 0.85) (thickness 0.14))))
 
+  (gr_text "I2C routed to sensor zone" (at 126 129) (layer "Dwgs.User")
+    (effects (font (size 0.65 0.65) (thickness 0.1))))
+
+  (gr_text "LD2450 UART + 5V/GND routed to module interface" (at 125 120.5) (layer "Dwgs.User")
+    (effects (font (size 0.65 0.65) (thickness 0.1))))
+
+  (gr_text "I2S routed to microphone zone" (at 141.5 134.5) (layer "Dwgs.User")
+    (effects (font (size 0.65 0.65) (thickness 0.1))))
+
+  (gr_text "SWD fully routed" (at 141.5 142) (layer "Dwgs.User")
+    (effects (font (size 0.65 0.65) (thickness 0.1))))
+
+  (gr_text "v1.2: maximum safe pre-routing" (at 118 146.5)
+    (layer "Dwgs.User")
+    (effects (font (size 0.8 0.8) (thickness 0.12))))
+
+  (gr_text "Core + buses routed; sensor landpatterns pending" (at 128 147.8)
+    (layer "Dwgs.User")
+    (effects (font (size 0.65 0.65) (thickness 0.1))))
+
   (footprint "Sensorplatine:JST_XH_1x04" (layer "F.Cu") (at 104 139.25)
     (fp_rect (start -2 -1.5) (end 2 9) (stroke (width 0.2) (type default)) (fill none) (layer "F.SilkS"))
     (fp_text reference "J1" (at 0 -2.5) (layer "F.SilkS")
@@ -311,19 +331,5 @@
   (segment (start 119 137.2) (end 119 148.54) (width 0.25) (layer "B.Cu") (net 18) (tstamp 5e120000-0000-4000-8000-000000000041))
   (segment (start 119 148.54) (end 143 147.54) (width 0.25) (layer "B.Cu") (net 18) (tstamp 5e120000-0000-4000-8000-000000000042))
 
-  (gr_text "I2C routed to sensor zone" (at 126 129) (layer "Dwgs.User")
-    (effects (font (size 0.65 0.65) (thickness 0.1))))
-  (gr_text "LD2450 UART + 5V/GND routed to module interface" (at 125 120.5) (layer "Dwgs.User")
-    (effects (font (size 0.65 0.65) (thickness 0.1))))
-  (gr_text "I2S routed to microphone zone" (at 141.5 134.5) (layer "Dwgs.User")
-    (effects (font (size 0.65 0.65) (thickness 0.1))))
-  (gr_text "SWD fully routed" (at 141.5 142) (layer "Dwgs.User")
-    (effects (font (size 0.65 0.65) (thickness 0.1))))
 
-  (gr_text "v1.2: maximum safe pre-routing" (at 118 146.5)
-    (layer "Dwgs.User")
-    (effects (font (size 0.8 0.8) (thickness 0.12))))
-  (gr_text "Core + buses routed; sensor landpatterns pending" (at 128 147.8)
-    (layer "Dwgs.User")
-    (effects (font (size 0.65 0.65) (thickness 0.1))))
 )
