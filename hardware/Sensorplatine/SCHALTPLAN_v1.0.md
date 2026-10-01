@@ -248,12 +248,12 @@ Steckertyp wird erst mit Gehäuse und Kabelwahl final festgelegt.
 | PA7 | 14 | I2S SD |
 | PB1 | 16 | RS485 DE + /RE |
 | PB6 | 32 | RS485 TX |
-| PB7 | 31 | RS485 RX |
+| PB7 | 27 | RS485 RX |
 | PA13 | 24 | SWDIO |
 | PA14 | 25 | SWCLK |
 | PF2/NRST | 6 | Reset |
 
-Hinweis: Die physikalischen Pin-Nummern müssen beim Überführen in KiCad nochmals gegen das aktuelle ST-Datenblatt geprüft werden. Die LQFP-32-Pinbelegung ist die verbindliche Grundlage.
+Die physikalischen Pin-Nummern wurden gegen das aktuelle ST-Datenblatt für STM32G031KxT im LQFP-32 geprüft. Die Alternate-Functions für USART1, USART2 und I2S1 sind ebenfalls abgeglichen.
 
 ## Layoutvorgaben 50 × 50 mm
 
