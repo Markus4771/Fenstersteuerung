@@ -202,3 +202,26 @@ Geplante Dateinamen:
 - `Sensorplatine_v1.1_50x50.kicad_pcb` – nächste bearbeitete PCB-Version
 - `DRC_v1.0.rpt`, `DRC_v1.1.rpt` usw.
 - spätere Gerber: `Sensorplatine_v1.1_Gerber.zip` usw.
+
+
+## Version v1.2
+
+Datei:
+
+`Sensorplatine_v1.2_50x50.kicad_pcb`
+
+Änderungen gegenüber v1.1:
+
+- 5-V-Versorgung neu geroutet
+- GND-Backbone neu aufgebaut
+- 3,3-V-Verteilung neu geroutet
+- RS485 A/B getrennt geführt
+- MAX3485 <-> STM32 neu geroutet
+- I2C bis zur Sensorzone geroutet
+- LD2450 UART sowie 5 V/GND bis zur Modulschnittstelle geroutet
+- I2S bis zur Mikrofonzone geroutet
+- SWD neu geroutet
+- SWD-Header weiter in die Platinenkontur verschoben
+
+Hinweis:
+v1.2 basiert auf der in GitHub gespeicherten v1.1. Lokal in KiCad verschobene Bauteile aus einer nicht hochgeladenen `.kicad_pcb` konnten noch nicht übernommen werden.
