@@ -109,3 +109,27 @@ Der Schaltplan enthält bereits:
 4. endgültiger 4-poliger Steckverbinder
 5. Footprint des HLK-LD2450 und Antennen-Keepout
 6. mechanische Positionen innerhalb 50 x 50 mm
+
+
+## PCB-Placement v1.0
+
+Erster mechanischer 50 x 50 mm Placement-Entwurf:
+
+`Sensorplatine_v1.0_placement_50x50.kicad_pcb`
+
+Aktuelle Platzierung:
+
+- HLK-LD2450 entlang der oberen Platinenkante
+- definierter Antennen-Keepout an der Oberkante
+- SCD41 links mit eigener Luftzone
+- BME280 und SGP40 mittig im Sensorbereich
+- VEML7700 am rechten Rand
+- STM32G031K8T6 zentral unten
+- MAX3485 und SM712 nahe RS485-Seite
+- AP2112K-3.3 unten rechts
+- T5848 nahe Gehäuserand für Schallöffnung
+- JST-XH 4-polig unten links
+- SWD-Header unten
+- zunächst zwei 2.5-mm-Befestigungsbohrungen unten
+
+Dieser Stand ist absichtlich noch nicht geroutet. Vor dem Routing werden Footprints und mechanische Abstände final geprüft.
