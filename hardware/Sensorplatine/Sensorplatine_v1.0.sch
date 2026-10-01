@@ -1,0 +1,292 @@
+EESchema Schematic File Version 4
+LIBS:Sensorplatine_v1.0-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+Sheet 1 1
+Title "Fenstersteuerung Sensorplatine v1.0"
+Date "2026-10-01"
+Rev "1.0"
+Comp "Fenstersteuerung"
+Comment1 "50x50 mm Sensorplatine, STM32G031 + RS485"
+Comment2 "BME280 / SCD41 / SGP40 / VEML7700 / LD2450 / I2S Mikrofon"
+Comment3 "RS485-Verbindung zur Hauptplatine"
+Comment4 ""
+$EndDescr
+Text Notes 700 600 0 100 ~ 20
+VERSORGUNG
+Text Notes 3900 600 0 100 ~ 20
+CONTROLLER / BUS
+Text Notes 700 3550 0 100 ~ 20
+I2C-SENSOREN
+Text Notes 7200 3550 0 100 ~ 20
+ANWESENHEIT / SCHALL
+
+$Comp
+L AP2112K_3V3 U9
+U 1 1 1001
+P 1700 1400
+F 0 "U9" H 1700 1800 50 0000 C CNN
+F 1 "AP2112K-3.3" H 1700 1700 50 0000 C CNN
+	1    1700 1400
+	1 0 0 -1
+$EndComp
+Text GLabel 950 1300 0 50 Input ~ 0
++5V
+Text GLabel 2450 1300 2 50 Output ~ 0
++3V3
+Text GLabel 1700 1950 3 50 Input ~ 0
+GND
+Wire Wire Line
+	950 1300 950 1300
+Wire Wire Line
+	950 1300 950 1500
+Wire Wire Line
+	950 1500 950 1500
+Text GLabel 950 1500 0 50 Input ~ 0
++5V
+Wire Wire Line
+	2450 1300 2450 1300
+Wire Wire Line
+	1700 1950 1700 1950
+
+$Comp
+L CONN_4 J1
+U 1 1 1002
+P 1700 2500
+F 0 "J1" H 1700 2900 50 0000 C CNN
+F 1 "MAIN_RS485" H 1700 2800 50 0000 C CNN
+	1    1700 2500
+	-1 0 0 -1
+$EndComp
+Text GLabel 2300 2350 2 50 Output ~ 0
++5V
+Text GLabel 2300 2450 2 50 Output ~ 0
+GND
+Text GLabel 2300 2550 2 50 BiDi ~ 0
+RS485_A
+Text GLabel 2300 2650 2 50 BiDi ~ 0
+RS485_B
+
+$Comp
+L STM32G031K8T6 U1
+U 1 1 1100
+P 5000 1900
+F 0 "U1" H 5000 2900 50 0000 C CNN
+F 1 "STM32G031K8T6" H 5000 2800 50 0000 C CNN
+	1    5000 1900
+	1 0 0 -1
+$EndComp
+Text GLabel 3850 1450 0 50 Input ~ 0
+I2C_SDA
+Text GLabel 3850 1650 0 50 Input ~ 0
++3V3
+Text GLabel 3850 1800 0 50 Input ~ 0
+GND
+Text GLabel 3850 2000 0 50 Input ~ 0
+NRST
+Text GLabel 3850 2200 0 50 Output ~ 0
+LD2450_RX
+Text GLabel 3850 2350 0 50 Input ~ 0
+LD2450_TX
+Text GLabel 3850 2500 0 50 Output ~ 0
+I2S_WS
+Text GLabel 3850 2650 0 50 Output ~ 0
+I2S_CK
+Text GLabel 6150 2650 2 50 Input ~ 0
+I2S_SD
+Text GLabel 6150 2500 2 50 Output ~ 0
+RS485_DE
+Text GLabel 6150 2350 2 50 BiDi ~ 0
+SWDIO
+Text GLabel 6150 2200 2 50 Output ~ 0
+SWCLK
+Text GLabel 6150 2000 2 50 Input ~ 0
+RS485_RX
+Text GLabel 6150 1800 2 50 Output ~ 0
+I2C_SCL
+Text GLabel 6150 1450 2 50 Output ~ 0
+RS485_TX
+
+$Comp
+L MAX3485 U7
+U 1 1 1200
+P 8200 1850
+F 0 "U7" H 8200 2350 50 0000 C CNN
+F 1 "MAX3485" H 8200 2250 50 0000 C CNN
+	1    8200 1850
+	1 0 0 -1
+$EndComp
+Text GLabel 7400 1650 0 50 Output ~ 0
+RS485_RX
+Text GLabel 7400 1800 0 50 Input ~ 0
+RS485_DE
+Text GLabel 7400 1950 0 50 Input ~ 0
+RS485_DE
+Text GLabel 7400 2100 0 50 Input ~ 0
+RS485_TX
+Text GLabel 9000 1750 2 50 BiDi ~ 0
+RS485_B
+Text GLabel 9000 1950 2 50 BiDi ~ 0
+RS485_A
+Text GLabel 8200 1250 1 50 Input ~ 0
++3V3
+Text GLabel 8200 2450 3 50 Input ~ 0
+GND
+
+$Comp
+L SWD_5 J2
+U 1 1 1300
+P 9600 1800
+F 0 "J2" H 9600 2250 50 0000 C CNN
+F 1 "SWD" H 9600 2150 50 0000 C CNN
+	1    9600 1800
+	-1 0 0 -1
+$EndComp
+Text GLabel 10200 1600 2 50 Input ~ 0
++3V3
+Text GLabel 10200 1700 2 50 BiDi ~ 0
+SWDIO
+Text GLabel 10200 1800 2 50 Input ~ 0
+SWCLK
+Text GLabel 10200 1900 2 50 Input ~ 0
+NRST
+Text GLabel 10200 2000 2 50 Input ~ 0
+GND
+
+$Comp
+L BME280 U2
+U 1 1 2001
+P 1800 4400
+F 0 "U2" H 1800 4950 50 0000 C CNN
+F 1 "BME280" H 1800 4850 50 0000 C CNN
+	1    1800 4400
+	1 0 0 -1
+$EndComp
+Text GLabel 1000 4150 0 50 Input ~ 0
+GND
+Text GLabel 1000 4300 0 50 Input ~ 0
++3V3
+Text GLabel 1000 4450 0 50 Input ~ 0
+GND
+Text GLabel 1000 4600 0 50 Input ~ 0
+GND
+Text GLabel 1800 3750 1 50 Input ~ 0
++3V3
+Text GLabel 2000 3750 1 50 Input ~ 0
++3V3
+Text GLabel 2600 4300 2 50 BiDi ~ 0
+I2C_SDA
+Text GLabel 2600 4450 2 50 Input ~ 0
+I2C_SCL
+
+$Comp
+L SCD41 U3
+U 1 1 2002
+P 4300 4400
+F 0 "U3" H 4300 5000 50 0000 C CNN
+F 1 "SCD41" H 4300 4900 50 0000 C CNN
+	1    4300 4400
+	1 0 0 -1
+$EndComp
+Text GLabel 3400 4150 0 50 Input ~ 0
+GND
+Text GLabel 3400 4650 0 50 Input ~ 0
+GND
+Text GLabel 4150 3700 1 50 Input ~ 0
++3V3
+Text GLabel 4450 3700 1 50 Input ~ 0
++3V3
+Text GLabel 5200 4300 2 50 Input ~ 0
+I2C_SCL
+Text GLabel 5200 4500 2 50 BiDi ~ 0
+I2C_SDA
+
+$Comp
+L SGP40 U4
+U 1 1 2003
+P 1800 5900
+F 0 "U4" H 1800 6450 50 0000 C CNN
+F 1 "SGP40" H 1800 6350 50 0000 C CNN
+	1    1800 5900
+	1 0 0 -1
+$EndComp
+Text GLabel 1000 5750 0 50 Input ~ 0
+GND
+Text GLabel 1000 6050 0 50 Input ~ 0
+GND
+Text GLabel 1800 5250 1 50 Input ~ 0
++3V3
+Text GLabel 2000 5250 1 50 Input ~ 0
++3V3
+Text GLabel 2600 5800 2 50 BiDi ~ 0
+I2C_SDA
+Text GLabel 2600 6000 2 50 Input ~ 0
+I2C_SCL
+
+$Comp
+L VEML7700 U5
+U 1 1 2004
+P 4300 5850
+F 0 "U5" H 4300 6300 50 0000 C CNN
+F 1 "VEML7700" H 4300 6200 50 0000 C CNN
+	1    4300 5850
+	1 0 0 -1
+$EndComp
+Text GLabel 4300 5300 1 50 Input ~ 0
++3V3
+Text GLabel 3550 5950 0 50 Input ~ 0
+GND
+Text GLabel 5050 5750 2 50 Input ~ 0
+I2C_SCL
+Text GLabel 5050 5950 2 50 BiDi ~ 0
+I2C_SDA
+
+$Comp
+L HLK_LD2450 M1
+U 1 1 3001
+P 8250 4350
+F 0 "M1" H 8250 4850 50 0000 C CNN
+F 1 "HLK-LD2450" H 8250 4750 50 0000 C CNN
+	1    8250 4350
+	1 0 0 -1
+$EndComp
+Text GLabel 7350 4200 0 50 Input ~ 0
++5V
+Text GLabel 7350 4500 0 50 Input ~ 0
+GND
+Text GLabel 9150 4250 2 50 Output ~ 0
+LD2450_TX
+Text GLabel 9150 4450 2 50 Input ~ 0
+LD2450_RX
+
+$Comp
+L MIC_I2S U8
+U 1 1 3002
+P 8250 5850
+F 0 "U8" H 8250 6400 50 0000 C CNN
+F 1 "MEMS_I2S_MIC" H 8250 6300 50 0000 C CNN
+	1    8250 5850
+	1 0 0 -1
+$EndComp
+Text GLabel 8250 5200 1 50 Input ~ 0
++3V3
+Text GLabel 7450 5650 0 50 Input ~ 0
+GND
+Text GLabel 7450 6000 0 50 Input ~ 0
+GND
+Text GLabel 9050 5700 2 50 Input ~ 0
+I2S_WS
+Text GLabel 9050 5850 2 50 Input ~ 0
+I2S_CK
+Text GLabel 9050 6000 2 50 Output ~ 0
+I2S_SD
+
+Text Notes 6900 6800 0 60 ~ 12
+Hinweis: Mikrofontyp wird vor PCB-Footprint final festgelegt.
+Text Notes 6900 6950 0 60 ~ 12
+LD2450 mit Antennen-Keepout am Platinenrand platzieren.
+Text Notes 6900 7100 0 60 ~ 12
+RS485-Abschluss 120 Ohm + TVS werden im PCB-Detail ergänzt.
+
+$EndSCHEMATC
