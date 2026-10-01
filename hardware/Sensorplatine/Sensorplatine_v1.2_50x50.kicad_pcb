@@ -235,7 +235,6 @@
 
 
 
-  ; +5V main feed
   (segment (start 104 139.25) (end 104 137.45) (width 0.6) (layer "F.Cu") (net 2))
   (segment (start 104 137.45) (end 106.3 137.45) (width 0.6) (layer "F.Cu") (net 2))
   (segment (start 104 139.25) (end 109.8 139.25) (width 0.6) (layer "B.Cu") (net 2))
@@ -245,7 +244,6 @@
   (segment (start 101.8 139.25) (end 101.8 118) (width 0.6) (layer "B.Cu") (net 2))
   (segment (start 101.8 118) (end 121.19 118) (width 0.6) (layer "B.Cu") (net 2))
 
-  ; GND backbone
   (segment (start 104 141.75) (end 107.5 141.75) (width 0.6) (layer "B.Cu") (net 1))
   (segment (start 107.5 141.75) (end 107.5 137.45) (width 0.6) (layer "B.Cu") (net 1))
   (segment (start 107.5 141.75) (end 108 143.05) (width 0.5) (layer "B.Cu") (net 1))
@@ -256,7 +254,6 @@
   (segment (start 132 121) (end 132 140.92) (width 0.5) (layer "B.Cu") (net 1))
   (segment (start 132 140.92) (end 143 139.92) (width 0.5) (layer "B.Cu") (net 1))
 
-  ; +3V3 backbone
   (segment (start 106.3 135.55) (end 106.3 132) (width 0.5) (layer "F.Cu") (net 3))
   (segment (start 106.3 132) (end 116.2 132.095) (width 0.5) (layer "F.Cu") (net 3))
   (segment (start 116.2 132.095) (end 119.4 132.095) (width 0.5) (layer "F.Cu") (net 3))
@@ -266,7 +263,6 @@
   (segment (start 136 129) (end 136 140.92) (width 0.5) (layer "B.Cu") (net 3))
   (segment (start 136 140.92) (end 143 139.92) (width 0.5) (layer "F.Cu") (net 3))
 
-  ; RS485 A/B from connector through TVS to transceiver
   (segment (start 104 144.25) (end 106.95 144.95) (width 0.35) (layer "F.Cu") (net 4))
   (segment (start 106.95 144.95) (end 112 144.95) (width 0.35) (layer "F.Cu") (net 4))
   (segment (start 112 144.95) (end 112 139) (width 0.35) (layer "F.Cu") (net 4))
@@ -277,7 +273,6 @@
   (segment (start 114 144.95) (end 114 139) (width 0.35) (layer "B.Cu") (net 5))
   (segment (start 114 139) (end 116.2 133.365) (width 0.35) (layer "B.Cu") (net 5))
 
-  ; MAX3485 to STM32
   (segment (start 109.8 135.905) (end 113 130.5) (width 0.25) (layer "F.Cu") (net 6))
   (segment (start 113 130.5) (end 122.2 131.8) (width 0.25) (layer "F.Cu") (net 6))
   (segment (start 109.8 132.095) (end 113 128.5) (width 0.25) (layer "B.Cu") (net 7))
@@ -288,12 +283,10 @@
   (segment (start 108.8 134) (end 111 142) (width 0.25) (layer "B.Cu") (net 8))
   (segment (start 111 142) (end 127.8 140.2) (width 0.25) (layer "B.Cu") (net 8))
 
-  ; I2C trunk
   (segment (start 120.8 133.2) (end 118.5 130.5) (width 0.25) (layer "F.Cu") (net 9))
   (segment (start 118.5 130.5) (end 123.73 127) (width 0.25) (layer "F.Cu") (net 9))
   (segment (start 125.4 131.8) (end 126.27 127) (width 0.25) (layer "F.Cu") (net 10))
 
-  ; LD2450 UART
   (segment (start 123 140.2) (end 117 143) (width 0.25) (layer "F.Cu") (net 11))
   (segment (start 117 143) (end 117 121) (width 0.25) (layer "F.Cu") (net 11))
   (segment (start 117 121) (end 126.27 118) (width 0.25) (layer "F.Cu") (net 11))
@@ -301,7 +294,6 @@
   (segment (start 115.5 142) (end 115.5 119.5) (width 0.25) (layer "B.Cu") (net 12))
   (segment (start 115.5 119.5) (end 128.81 118) (width 0.25) (layer "B.Cu") (net 12))
 
-  ; I2S to mic zone
   (segment (start 123.8 140.2) (end 123.8 143) (width 0.25) (layer "F.Cu") (net 13))
   (segment (start 123.8 143) (end 140.46 137) (width 0.25) (layer "F.Cu") (net 13))
   (segment (start 124.6 140.2) (end 124.6 144) (width 0.25) (layer "F.Cu") (net 14))
@@ -309,7 +301,6 @@
   (segment (start 126.2 140.2) (end 126.2 145) (width 0.25) (layer "F.Cu") (net 15))
   (segment (start 126.2 145) (end 145.54 137) (width 0.25) (layer "F.Cu") (net 15))
 
-  ; SWD
   (segment (start 129.2 133.2) (end 134 133.2) (width 0.25) (layer "B.Cu") (net 16))
   (segment (start 134 133.2) (end 134 143.46) (width 0.25) (layer "B.Cu") (net 16))
   (segment (start 134 143.46) (end 143 142.46) (width 0.25) (layer "B.Cu") (net 16))
