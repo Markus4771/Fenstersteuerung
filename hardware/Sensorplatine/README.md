@@ -266,7 +266,7 @@ Datei:
 - neuer Ausgangspunkt für das nächste kontrollierte Routing
 - Bauteilpositionen sollen vor dem nächsten Routing nicht automatisch verändert werden
 
-**Aktueller Arbeitsstand: v4.0.ac**
+**Aktueller Arbeitsstand: v4.0.ae**
 
 
 ### v4.0.ad – konservatives Kernrouting
@@ -285,3 +285,16 @@ Datei:
 - vor Weiterentwicklung ist ein neuer KiCad-DRC erforderlich
 
 **Aktueller Arbeitsstand: v4.0.ad**
+
+
+### v4.0.ae – RS485-only routing
+
+Datei:
+
+`Sensorplatine_v4.0.ae_50x50.kicad_pcb`
+
+- basiert auf der reinen v4.0.aa-Manuellplatzierung
+- nur RS485_A und RS485_B geroutet
+- D1 und U7 angebunden
+- Versorgung, I2C, I2S und SWD bleiben bewusst offen
+- Ziel: zuerst einen DRC-sauberen RS485-Kern herstellen
