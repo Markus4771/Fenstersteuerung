@@ -267,3 +267,21 @@ Datei:
 - Bauteilpositionen sollen vor dem nächsten Routing nicht automatisch verändert werden
 
 **Aktueller Arbeitsstand: v4.0.ac**
+
+
+### v4.0.ad – konservatives Kernrouting
+
+Datei:
+
+`Sensorplatine_v4.0.ad_50x50.kicad_pcb`
+
+- basiert auf v4.0.ac
+- manuelle Bauteilplatzierung unverändert
+- +5 V und GND im Kernbereich geroutet
+- RS485_A und RS485_B geroutet
+- D1 und U7 im RS485-Pfad berücksichtigt
+- +3V3 von U9 zu U7 geroutet
+- enge Sensor-, I2C-, I2S- und SWD-Bereiche noch bewusst offen
+- vor Weiterentwicklung ist ein neuer KiCad-DRC erforderlich
+
+**Aktueller Arbeitsstand: v4.0.ad**
