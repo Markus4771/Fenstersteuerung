@@ -2,7 +2,7 @@
 
 ## Status
 
-Konzeptstand **v0.1** – noch keine fertige Hardwareversion.
+Aktueller Entwicklungsstand: **v4.0.ac**. Diese Version ist der aktuelle manuell platzierte KiCad-10-Basisstand ohne Leiterbahnen und Vias.
 
 Die Sensorplatine ist als abgesetzte Raumklima- und Anwesenheitssensorplatine für die Fenstersteuerung vorgesehen. Die Reedkontakte für Fenster offen/gekippt bleiben direkt an der Hauptplatine und gehören ausdrücklich **nicht** auf diese Sensorplatine.
 
@@ -225,3 +225,45 @@ Datei:
 
 Hinweis:
 v1.2 basiert auf der in GitHub gespeicherten v1.1. Lokal in KiCad verschobene Bauteile aus einer nicht hochgeladenen `.kicad_pcb` konnten noch nicht übernommen werden.
+
+
+## Version 4.0
+
+### v4.0.aa – manuelle Neuplatzierung
+
+Datei:
+
+`Sensorplatine_v4.0.aa_placement_only_50x50.kicad_pcb`
+
+- neue manuelle Bauteilplatzierung
+- KiCad-10-Dateiformat
+- keine Leiterbahnen
+- keine Vias
+- dient als saubere mechanische Ausgangsbasis
+
+### v4.0.ab – Routingversuch
+
+Datei:
+
+`Sensorplatine_v4.0.ab_50x50.kicad_pcb`
+
+DRC:
+
+`DRC_v4.0.ab.rpt`
+
+Dieser Stand war ein maximaler 2-Lagen-Routingversuch. Der DRC zeigte zu viele geometrische Konflikte und Kurzschlüsse. **v4.0.ab ist deshalb ausdrücklich nicht für Fertigung oder weitere Entwicklung freigegeben.**
+
+### v4.0.ac – aktueller Basisstand
+
+Datei:
+
+`Sensorplatine_v4.0.ac_50x50.kicad_pcb`
+
+- basiert auf der aktuellen manuellen Bauteilplatzierung
+- KiCad 10
+- aktuell 0 Leiterbahnsegmente
+- aktuell 0 Vias
+- neuer Ausgangspunkt für das nächste kontrollierte Routing
+- Bauteilpositionen sollen vor dem nächsten Routing nicht automatisch verändert werden
+
+**Aktueller Arbeitsstand: v4.0.ac**
