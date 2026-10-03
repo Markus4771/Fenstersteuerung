@@ -1,0 +1,963 @@
+** Drc report for Sensorplatine_v4.0.ab_50x50.kicad_pcb **
+** Created on 2026-10-03T09:40:51 **
+** Report includes: Errors, Warnings, Exclusions **
+
+** Found 240 DRC violations **
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0059 in)
+    Local override; error
+    @(4.0945 in, 5.7776 in): PTH pad 4 [RS485_B] of J1
+    @(4.1437 in, 5.7874 in): Track [RS485_A] on F.Cu, length 0.0591 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0059 in)
+    Local override; error
+    @(4.6752 in, 5.4331 in): Track [RS485_B] on F.Cu, length 0.0492 in
+    @(4.6339 in, 5.4581 in): Pad 6 [RS485_A] of U7 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(5.7185 in, 5.1969 in): Track [GND] on F.Cu, length 0.0984 in
+    @(5.6004 in, 5.6102 in): Track [+3V3] on F.Cu, length 0.6890 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0073 in)
+    Local override; error
+    @(4.6358 in, 5.4035 in): Track [RS485_B] on F.Cu, length 0.0295 in
+    @(4.6339 in, 5.4581 in): Pad 6 [RS485_A] of U7 on F.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze NRST und SWDIO)
+    Local override; error
+    @(5.0197 in, 5.5512 in): Via [NRST] on F.Cu - B.Cu
+    @(5.4429 in, 5.5709 in): Track [SWDIO] on F.Cu, length 0.5020 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0020 in)
+    Local override; error
+    @(5.7677 in, 5.6102 in): Track [GND] on F.Cu, length 0.0197 in
+    @(5.7205 in, 5.6083 in): Pad 1 [+3V3] of U10 on F.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze +1V8 und I2S_SD)
+    Local override; error
+    @(5.7205 in, 5.2283 in): Pad 3 [+1V8] of U8 on F.Cu
+    @(5.7480 in, 5.2461 in): Via [I2S_SD] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze NRST und SWCLK)
+    Local override; error
+    @(5.0197 in, 5.5512 in): Via [NRST] on F.Cu - B.Cu
+    @(5.4232 in, 5.5512 in): Track [SWCLK] on B.Cu, length 0.3839 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2C_SDA und I2C_SCL)
+    Local override; error
+    @(4.7638 in, 4.8917 in): Via [I2C_SDA] on F.Cu - B.Cu
+    @(4.7638 in, 4.9114 in): Track [I2C_SCL] on F.Cu, length 0.2165 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2S_CK und I2S_SD)
+    Local override; error
+    @(5.7972 in, 5.2264 in): Track [I2S_CK] on B.Cu, length 0.5020 in
+    @(5.7480 in, 5.2461 in): Via [I2S_SD] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2C_SDA und +5V)
+    Local override; error
+    @(4.7638 in, 4.8917 in): Via [I2C_SDA] on F.Cu - B.Cu
+    @(4.7835 in, 5.2461 in): Track [+5V] on B.Cu, length 0.4429 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0010 in)
+    Local override; error
+    @(5.2953 in, 5.5118 in): Via [I2S_CK] on F.Cu - B.Cu
+    @(5.3228 in, 5.5315 in): Pad 13 [<no net>] of U1 on F.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze GND und I2C_SCL)
+    Local override; error
+    @(5.2756 in, 5.2657 in): Via [GND] on F.Cu - B.Cu
+    @(5.3150 in, 5.2461 in): Track [I2C_SCL] on F.Cu, length 0.0787 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze +3V3 und GND)
+    Local override; error
+    @(5.1378 in, 5.3543 in): Track [+3V3] on F.Cu, length 0.5020 in
+    @(4.8622 in, 5.3740 in): Via [GND] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze +3V3 und GND)
+    Local override; error
+    @(5.6004 in, 5.6102 in): Track [+3V3] on F.Cu, length 0.6890 in
+    @(5.6201 in, 5.1969 in): Via [GND] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze GND und I2S_WS)
+    Local override; error
+    @(5.2756 in, 5.2657 in): Via [GND] on F.Cu - B.Cu
+    @(5.2559 in, 5.1673 in): Track [I2S_WS] on B.Cu, length 0.3445 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze GND und I2S_SD)
+    Local override; error
+    @(5.6890 in, 5.2657 in): Via [GND] on F.Cu - B.Cu
+    @(5.7480 in, 5.2461 in): Track [I2S_SD] on B.Cu, length 0.3937 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze RS485_DE und I2S_CK)
+    Local override; error
+    @(5.4134 in, 5.5315 in): Track [RS485_DE] on B.Cu, length 1.0335 in
+    @(5.2953 in, 5.5118 in): Via [I2S_CK] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2C_SDA und GND)
+    Local override; error
+    @(4.8622 in, 4.9311 in): Track [I2C_SDA] on F.Cu, length 0.0689 in
+    @(4.8130 in, 4.9114 in): Via [GND] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze GND und +3V3)
+    Local override; error
+    @(4.8130 in, 4.8622 in): Via [GND] on F.Cu - B.Cu
+    @(4.7933 in, 4.8622 in): Track [+3V3] on F.Cu, length 0.0295 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0039 in)
+    Local override; error
+    @(4.8130 in, 4.9114 in): Via [GND] on F.Cu - B.Cu
+    @(4.7835 in, 5.2461 in): Track [+5V] on B.Cu, length 0.4429 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0039 in)
+    Local override; error
+    @(4.8130 in, 4.8622 in): Via [GND] on F.Cu - B.Cu
+    @(4.7835 in, 5.2461 in): Track [+5V] on B.Cu, length 0.4429 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0039 in)
+    Local override; error
+    @(4.3878 in, 5.7835 in): Pad 1 [RS485_A] of D1 on F.Cu
+    @(4.4291 in, 5.7677 in): Via [GND] on F.Cu - B.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0022 in)
+    Local override; error
+    @(4.7638 in, 5.2264 in): Via [I2C_SDA] on F.Cu - B.Cu
+    @(4.7835 in, 5.2559 in): Track [+5V] on F.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0057 in)
+    Local override; error
+    @(4.3819 in, 5.5081 in): Pad 4 [RS485_TX] of U7 on F.Cu
+    @(4.4291 in, 5.5315 in): Track [RS485_A] on F.Cu, length 0.0394 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0057 in)
+    Local override; error
+    @(4.3898 in, 5.5315 in): Track [RS485_A] on F.Cu, length 0.2559 in
+    @(4.3819 in, 5.5081 in): Pad 4 [RS485_TX] of U7 on F.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2C_SDA und +5V)
+    Local override; error
+    @(4.7638 in, 5.2264 in): Via [I2C_SDA] on F.Cu - B.Cu
+    @(4.7835 in, 5.2461 in): Track [+5V] on B.Cu, length 0.4429 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze +3V3 und RS485_TX)
+    Local override; error
+    @(4.4488 in, 5.3543 in): Via [+3V3] on F.Cu - B.Cu
+    @(4.4291 in, 5.2067 in): Track [RS485_TX] on F.Cu, length 0.2264 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0039 in)
+    Local override; error
+    @(4.9114 in, 5.2854 in): Track [+5V] on F.Cu, length 0.0787 in
+    @(4.8622 in, 5.2559 in): Via [GND] on F.Cu - B.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0040 in)
+    Local override; error
+    @(4.7933 in, 4.7933 in): Via [GND] on F.Cu - B.Cu
+    @(4.7638 in, 4.8130 in): Via [I2C_SCL] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze +3V3 und GND)
+    Local override; error
+    @(4.2717 in, 4.8524 in): Via [+3V3] on F.Cu - B.Cu
+    @(4.3307 in, 4.9606 in): Pad 21 [GND] of U3 on F.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze +3V3 und I2C_SDA)
+    Local override; error
+    @(5.2854 in, 4.9213 in): Via [+3V3] on F.Cu - B.Cu
+    @(5.2657 in, 4.8819 in): Track [I2C_SDA] on F.Cu, length 0.0591 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze GND und I2C_SCL)
+    Local override; error
+    @(5.2756 in, 5.2657 in): Track [GND] on F.Cu, length 0.0886 in
+    @(5.2362 in, 5.2461 in): Via [I2C_SCL] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2C_SDA und I2C_SCL)
+    Local override; error
+    @(4.7638 in, 4.8917 in): Track [I2C_SDA] on F.Cu, length 0.2362 in
+    @(4.7441 in, 4.9114 in): Via [I2C_SCL] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2C_SDA und +3V3)
+    Local override; error
+    @(5.2657 in, 4.8819 in): Track [I2C_SDA] on F.Cu, length 0.0591 in
+    @(5.2559 in, 4.8720 in): Via [+3V3] on F.Cu - B.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(5.2362 in, 4.8819 in): Track [+3V3] on F.Cu, length 0.0098 in
+    @(5.2362 in, 4.8425 in): Via [I2C_SCL] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze GND und I2C_SCL)
+    Local override; error
+    @(4.7441 in, 4.8327 in): Track [GND] on F.Cu, length 0.1378 in
+    @(4.7638 in, 4.8130 in): Via [I2C_SCL] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2C_SCL und I2S_WS)
+    Local override; error
+    @(5.2362 in, 5.2461 in): Via [I2C_SCL] on F.Cu - B.Cu
+    @(5.2559 in, 5.1673 in): Track [I2S_WS] on B.Cu, length 0.3445 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2C_SCL und +3V3)
+    Local override; error
+    @(5.2362 in, 4.8425 in): Via [I2C_SCL] on F.Cu - B.Cu
+    @(5.2559 in, 4.8327 in): Track [+3V3] on B.Cu, length 0.0098 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2C_SCL und I2C_SDA)
+    Local override; error
+    @(4.7441 in, 4.9114 in): Via [I2C_SCL] on F.Cu - B.Cu
+    @(4.7638 in, 5.2264 in): Track [I2C_SDA] on B.Cu, length 0.3346 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0040 in)
+    Local override; error
+    @(5.2362 in, 4.8425 in): Via [I2C_SCL] on F.Cu - B.Cu
+    @(5.2559 in, 4.8720 in): Via [+3V3] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2C_SCL und +5V)
+    Local override; error
+    @(4.7638 in, 4.8130 in): Via [I2C_SCL] on F.Cu - B.Cu
+    @(4.7835 in, 5.2461 in): Track [+5V] on B.Cu, length 0.4429 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2C_SDA und I2C_SCL)
+    Local override; error
+    @(4.7638 in, 4.8917 in): Track [I2C_SDA] on F.Cu, length 0.2362 in
+    @(4.5472 in, 4.9114 in): Via [I2C_SCL] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2S_CK und I2S_SD)
+    Local override; error
+    @(5.7972 in, 5.2264 in): Via [I2S_CK] on F.Cu - B.Cu
+    @(5.7677 in, 5.2283 in): Pad 4 [I2S_SD] of U8 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(5.3543 in, 5.5118 in): Via [I2S_SD] on F.Cu - B.Cu
+    @(5.3858 in, 5.5315 in): Pad 15 [<no net>] of U1 on F.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2S_WS und )
+    Local override; error
+    @(5.7972 in, 5.1673 in): Via [I2S_WS] on F.Cu - B.Cu
+    @(5.7677 in, 5.1654 in): Pad 8 [<no net>] of U8 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0010 in)
+    Local override; error
+    @(5.2283 in, 5.5315 in): Pad 10 [LD2450_TX] of U1 on F.Cu
+    @(5.2559 in, 5.5118 in): Via [I2S_WS] on F.Cu - B.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0026 in)
+    Local override; error
+    @(5.1870 in, 5.4921 in): Via [LD2450_RX] on F.Cu - B.Cu
+    @(5.1417 in, 5.4764 in): Pad 8 [<no net>] of U1 on F.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze LD2450_TX und LD2450_RX)
+    Local override; error
+    @(5.2165 in, 5.5118 in): Via [LD2450_TX] on F.Cu - B.Cu
+    @(5.1969 in, 5.5315 in): Pad 9 [LD2450_RX] of U1 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0038 in)
+    Local override; error
+    @(5.0394 in, 5.7480 in): PTH pad 3 [SWCLK] of J2
+    @(5.0197 in, 5.6988 in): Via [NRST] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze RS485_DE und I2S_SD)
+    Local override; error
+    @(5.4134 in, 5.5315 in): Track [RS485_DE] on B.Cu, length 1.0335 in
+    @(5.3543 in, 5.5118 in): Via [I2S_SD] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze LD2450_RX und LD2450_TX)
+    Local override; error
+    @(5.1870 in, 5.4921 in): Via [LD2450_RX] on F.Cu - B.Cu
+    @(5.2165 in, 5.5118 in): Track [LD2450_TX] on B.Cu, length 0.2461 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0047 in)
+    Local override; error
+    @(5.4134 in, 5.4921 in): Via [SWCLK] on F.Cu - B.Cu
+    @(5.3858 in, 5.5315 in): Pad 15 [<no net>] of U1 on F.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze +3V3 und RS485_TX)
+    Local override; error
+    @(4.6358 in, 5.1870 in): Via [+3V3] on F.Cu - B.Cu
+    @(4.9606 in, 5.2067 in): Track [RS485_TX] on F.Cu, length 0.5315 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0038 in)
+    Local override; error
+    @(5.0394 in, 5.7480 in): PTH pad 3 [SWCLK] of J2
+    @(5.0197 in, 5.6988 in): Via [NRST] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze GND und +3V3)
+    Local override; error
+    @(4.4291 in, 5.7677 in): Via [GND] on F.Cu - B.Cu
+    @(4.2717 in, 5.7480 in): Track [+3V3] on B.Cu, length 0.5709 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze GND und +3V3)
+    Local override; error
+    @(4.6358 in, 5.7677 in): Via [GND] on F.Cu - B.Cu
+    @(4.2717 in, 5.7480 in): Track [+3V3] on B.Cu, length 0.5709 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0040 in)
+    Local override; error
+    @(5.2165 in, 5.5118 in): Via [LD2450_TX] on F.Cu - B.Cu
+    @(5.1870 in, 5.4921 in): Via [LD2450_RX] on F.Cu - B.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0030 in)
+    Local override; error
+    @(5.8150 in, 5.1654 in): Pad 7 [I2S_WS] of U8 on F.Cu
+    @(5.8169 in, 5.1870 in): Track [GND] on F.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0030 in)
+    Local override; error
+    @(5.8150 in, 5.1654 in): Pad 7 [I2S_WS] of U8 on F.Cu
+    @(5.8465 in, 5.1870 in): Track [GND] on F.Cu, length 0.0295 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(5.1870 in, 5.3740 in): Track [GND] on F.Cu, length 0.0492 in
+    @(5.1417 in, 5.3504 in): Pad 4 [+3V3] of U1 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(5.1417 in, 5.3504 in): Pad 4 [+3V3] of U1 on F.Cu
+    @(5.1378 in, 5.3740 in): Track [GND] on F.Cu, length 0.0098 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze RS485_DE und RS485_TX)
+    Local override; error
+    @(4.3799 in, 5.4528 in): Via [RS485_DE] on F.Cu - B.Cu
+    @(4.4291 in, 5.4331 in): Track [RS485_TX] on F.Cu, length 0.0886 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0020 in)
+    Local override; error
+    @(4.8425 in, 4.8878 in): Pad 6 [+3V3] of U2 on F.Cu
+    @(4.8622 in, 4.8819 in): Track [GND] on F.Cu, length 0.0197 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0020 in)
+    Local override; error
+    @(4.8819 in, 5.2559 in): Track [GND] on F.Cu, length 0.0197 in
+    @(4.8346 in, 5.2539 in): Pad 1 [+5V] of U9 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0020 in)
+    Local override; error
+    @(4.1634 in, 4.9606 in): Pad 3 [<no net>] of U3 on F.Cu
+    @(4.3307 in, 4.9606 in): Track [GND] on F.Cu, length 0.1378 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0063 in)
+    Local override; error
+    @(5.1394 in, 5.7480 in): PTH pad 4 [NRST] of J2
+    @(5.1870 in, 5.7480 in): Track [GND] on B.Cu, length 0.0492 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0063 in)
+    Local override; error
+    @(5.2362 in, 5.7480 in): Track [GND] on B.Cu, length 0.0492 in
+    @(5.1394 in, 5.7480 in): PTH pad 4 [NRST] of J2
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0039 in)
+    Local override; error
+    @(4.0945 in, 5.4823 in): PTH pad 1 [+5V] of J1
+    @(4.1437 in, 5.5315 in): Track [GND] on F.Cu, length 0.0492 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze I2C_SDA und +5V)
+    Local override; error
+    @(4.7638 in, 5.2264 in): Via [I2C_SDA] on F.Cu - B.Cu
+    @(4.7835 in, 5.2461 in): Via [+5V] on F.Cu - B.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0039 in)
+    Local override; error
+    @(4.0945 in, 5.4823 in): PTH pad 1 [+5V] of J1
+    @(4.1437 in, 5.1181 in): Track [GND] on F.Cu, length 0.4134 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0020 in)
+    Local override; error
+    @(4.1929 in, 4.6949 in): Track [GND] on F.Cu, length 0.4232 in
+    @(4.1634 in, 4.8346 in): Pad 1 [<no net>] of U3 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0024 in)
+    Local override; error
+    @(4.7713 in, 4.6457 in): PTH pad 1 [+5V] of J3
+    @(4.8130 in, 4.6457 in): Track [GND] on F.Cu, length 0.0492 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0078 in)
+    Local override; error
+    @(4.7835 in, 5.2461 in): Via [+5V] on F.Cu - B.Cu
+    @(4.7638 in, 5.2264 in): Track [I2C_SDA] on B.Cu, length 0.3346 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0024 in)
+    Local override; error
+    @(4.7713 in, 4.6457 in): PTH pad 1 [+5V] of J3
+    @(4.8720 in, 4.6457 in): Track [GND] on F.Cu, length 0.0591 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(5.7972 in, 5.5807 in): Track [+3V3] on F.Cu, length 0.0787 in
+    @(5.7677 in, 5.6083 in): Pad 2 [GND] of U10 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(5.7972 in, 5.6102 in): Track [+3V3] on F.Cu, length 0.0295 in
+    @(5.7677 in, 5.6083 in): Pad 2 [GND] of U10 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(5.8169 in, 5.6102 in): Track [+3V3] on F.Cu, length 0.0197 in
+    @(5.7677 in, 5.6083 in): Pad 2 [GND] of U10 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.8425 in, 4.8622 in): Track [GND] on F.Cu, length 0.0295 in
+    @(4.8425 in, 4.8425 in): Track [+3V3] on F.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.8425 in, 4.8622 in): Track [GND] on F.Cu, length 0.0295 in
+    @(5.1476 in, 4.8425 in): Track [+3V3] on F.Cu, length 0.3051 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(5.1378 in, 5.3543 in): Track [+3V3] on F.Cu, length 0.5020 in
+    @(4.8622 in, 5.3839 in): Track [GND] on F.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(5.1870 in, 5.3740 in): Track [GND] on F.Cu, length 0.0492 in
+    @(5.1417 in, 5.3504 in): Track [+3V3] on F.Cu, length 0.0056 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.8425 in, 4.8622 in): Track [GND] on F.Cu, length 0.0295 in
+    @(4.7933 in, 4.8720 in): Track [+3V3] on F.Cu, length 0.0098 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze +3V3 und GND)
+    Local override; error
+    @(4.8031 in, 4.8819 in): Track [+3V3] on F.Cu, length 0.0098 in
+    @(4.8425 in, 4.8622 in): Track [GND] on F.Cu, length 0.0295 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze +3V3 und GND)
+    Local override; error
+    @(4.8031 in, 4.8720 in): Track [+3V3] on F.Cu, length 0.0098 in
+    @(4.8425 in, 4.8622 in): Track [GND] on F.Cu, length 0.0295 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.8130 in, 4.8819 in): Track [+3V3] on F.Cu, length 0.0098 in
+    @(4.8425 in, 4.8622 in): Track [GND] on F.Cu, length 0.0295 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.8130 in, 4.8917 in): Track [+3V3] on F.Cu, length 0.0098 in
+    @(4.8425 in, 4.9114 in): Track [GND] on F.Cu, length 0.0295 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.8425 in, 4.9134 in): Track [GND] on F.Cu, length 0.0020 in
+    @(4.8425 in, 4.8917 in): Track [+3V3] on F.Cu, length 0.0295 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.8425 in, 4.9134 in): Track [GND] on F.Cu, length 0.0020 in
+    @(4.8425 in, 4.8878 in): Track [+3V3] on F.Cu, length 0.0039 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.7933 in, 4.8327 in): Track [+3V3] on F.Cu, length 0.0295 in
+    @(4.8425 in, 4.8622 in): Track [GND] on F.Cu, length 0.0295 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.8425 in, 4.8622 in): Track [GND] on F.Cu, length 0.0295 in
+    @(4.7933 in, 4.8622 in): Track [+3V3] on F.Cu, length 0.0295 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(4.3307 in, 4.9606 in): Pad 21 [GND] of U3 on F.Cu
+    @(4.4390 in, 4.8524 in): Track [+3V3] on F.Cu, length 0.1673 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0074 in)
+    Local override; error
+    @(4.3307 in, 4.9606 in): Pad 21 [GND] of U3 on F.Cu
+    @(4.4390 in, 4.8622 in): Track [+3V3] on F.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.4980 in, 4.8346 in): Pad 15 [<no net>] of U3 on F.Cu
+    @(4.7638 in, 4.8622 in): Track [+3V3] on F.Cu, length 0.3248 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.2717 in, 4.8524 in): Track [+3V3] on B.Cu, length 0.8957 in
+    @(4.7933 in, 5.7677 in): Track [GND] on B.Cu, length 0.5315 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.7933 in, 5.7972 in): Track [GND] on B.Cu, length 0.0295 in
+    @(4.2717 in, 5.7480 in): Track [+3V3] on B.Cu, length 0.5709 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(4.2717 in, 4.7933 in): Track [+3V3] on F.Cu, length 0.0591 in
+    @(4.3307 in, 4.9606 in): Pad 21 [GND] of U3 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0020 in)
+    Local override; error
+    @(4.8031 in, 4.8622 in): Track [GND] on B.Cu, length 0.0689 in
+    @(4.7835 in, 4.8031 in): Track [+5V] on B.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0020 in)
+    Local override; error
+    @(4.7736 in, 4.8031 in): Track [+5V] on B.Cu, length 0.1575 in
+    @(4.8031 in, 4.7933 in): Track [GND] on B.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0020 in)
+    Local override; error
+    @(4.8130 in, 4.8622 in): Track [GND] on B.Cu, length 0.0098 in
+    @(4.7835 in, 5.2461 in): Track [+5V] on B.Cu, length 0.4429 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0010 in)
+    Local override; error
+    @(5.4134 in, 5.5315 in): Via [RS485_DE] on F.Cu - B.Cu
+    @(5.3858 in, 5.5315 in): Pad 15 [<no net>] of U1 on F.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze RS485_DE und I2S_WS)
+    Local override; error
+    @(5.4134 in, 5.5315 in): Track [RS485_DE] on B.Cu, length 1.0335 in
+    @(5.2559 in, 5.5118 in): Via [I2S_WS] on F.Cu - B.Cu
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze SWCLK und RS485_DE)
+    Local override; error
+    @(5.4232 in, 5.5118 in): Track [SWCLK] on B.Cu, length 0.0098 in
+    @(5.4134 in, 5.5315 in): Via [RS485_DE] on F.Cu - B.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0027 in)
+    Local override; error
+    @(5.2362 in, 5.2461 in): Track [I2C_SCL] on B.Cu, length 0.4035 in
+    @(5.2559 in, 4.8327 in): Track [+3V3] on B.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0075 in)
+    Local override; error
+    @(5.2756 in, 5.2657 in): Track [GND] on F.Cu, length 0.0886 in
+    @(5.3150 in, 5.2461 in): Track [I2C_SCL] on F.Cu, length 0.0787 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0039 in)
+    Local override; error
+    @(4.0945 in, 5.4823 in): PTH pad 1 [+5V] of J1
+    @(4.0945 in, 5.5315 in): Track [GND] on F.Cu, length 0.0492 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0050 in)
+    Local override; error
+    @(5.7205 in, 5.6083 in): Track [+3V3] on F.Cu, length 0.0028 in
+    @(5.7480 in, 5.6102 in): Via [GND] on F.Cu - B.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0075 in)
+    Local override; error
+    @(4.7441 in, 4.8327 in): Track [GND] on F.Cu, length 0.1378 in
+    @(5.1772 in, 4.8130 in): Track [I2C_SCL] on F.Cu, length 0.4134 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze +5V und I2C_SCL)
+    Local override; error
+    @(4.7736 in, 4.8031 in): Track [+5V] on B.Cu, length 0.1575 in
+    @(4.7638 in, 4.8130 in): Track [I2C_SCL] on B.Cu, length 0.0591 in
+[shorting_items]: Elemente, die zwei Netze kurzschließen (Netze GND und +5V)
+    Local override; error
+    @(4.7933 in, 4.7933 in): Via [GND] on F.Cu - B.Cu
+    @(4.7835 in, 5.2461 in): Track [+5V] on B.Cu, length 0.4429 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0020 in)
+    Local override; error
+    @(5.1476 in, 4.8819 in): Track [GND] on F.Cu, length 0.2854 in
+    @(4.8425 in, 4.8878 in): Pad 6 [+3V3] of U2 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0055 in)
+    Local override; error
+    @(5.2657 in, 4.9409 in): Track [I2C_SDA] on F.Cu, length 0.1181 in
+    @(5.2362 in, 4.9173 in): Pad 4 [GND] of U4 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0027 in)
+    Local override; error
+    @(5.2362 in, 4.8720 in): Track [+3V3] on F.Cu, length 0.0197 in
+    @(5.2657 in, 4.8819 in): Track [I2C_SDA] on F.Cu, length 0.0591 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0027 in)
+    Local override; error
+    @(4.7933 in, 4.8917 in): Track [I2C_SDA] on F.Cu, length 0.0295 in
+    @(4.8130 in, 4.8819 in): Track [+3V3] on F.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0027 in)
+    Local override; error
+    @(4.8130 in, 4.8819 in): Track [+3V3] on F.Cu, length 0.0098 in
+    @(4.7933 in, 4.9311 in): Track [I2C_SDA] on F.Cu, length 0.0394 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0027 in)
+    Local override; error
+    @(5.6398 in, 4.8819 in): Track [I2C_SDA] on F.Cu, length 0.3740 in
+    @(5.2362 in, 4.8720 in): Track [+3V3] on F.Cu, length 0.0197 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0055 in)
+    Local override; error
+    @(4.7835 in, 5.2461 in): Track [+5V] on B.Cu, length 0.4429 in
+    @(4.7638 in, 5.2264 in): Track [I2C_SDA] on B.Cu, length 0.3346 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0055 in)
+    Local override; error
+    @(4.8622 in, 4.9311 in): Track [I2C_SDA] on F.Cu, length 0.0689 in
+    @(4.8425 in, 4.9134 in): Track [GND] on F.Cu, length 0.0020 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0055 in)
+    Local override; error
+    @(4.8425 in, 4.9134 in): Pad 5 [GND] of U2 on F.Cu
+    @(4.8622 in, 4.9213 in): Track [I2C_SDA] on F.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0055 in)
+    Local override; error
+    @(4.8425 in, 4.9134 in): Pad 5 [GND] of U2 on F.Cu
+    @(5.1476 in, 4.9213 in): Track [I2C_SDA] on F.Cu, length 0.2854 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0055 in)
+    Local override; error
+    @(4.9606 in, 5.2264 in): Track [I2C_SDA] on F.Cu, length 0.1969 in
+    @(4.7835 in, 5.2559 in): Track [+5V] on F.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0055 in)
+    Local override; error
+    @(4.7638 in, 4.8917 in): Track [I2C_SDA] on F.Cu, length 0.2362 in
+    @(4.4980 in, 4.8976 in): Pad 14 [<no net>] of U3 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0055 in)
+    Local override; error
+    @(4.5276 in, 4.8917 in): Track [I2C_SDA] on F.Cu, length 0.0394 in
+    @(4.4980 in, 4.8976 in): Pad 14 [<no net>] of U3 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(5.7480 in, 5.2461 in): Track [I2S_SD] on B.Cu, length 0.3937 in
+    @(5.6890 in, 5.6102 in): Track [GND] on B.Cu, length 0.3445 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(5.2953 in, 5.2264 in): Track [I2S_CK] on B.Cu, length 0.2854 in
+    @(5.2756 in, 5.1969 in): Track [GND] on B.Cu, length 0.0689 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(5.7972 in, 5.2264 in): Track [I2S_CK] on B.Cu, length 0.5020 in
+    @(5.2756 in, 5.1969 in): Track [GND] on B.Cu, length 0.0689 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(5.6201 in, 5.1969 in): Track [GND] on B.Cu, length 0.3445 in
+    @(5.2559 in, 5.1673 in): Track [I2S_WS] on B.Cu, length 0.3445 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(5.8465 in, 5.1870 in): Track [GND] on F.Cu, length 0.0295 in
+    @(5.8169 in, 5.1673 in): Track [I2S_WS] on F.Cu, length 0.0197 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(5.8150 in, 5.1654 in): Track [I2S_WS] on F.Cu, length 0.0028 in
+    @(5.8465 in, 5.1870 in): Track [GND] on F.Cu, length 0.0295 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0039 in)
+    Local override; error
+    @(5.1969 in, 5.5315 in): Pad 9 [LD2450_RX] of U1 on F.Cu
+    @(5.2165 in, 5.5315 in): Track [LD2450_TX] on F.Cu, length 0.0197 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0039 in)
+    Local override; error
+    @(5.2264 in, 5.5315 in): Track [LD2450_TX] on F.Cu, length 0.0098 in
+    @(5.1969 in, 5.5315 in): Pad 9 [LD2450_RX] of U1 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0059 in)
+    Local override; error
+    @(5.1417 in, 5.4449 in): Pad 7 [<no net>] of U1 on F.Cu
+    @(5.1378 in, 5.4232 in): Track [NRST] on F.Cu, length 0.0394 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0059 in)
+    Local override; error
+    @(5.1417 in, 5.4449 in): Pad 7 [<no net>] of U1 on F.Cu
+    @(5.1378 in, 5.4134 in): Track [NRST] on F.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(5.3858 in, 5.5315 in): Pad 15 [<no net>] of U1 on F.Cu
+    @(5.4429 in, 5.5709 in): Track [SWDIO] on F.Cu, length 0.5020 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(5.4134 in, 5.1969 in): Track [SWCLK] on F.Cu, length 0.2953 in
+    @(5.4173 in, 5.5315 in): Pad 16 [RS485_DE] of U1 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0059 in)
+    Local override; error
+    @(5.4724 in, 5.2874 in): Pad 23 [<no net>] of U1 on F.Cu
+    @(5.4724 in, 5.2559 in): Track [SWDIO] on F.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0059 in)
+    Local override; error
+    @(5.4724 in, 5.2874 in): Pad 23 [<no net>] of U1 on F.Cu
+    @(5.4724 in, 5.2657 in): Track [SWDIO] on F.Cu, length 0.0394 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(5.5118 in, 5.2657 in): Track [SWDIO] on F.Cu, length 0.2362 in
+    @(5.4724 in, 5.4764 in): Pad 17 [<no net>] of U1 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0041 in)
+    Local override; error
+    @(5.4134 in, 5.5315 in): Track [RS485_DE] on B.Cu, length 1.0335 in
+    @(5.4232 in, 5.5118 in): Track [SWCLK] on B.Cu, length 0.0098 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.3937 in, 5.1280 in): Pad 9 [I2C_SCL] of U3 on F.Cu
+    @(4.3799 in, 5.1575 in): Track [RS485_RX] on F.Cu, length 0.1969 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0049 in)
+    Local override; error
+    @(4.4882 in, 5.1575 in): Track [RS485_RX] on F.Cu, length 0.1083 in
+    @(4.3937 in, 5.1280 in): Pad 9 [I2C_SCL] of U3 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0059 in)
+    Local override; error
+    @(5.3445 in, 5.1969 in): Track [RS485_RX] on F.Cu, length 0.0394 in
+    @(5.3228 in, 5.2008 in): Pad 28 [I2C_SCL] of U1 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(4.3819 in, 5.4581 in): Pad 3 [RS485_DE] of U7 on F.Cu
+    @(4.3406 in, 5.4331 in): Track [RS485_TX] on F.Cu, length 0.0787 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0020 in)
+    Local override; error
+    @(4.8819 in, 5.2539 in): Pad 2 [GND] of U9 on F.Cu
+    @(4.9311 in, 5.2559 in): Track [+5V] on F.Cu, length 0.0197 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0073 in)
+    Local override; error
+    @(4.6358 in, 5.4331 in): Track [RS485_B] on F.Cu, length 0.0394 in
+    @(4.6339 in, 5.4581 in): Pad 6 [RS485_A] of U7 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0065 in)
+    Local override; error
+    @(4.6752 in, 5.4823 in): Track [RS485_B] on F.Cu, length 0.2067 in
+    @(4.6339 in, 5.4581 in): Pad 6 [RS485_A] of U7 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0039 in)
+    Local override; error
+    @(4.3878 in, 5.7835 in): Pad 1 [RS485_A] of D1 on F.Cu
+    @(4.4193 in, 5.7874 in): Track [RS485_B] on F.Cu, length 0.0295 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0039 in)
+    Local override; error
+    @(4.3878 in, 5.7835 in): Pad 1 [RS485_A] of D1 on F.Cu
+    @(4.4685 in, 5.7874 in): Track [RS485_B] on F.Cu, length 0.0492 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0059 in)
+    Local override; error
+    @(4.0945 in, 5.7283 in): Track [RS485_A] on F.Cu, length 0.0492 in
+    @(4.0945 in, 5.7776 in): PTH pad 4 [RS485_B] of J1
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0059 in)
+    Local override; error
+    @(4.0945 in, 5.7776 in): PTH pad 4 [RS485_B] of J1
+    @(4.1437 in, 5.7283 in): Track [RS485_A] on F.Cu, length 0.0492 in
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0059 in)
+    Local override; error
+    @(5.3543 in, 5.1969 in): Track [RS485_RX] on F.Cu, length 0.0098 in
+    @(5.3228 in, 5.2008 in): Pad 28 [I2C_SCL] of U1 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0020 in)
+    Local override; error
+    @(4.9114 in, 5.2559 in): Track [+5V] on F.Cu, length 0.0295 in
+    @(4.8819 in, 5.2539 in): Pad 2 [GND] of U9 on F.Cu
+[clearance]: Freiraum-Verstoß ( Freiraum 0,0079 in; tatsächlich 0,0069 in)
+    Local override; error
+    @(4.0945 in, 5.7776 in): PTH pad 4 [RS485_B] of J1
+    @(4.3898 in, 5.7874 in): Track [RS485_A] on F.Cu, length 0.2461 in
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0020 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(4.8346 in, 5.2539 in): Pad 1 [+5V] of U9 on F.Cu
+    @(4.8622 in, 5.2559 in): Via [GND] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0020 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(5.7205 in, 5.6083 in): Pad 1 [+3V3] of U10 on F.Cu
+    @(5.7480 in, 5.6102 in): Via [GND] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0079 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(4.7657 in, 4.8366 in): Pad 1 [GND] of U2 on F.Cu
+    @(4.7638 in, 4.8130 in): Via [I2C_SCL] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0075 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(5.7205 in, 5.2283 in): Pad 3 [+1V8] of U8 on F.Cu
+    @(5.7480 in, 5.2461 in): Via [I2S_SD] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0079 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(5.7677 in, 5.2283 in): Pad 4 [I2S_SD] of U8 on F.Cu
+    @(5.7972 in, 5.2264 in): Via [I2S_CK] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0089 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(5.2362 in, 4.8425 in): Pad 6 [I2C_SCL] of U4 on F.Cu
+    @(5.2559 in, 4.8720 in): Via [+3V3] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0059 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(4.7657 in, 4.9134 in): Pad 4 [I2C_SCL] of U2 on F.Cu
+    @(4.7638 in, 4.8917 in): Via [I2C_SDA] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0079 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(5.7677 in, 5.1654 in): Pad 8 [<no net>] of U8 on F.Cu
+    @(5.7972 in, 5.1673 in): Via [I2S_WS] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0010 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(5.1969 in, 5.5315 in): Pad 9 [LD2450_RX] of U1 on F.Cu
+    @(5.2165 in, 5.5118 in): Via [LD2450_TX] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0089 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(5.2283 in, 5.5315 in): Pad 10 [LD2450_TX] of U1 on F.Cu
+    @(5.2559 in, 5.5118 in): Via [I2S_WS] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0059 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(4.3307 in, 4.9606 in): Pad 21 [GND] of U3 on F.Cu
+    @(4.2717 in, 4.8524 in): Via [+3V3] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0089 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(5.3228 in, 5.5315 in): Pad 13 [<no net>] of U1 on F.Cu
+    @(5.2953 in, 5.5118 in): Via [I2S_CK] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0089 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(5.3858 in, 5.5315 in): Pad 15 [<no net>] of U1 on F.Cu
+    @(5.4134 in, 5.5315 in): Via [RS485_DE] on F.Cu - B.Cu
+[hole_clearance]: Loch-Freiraum-Verstoß (Einschränkungen aus Platinenkonfiguration zu Löchern Freiraum 0,0098 in; tatsächlich 0,0039 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zu Löchern; error
+    @(5.4173 in, 5.5315 in): Pad 16 [RS485_DE] of U1 on F.Cu
+    @(5.4134 in, 5.4921 in): Via [SWCLK] on F.Cu - B.Cu
+[solder_mask_bridge]: Vorderseitige Lötstoppöffnung über Elementen mit verschiedenen Netzen
+    Rule: Mindestbreite der Lötstoppmaske aus Platinenkonfiguration; error
+    @(5.4134 in, 5.4921 in): Via [SWCLK] on F.Cu - B.Cu
+    @(5.4173 in, 5.5315 in): Pad 16 [RS485_DE] of U1 on F.Cu
+[solder_mask_bridge]: Vorderseitige Lötstoppöffnung über Elementen mit verschiedenen Netzen
+    Rule: Mindestbreite der Lötstoppmaske aus Platinenkonfiguration; error
+    @(5.2165 in, 5.5118 in): Via [LD2450_TX] on F.Cu - B.Cu
+    @(5.1969 in, 5.5315 in): Pad 9 [LD2450_RX] of U1 on F.Cu
+[solder_mask_bridge]: Vorderseitige Lötstoppöffnung über Elementen mit verschiedenen Netzen
+    Rule: Mindestbreite der Lötstoppmaske aus Platinenkonfiguration; error
+    @(5.7480 in, 5.2461 in): Via [I2S_SD] on F.Cu - B.Cu
+    @(5.7205 in, 5.2283 in): Pad 3 [+1V8] of U8 on F.Cu
+[solder_mask_bridge]: Vorderseitige Lötstoppöffnung über Elementen mit verschiedenen Netzen
+    Rule: Mindestbreite der Lötstoppmaske aus Platinenkonfiguration; error
+    @(4.7638 in, 4.8917 in): Via [I2C_SDA] on F.Cu - B.Cu
+    @(4.7657 in, 4.9134 in): Pad 4 [I2C_SCL] of U2 on F.Cu
+[solder_mask_bridge]: Vorderseitige Lötstoppöffnung über Elementen mit verschiedenen Netzen
+    Rule: Mindestbreite der Lötstoppmaske aus Platinenkonfiguration; error
+    @(4.2717 in, 4.8524 in): Via [+3V3] on F.Cu - B.Cu
+    @(4.3307 in, 4.9606 in): Pad 21 [GND] of U3 on F.Cu
+[solder_mask_bridge]: Vorderseitige Lötstoppöffnung über Elementen mit verschiedenen Netzen
+    Rule: Mindestbreite der Lötstoppmaske aus Platinenkonfiguration; error
+    @(4.8622 in, 5.2559 in): Via [GND] on F.Cu - B.Cu
+    @(4.8346 in, 5.2539 in): Pad 1 [+5V] of U9 on F.Cu
+[solder_mask_bridge]: Vorderseitige Lötstoppöffnung über Elementen mit verschiedenen Netzen
+    Rule: Mindestbreite der Lötstoppmaske aus Platinenkonfiguration; error
+    @(5.7480 in, 5.6102 in): Via [GND] on F.Cu - B.Cu
+    @(5.7205 in, 5.6083 in): Pad 1 [+3V3] of U10 on F.Cu
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(5.0394 in, 5.7480 in): Footprint J2
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(5.1909 in, 4.8799 in): Footprint U4
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(4.5079 in, 5.4331 in): Footprint U7
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(4.9213 in, 4.2913 in): Footprint M1
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(5.7677 in, 5.5709 in): Footprint U10
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(4.8819 in, 5.2165 in): Footprint U9
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(4.3307 in, 4.9606 in): Footprint U3
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(4.0945 in, 5.4823 in): Footprint J1
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(4.8041 in, 4.8750 in): Footprint U2
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(4.4291 in, 5.7461 in): Footprint D1
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(5.3071 in, 5.3661 in): Footprint U1
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(5.7677 in, 5.1969 in): Footprint U8
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(5.7087 in, 4.8819 in): Footprint U5
+[lib_footprint_issues]: Die aktuelle Konfiguration enthält die Footprint-Bibliothek "Sensorplatine" nicht
+    Local override; warning
+    @(4.9213 in, 4.6457 in): Footprint J3
+[text_height]: Schrifthöhe außerhalb des zulässigen Bereichs (Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe min. Breite 0,0315 in; tatsächlich 0,0276 in)
+    Rule: Einschränkungen aus Platinenkonfiguration zur Bestückungsdruckhöhe; warning
+    @(4.9213 in, 4.5472 in): Reference field of J3
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(4.9213 in, 5.8465 in): PCB text 'Sensorplatine v4.0.ab - ROUTED - STRAIGHT CORE ROUTING' on f.silkscreen
+    @(4.0157 in, 5.4232 in): Rectangle of J1 on f.silkscreen
+[silk_overlap]: Silkscreen clearance
+    Rule: Einschränkungen aus Platinenkonfiguration zum Bestückungsdruck; warning
+    @(4.9213 in, 4.5472 in): Reference field of J3
+    @(4.9213 in, 4.5354 in): Reference field of M1
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.4094 in, 5.3150 in): Rectangle of U7 on f.silkscreen
+    @(4.6339 in, 5.4581 in): Pad 6 [RS485_A] of U7 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.4094 in, 5.3150 in): Rectangle of U7 on f.silkscreen
+    @(4.6339 in, 5.4081 in): Pad 7 [RS485_B] of U7 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.4094 in, 5.3150 in): Rectangle of U7 on f.silkscreen
+    @(4.6339 in, 5.3581 in): Pad 8 [+3V3] of U7 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.4094 in, 5.3150 in): Rectangle of U7 on f.silkscreen
+    @(4.6339 in, 5.5081 in): Pad 5 [GND] of U7 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.4094 in, 5.3150 in): Rectangle of U7 on f.silkscreen
+    @(4.3819 in, 5.3581 in): Pad 1 [RS485_RX] of U7 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.4094 in, 5.3150 in): Rectangle of U7 on f.silkscreen
+    @(4.3819 in, 5.4081 in): Pad 2 [RS485_DE] of U7 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.4094 in, 5.3150 in): Rectangle of U7 on f.silkscreen
+    @(4.3819 in, 5.4581 in): Pad 3 [RS485_DE] of U7 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.4094 in, 5.3150 in): Rectangle of U7 on f.silkscreen
+    @(4.3819 in, 5.5081 in): Pad 4 [RS485_TX] of U7 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.1969 in, 5.5315 in): Pad 9 [LD2450_RX] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.2283 in, 5.5315 in): Pad 10 [LD2450_TX] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.2598 in, 5.5315 in): Pad 11 [I2S_WS] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.2913 in, 5.5315 in): Pad 12 [I2S_CK] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.3228 in, 5.5315 in): Pad 13 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.3543 in, 5.5315 in): Pad 14 [I2S_SD] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.3858 in, 5.5315 in): Pad 15 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.4173 in, 5.5315 in): Pad 16 [RS485_DE] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.3583 in, 5.6909 in): Rectangle of D1 on f.silkscreen
+    @(4.4291 in, 5.7087 in): Pad 3 [GND] of D1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.3583 in, 5.6909 in): Rectangle of D1 on f.silkscreen
+    @(4.3878 in, 5.7835 in): Pad 1 [RS485_A] of D1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(4.3583 in, 5.6909 in): Rectangle of D1 on f.silkscreen
+    @(4.4705 in, 5.7835 in): Pad 2 [RS485_B] of D1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.3071 in, 5.1693 in): Reference field of U1
+    @(5.2913 in, 5.2008 in): Pad 29 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.4173 in, 5.2008 in): Pad 25 [SWCLK] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.3858 in, 5.2008 in): Pad 26 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.3543 in, 5.2008 in): Pad 27 [RS485_RX] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.3228 in, 5.2008 in): Pad 28 [I2C_SCL] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.2913 in, 5.2008 in): Pad 29 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.2598 in, 5.2008 in): Pad 30 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.2283 in, 5.2008 in): Pad 31 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.1969 in, 5.2008 in): Pad 32 [RS485_TX] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.4724 in, 5.4764 in): Pad 17 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.4724 in, 5.4449 in): Pad 18 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.4724 in, 5.4134 in): Pad 19 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.4724 in, 5.3819 in): Pad 20 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.4724 in, 5.3504 in): Pad 21 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.4724 in, 5.3189 in): Pad 22 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.4724 in, 5.2874 in): Pad 23 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.4724 in, 5.2559 in): Pad 24 [SWDIO] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.1417 in, 5.2559 in): Pad 1 [I2C_SDA] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.1417 in, 5.2874 in): Pad 2 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.1417 in, 5.3189 in): Pad 3 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.1417 in, 5.3504 in): Pad 4 [+3V3] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.1417 in, 5.3819 in): Pad 5 [GND] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.1417 in, 5.4134 in): Pad 6 [NRST] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.1417 in, 5.4449 in): Pad 7 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.1575 in, 5.2165 in): Rectangle of U1 on f.silkscreen
+    @(5.1417 in, 5.4764 in): Pad 8 [<no net>] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.3071 in, 5.1693 in): Reference field of U1
+    @(5.3228 in, 5.2008 in): Pad 28 [I2C_SCL] of U1 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.5748 in, 4.8268 in): Rectangle of U5 on f.silkscreen
+    @(5.8189 in, 4.9173 in): Pad 3 [GND] of U5 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.5748 in, 4.8268 in): Rectangle of U5 on f.silkscreen
+    @(5.8189 in, 4.8465 in): Pad 4 [I2C_SDA] of U5 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.5748 in, 4.8268 in): Rectangle of U5 on f.silkscreen
+    @(5.5984 in, 4.9173 in): Pad 2 [+3V3] of U5 on F.Cu
+[silk_over_copper]: Silkscreen clipped by solder mask
+    Local override; warning
+    @(5.5748 in, 4.8268 in): Rectangle of U5 on f.silkscreen
+    @(5.5984 in, 4.8465 in): Pad 1 [I2C_SCL] of U5 on F.Cu
+
+** Found 0 unconnected pads **
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **
